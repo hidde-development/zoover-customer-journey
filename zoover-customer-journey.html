@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zoover — Customer Journey Map</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display&display=swap');
+:root {
+  --bg:#FFF6EA; --sf:#FFFFFF; --sf2:#FFF0D9; --sf3:#FFE8C8;
+  --bd:#E0CEAE; --bd2:#D4C0A3; --tx:#3D1952; --mu:#6B5A7A; --fa:#9A8BA8;
+  --c1:#C2185B; --c2:#E87722; --c3:#00838F; --c4:#2E7D32; --c5:#6A1B9A;
+  --goo:#1A73E8; --llm:#0D8C65; --tik:#E1174A; --met:#0552B5; --dir:#D97706; --insta:#E1306C; --pin:#E60023;
+  --fwd:#2E7D32; --bwd:#C62828; --bc:#999; --same:#2962B6;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Afacad',sans-serif;font-weight:400;letter-spacing:0;line-height:1.15;background:var(--bg);color:var(--tx);min-height:100vh;}
+.hdr{position:sticky;top:0;z-index:200;background:rgba(255,246,234,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd);padding:8px 24px;min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.hdr-l{display:flex;align-items:center;gap:12px;flex-shrink:0;}
+.logo{width:36px;height:36px;border-radius:50%;overflow:hidden;flex-shrink:0;}
+.logo img{width:100%;height:100%;display:block;object-fit:cover;}
+.hdr h1{font-family:'Roca','DM Serif Display','Playfair Display',Georgia,serif;font-size:18px;font-weight:300;letter-spacing:-0.04em;line-height:1;white-space:nowrap;color:var(--tx);} .hdr h1 span{font-family:'Afacad',sans-serif;color:var(--mu);font-weight:400;font-size:13px;letter-spacing:0;}
+.hdr-r{display:flex;gap:6px;flex-wrap:wrap;align-items:center;}
+.flbl{font-size:11px;color:var(--mu);font-weight:600;text-transform:uppercase;letter-spacing:0.12em;line-height:1.1;margin-right:4px;}
+.fb{display:flex;align-items:center;gap:5px;padding:6px 14px;border-radius:18px;border:1px solid var(--bd2);background:transparent;color:var(--mu);font-size:13px;font-family:inherit;font-weight:500;cursor:pointer;transition:.15s;}
+.fb:hover{color:var(--tx);background:var(--sf);}
+.fb.act{color:var(--tx);background:var(--sf);}
+.fb .d{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.fb.act.fg{border-color:var(--goo);color:var(--goo);background:rgba(26,115,232,.08);}
+.fb.act.fl{border-color:var(--llm);color:var(--llm);background:rgba(13,140,101,.08);}
+.fb.act.ft{border-color:var(--tik);color:var(--tik);background:rgba(225,23,74,.08);}
+.fb.act.fm{border-color:var(--insta);color:var(--insta);background:rgba(225,48,108,.08);}
+.fb.act.fp{border-color:var(--pin);color:var(--pin);background:rgba(230,0,35,.08);}
+.fb.act.fd{border-color:var(--dir);color:var(--dir);background:rgba(217,119,6,.08);}
+.sep{width:1px;height:24px;background:var(--bd2);margin:0 6px;}
+.link-toggle-wrap{display:flex;align-items:center;gap:6px;}
+.link-toggle-label{font-size:11px;color:var(--mu);font-weight:500;user-select:none;}
+.link-toggle{position:relative;width:36px;height:20px;display:inline-block;flex-shrink:0;}
+.link-toggle input{opacity:0;width:0;height:0;}
+.link-slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background:var(--c3);border-radius:10px;transition:.25s;}
+.link-slider:before{content:'';position:absolute;height:16px;width:16px;left:2px;bottom:2px;background:#fff;border-radius:50%;transition:.25s;}
+.link-toggle input:checked+.link-slider{background:var(--c2);}
+.link-toggle input:checked+.link-slider:before{transform:translateX(16px);}
+.leg{display:flex;gap:16px;padding:12px 24px;flex-wrap:wrap;align-items:center;border-bottom:1px solid var(--bd);font-size:13px;color:var(--mu);}
+.leg-i{display:flex;align-items:center;gap:5px;}
+.leg-bar{width:4px;height:14px;border-radius:2px;}
+.leg-s{width:1px;height:14px;background:var(--bd);}
+.lg-b{font-size:9.5px;padding:2px 7px;border-radius:3px;font-weight:700;}
+.lg-miss{background:rgba(198,40,40,.1);color:#C62828;}
+.lg-span{background:var(--sf2);color:var(--mu);}
+.link-leg{display:none;align-items:center;gap:14px;}
+.link-leg.vis{display:flex;}
+.leg-arrow{width:24px;height:2px;border-radius:1px;position:relative;}
+.leg-arrow::after{content:'';position:absolute;right:-1px;top:-3px;border:4px solid transparent;}
+.leg-arr-fwd{background:var(--fwd);}.leg-arr-fwd::after{border-left-color:var(--fwd);}
+.leg-arr-bwd{background:var(--bwd);}.leg-arr-bwd::after{border-left-color:var(--bwd);}
+.leg-arr-bc{background:var(--bc);background:repeating-linear-gradient(90deg,var(--bc) 0 4px,transparent 4px 7px);}.leg-arr-bc::after{border-left-color:var(--bc);}
+.leg-arr-same{background:var(--same);}.leg-arr-same::after{border-left-color:var(--same);}
+.jw{overflow-x:auto;padding:20px 20px 20px;position:relative;}
+.journey{display:flex;gap:0;align-items:flex-start;position:relative;min-width:0;}
+.conn{width:28px;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding-top:52px;color:var(--fa);font-size:18px;user-select:none;}
+#linkSvg{position:absolute;top:0;left:0;pointer-events:none;z-index:50;overflow:visible;}
+.phase{flex:1 1 0;min-width:200px;}
+.ph{border-radius:9px;padding:12px 14px;margin-bottom:8px;border:1px solid transparent;}
+.p1 .ph{background:rgba(194,24,91,.06);border-color:rgba(194,24,91,.2);}
+.p2 .ph{background:rgba(232,119,34,.06);border-color:rgba(232,119,34,.2);}
+.p3 .ph{background:rgba(0,131,143,.06);border-color:rgba(0,131,143,.2);}
+.p4 .ph{background:rgba(46,125,50,.06);border-color:rgba(46,125,50,.2);}
+.p5 .ph{background:rgba(106,27,154,.06);border-color:rgba(106,27,154,.2);}
+.pstep{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;line-height:1.1;margin-bottom:4px;}
+.p1 .pstep{color:#C2185B;} .p2 .pstep{color:#E87722;} .p3 .pstep{color:#00838F;} .p4 .pstep{color:#2E7D32;} .p5 .pstep{color:#6A1B9A;}
+.pname{font-size:24px;font-weight:700;line-height:1;margin-bottom:4px;} .pdesc{font-size:12px;color:var(--mu);line-height:1.15;}
+.pcards{display:flex;flex-direction:column;gap:6px;}
+.card{background:var(--sf);border:1px solid var(--bd);border-radius:8px;cursor:pointer;transition:.15s;position:relative;overflow:hidden;}
+.card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;transition:width .2s;}
+.p1 .card::before{background:var(--c1);} .p2 .card::before{background:var(--c2);} .p3 .card::before{background:var(--c3);} .p4 .card::before{background:var(--c4);} .p5 .card::before{background:var(--c5);}
+.card:hover{border-color:var(--bd2);background:var(--sf2);box-shadow:0 2px 8px rgba(61,25,82,.06);}
+.card.dim{opacity:.12;pointer-events:none;}
+.card.hl-fwd{border-color:var(--fwd)!important;box-shadow:0 0 12px rgba(46,125,50,.2);z-index:5;}
+.card.hl-bwd{border-color:var(--bwd)!important;box-shadow:0 0 12px rgba(198,40,40,.2);z-index:5;}
+.card.hl-bc{border-color:var(--bc)!important;border-style:dashed;z-index:5;}
+.card.hl-same{border-color:var(--same)!important;box-shadow:0 0 8px rgba(41,98,182,.2);z-index:5;}
+.card.hl-src{border-color:var(--c2)!important;box-shadow:0 0 16px rgba(232,119,34,.25);z-index:6;}
+.card.hl-src::before{width:5px;}
+.dir-badge{display:none;position:absolute;top:6px;right:6px;font-size:9px;padding:2px 6px;border-radius:3px;font-weight:700;z-index:10;letter-spacing:.3px;text-transform:uppercase;}
+.db-fwd{background:rgba(46,125,50,.12);color:var(--fwd);}
+.db-bwd{background:rgba(198,40,40,.12);color:var(--bwd);}
+.db-bc{background:rgba(102,102,102,.1);color:#666;}
+.db-same{background:rgba(74,144,217,.2);color:var(--same);}
+
+/* CARD HEADER — clean, white, no emoji */
+.ch{padding:9px 10px 9px 14px;display:flex;align-items:center;gap:8px;}
+.ch-nm{font-size:13px;font-weight:600;color:var(--tx);flex:1;min-width:0;line-height:1.15;}
+.miss-d{width:5px;height:5px;border-radius:50%;background:#C62828;flex-shrink:0;}
+.span-d{width:5px;height:5px;border-radius:50%;background:var(--fa);flex-shrink:0;border:1px solid var(--mu);}
+.intent{font-size:10px;padding:3px 7px;border-radius:3px;font-weight:600;flex-shrink:0;letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;}
+.i-i{background:rgba(92,107,192,.12);color:#3949AB;}
+.i-n{background:rgba(0,137,123,.12);color:#00897B;}
+.i-c{background:rgba(245,127,23,.12);color:#E65100;}
+.i-t{background:rgba(211,47,47,.12);color:#C62828;}
+.ch-cs{display:flex;gap:2px;flex-shrink:0;}
+.ch-c{width:5px;height:5px;border-radius:50%;}
+.ch-car{font-size:12px;color:var(--fa);flex-shrink:0;transition:transform .2s;width:16px;text-align:center;}
+.card.open .ch-car{transform:rotate(180deg);}
+.cb{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+.card.open .cb{max-height:1800px;}
+.cbi{padding:0 14px 12px;}
+.cb-meta{display:flex;align-items:center;gap:6px;margin-bottom:8px;flex-wrap:wrap;}
+.cb-url{font-size:11px;color:var(--fa);font-family:'SF Mono','Fira Code',monospace;margin-bottom:10px;}
+.ch-stats{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--fa);margin-left:auto;margin-right:6px;flex-shrink:0;white-space:nowrap;}
+.ch-pages{opacity:.7;}
+.ch-vis{display:flex;align-items:center;gap:3px;font-weight:600;font-size:10px;letter-spacing:.03em;}
+.ch-vis-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.dash-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px;}
+.dash-card{background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:10px 12px;text-align:center;}
+.dash-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--fa);margin-bottom:4px;}
+.dash-val{font-size:20px;font-weight:700;color:var(--fg);line-height:1.2;}
+.dash-val.empty{font-size:12px;font-weight:400;color:var(--fa);opacity:.6;}
+.dash-sub{font-size:10px;color:var(--fa);margin-top:2px;}
+.cb-s{margin-bottom:10px;}
+.cb-lbl{font-size:10px;font-weight:400;text-transform:uppercase;letter-spacing:0.12em;line-height:1.1;color:var(--mu);margin-bottom:5px;}
+.cb-chs{display:flex;flex-wrap:wrap;gap:3px;}
+.cc{font-size:11px;padding:3px 7px;border-radius:7px;font-weight:600;}
+.cc-g{background:rgba(26,115,232,.1);color:#1565C0;}
+.cc-l{background:rgba(13,140,101,.1);color:#0D8C65;}
+.cc-t{background:rgba(225,23,74,.1);color:#C2185B;}
+.cc-m{background:rgba(225,48,108,.1);color:#C2185B;}
+.cc-p{background:rgba(230,0,35,.1);color:#C62828;}
+.cc-d{background:rgba(217,119,6,.1);color:#B45309;}
+
+/* Social playbook */
+.social-pb{margin-bottom:10px;}
+.social-icons{display:flex;gap:6px;}
+.social-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;cursor:pointer;border:1.5px solid var(--bd);background:var(--bg);transition:all .15s;opacity:.7;}
+.social-icon:hover{opacity:1;transform:scale(1.08);}
+.social-icon.si-active{opacity:1;border-color:currentColor;box-shadow:0 2px 8px rgba(0,0,0,.1);}
+.social-icon.si-tiktok{color:#E1174A;}
+.social-icon.si-insta{color:#E1306C;}
+.social-icon.si-pinterest{color:#E60023;}
+.social-tip{margin-top:8px;padding:11px 14px;background:var(--sf);border-radius:8px;border-left:3px solid currentColor;font-size:12px;line-height:1.6;animation:fadeIn .2s ease;}
+.social-tip-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;font-weight:600;margin-bottom:4px;opacity:.7;}
+.social-tip-format{font-weight:600;color:var(--tx);margin-bottom:2px;}
+.social-tip-hook{color:var(--mu);}
+.social-tip-cta{font-size:11px;margin-top:4px;padding:4px 9px;background:rgba(0,0,0,.04);border-radius:4px;display:inline-block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+
+/* Keyword groups */
+.kwg{margin-bottom:6px;padding:6px 10px;background:var(--sf);border-radius:6px;border-left:2px solid var(--bd2);}
+.kwg-label{font-size:12px;font-weight:600;color:var(--tx);margin-bottom:3px;display:flex;align-items:center;gap:5px;}
+.kwg-type{font-size:9px;padding:2px 6px;border-radius:3px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;}
+.kwg-type-head{background:rgba(26,115,232,.1);color:#1565C0;}
+.kwg-type-body{background:rgba(232,119,34,.1);color:#C65D00;}
+.kwg-type-longtail{background:rgba(106,27,154,.1);color:#6A1B9A;}
+.kwg-type-local{background:rgba(46,125,50,.1);color:#2E7D32;}
+.kwg-type-brand{background:rgba(217,119,6,.1);color:#B45309;}
+.kwg-type-comparison{background:rgba(0,131,143,.1);color:#00838F;}
+.kwg-examples{display:flex;flex-wrap:wrap;gap:3px;}
+.kwg-ex{font-size:12px;color:var(--mu);background:var(--sf2);border:1px solid var(--bd);padding:1px 7px;border-radius:4px;}
+.kwg-ex b{color:var(--tx);font-weight:600;}
+
+.lq{background:rgba(13,140,101,.06);border:1px solid rgba(13,140,101,.18);border-radius:5px;padding:5px 9px;font-size:12px;color:#0D8C65;font-style:italic;margin-bottom:3px;}
+.gap-b{background:rgba(198,40,40,.05);border:1px solid rgba(198,40,40,.18);border-radius:5px;padding:6px 9px;font-size:12px;color:#C62828;line-height:1.45;}
+.sp-i{font-size:12px;color:var(--mu);line-height:1.35;}
+.tpl{font-size:10px;padding:3px 8px;border-radius:4px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;flex-shrink:0;white-space:nowrap;}
+.tpl-lister{background:rgba(232,119,34,.1);color:#C65D00;}
+.tpl-content{background:rgba(46,125,50,.1);color:#2E7D32;}
+.tpl-hybrid{background:rgba(0,131,143,.1);color:#00838F;}
+.tpl-detail{background:rgba(106,27,154,.1);color:#6A1B9A;}
+.tpl-form{background:rgba(194,24,91,.1);color:#C2185B;}
+.tpl-conv{background:rgba(26,115,232,.1);color:#1565C0;}
+.tpl-dash{background:rgba(102,102,102,.1);color:#666;}
+
+/* Phase stats */
+.phase-stats{font-size:12px;color:var(--mu);padding:5px 14px 9px;line-height:1.5;display:flex;flex-wrap:wrap;gap:2px 8px;}
+.phase-stat{display:inline-flex;align-items:center;gap:3px;white-space:nowrap;}
+.ps-val{font-weight:700;color:var(--tx);}
+.ps-sep{color:var(--fa);}
+
+/* Competitor tags */
+.comp-tags{display:flex;flex-wrap:wrap;gap:3px;margin-top:2px;}
+.comp-tag{font-size:11px;padding:3px 8px;border-radius:7px;font-weight:600;background:rgba(198,40,40,.06);color:#C62828;border:1px solid rgba(198,40,40,.15);}
+
+/* Brief tool */
+.brief-tool{margin-top:10px;border:1px solid var(--bd);border-radius:8px;background:var(--sf);overflow:hidden;}
+.brief-hdr{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--sf2);border-bottom:1px solid var(--bd);cursor:pointer;}
+.brief-hdr:hover{background:var(--sf3);}
+.brief-icon{font-size:14px;}
+.brief-title{font-size:13px;font-weight:600;color:var(--tx);flex:1;}
+.brief-caret{font-size:10px;color:var(--fa);transition:transform .2s;}
+.brief-tool.open .brief-caret{transform:rotate(180deg);}
+.brief-body{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+.brief-tool.open .brief-body{max-height:2000px;}
+.brief-inner{padding:14px;}
+.brief-url-row{display:flex;gap:6px;margin-bottom:12px;}
+.brief-url{flex:1;padding:9px 13px;border:1px solid var(--bd2);border-radius:6px;font-size:12px;font-family:inherit;background:var(--sf);color:var(--tx);outline:none;}
+.brief-url:focus{border-color:var(--c2);}
+.brief-url::placeholder{color:var(--fa);}
+.brief-gen{padding:9px 18px;border-radius:6px;border:1px solid var(--c2);background:var(--c2);color:#fff;font-size:12px;font-weight:600;font-family:inherit;cursor:pointer;white-space:nowrap;transition:.15s;}
+.brief-gen:hover{background:#D06A1B;}
+.brief-output{display:none;font-size:12px;line-height:1.6;color:var(--tx);}
+.brief-output.vis{display:block;}
+.brief-output h4{font-size:13px;font-weight:700;color:var(--c2);margin:12px 0 4px;text-transform:uppercase;letter-spacing:.05em;}
+.brief-output h4:first-child{margin-top:0;}
+.brief-output p{margin:0 0 6px;color:var(--mu);}
+.brief-output ul{margin:0 0 8px;padding-left:18px;color:var(--mu);}
+.brief-output li{margin-bottom:3px;}
+.brief-output .kw-tag{display:inline-block;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:600;margin:1px 2px;}
+.brief-output .kw-head{background:rgba(232,119,34,.1);color:#C65D00;}
+.brief-output .kw-body{background:rgba(0,131,143,.1);color:#00838F;}
+.brief-output .kw-longtail{background:rgba(106,27,154,.1);color:#6A1B9A;}
+.brief-output .kw-brand{background:rgba(194,24,91,.1);color:#C2185B;}
+.brief-output .kw-comparison{background:rgba(26,115,232,.1);color:#1565C0;}
+.brief-output .kw-local{background:rgba(102,102,102,.1);color:#666;}
+.brief-output .entity{font-weight:600;color:var(--c2);}
+.brief-output code{background:var(--sf2);padding:2px 6px;border-radius:3px;font-size:11px;font-family:'SF Mono','Fira Code',monospace;color:var(--tx);}
+.brief-copy{display:flex;align-items:center;justify-content:center;gap:5px;margin-top:12px;padding:9px 16px;border-radius:6px;border:1px solid var(--bd2);background:var(--sf);color:var(--mu);font-size:12px;font-weight:600;font-family:inherit;cursor:pointer;transition:.15s;width:100%;}
+.brief-copy:hover{background:var(--sf2);color:var(--tx);border-color:var(--c2);}
+.brief-copy.copied{background:rgba(46,125,50,.1);color:var(--fwd);border-color:var(--fwd);}
+
+.ftr{padding:40px 24px 48px;text-align:center;border-top:1px solid var(--bd);}
+.ftr-logo{max-width:220px;margin:0 auto 10px;}
+.ftr-logo svg{width:100%;height:auto;display:block;}
+.ftr-sub{font-size:12px;color:var(--fa);letter-spacing:.5px;}
+::-webkit-scrollbar{width:4px;height:4px;} ::-webkit-scrollbar-track{background:transparent;} ::-webkit-scrollbar-thumb{background:var(--bd2);border-radius:2px;}
+
+/* ——— Link-modus actief ——— */
+body.has-sel .card:not(.hl-src):not(.hl-fwd):not(.hl-bwd):not(.hl-bc):not(.hl-same):not(.dim){border-color:var(--bd2);}
+@keyframes fadeInUp{from{opacity:0;transform:translateX(-50%) translateY(8px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+
+/* ——— Responsive ——— */
+
+/* Groot scherm: fases iets meer ademen */
+@media(min-width:1600px){
+  .jw{padding:24px 32px 24px;}
+  .conn{width:32px;}
+  .ph{padding:14px 16px;}
+}
+
+/* Tablet landscape — fases iets smaller, nog steeds flex */
+@media(max-width:1200px){
+  .phase{min-width:180px;}
+  .conn{width:20px;font-size:14px;}
+}
+
+/* Tablet portrait — horizontaal scrollen */
+@media(max-width:960px){
+  .hdr{height:auto;flex-direction:column;align-items:flex-start;padding:12px 16px;gap:8px;}
+  .hdr-r{flex-wrap:wrap;gap:5px;}
+  .fb{padding:5px 11px;font-size:11.5px;}
+  .leg{padding:10px 16px;gap:12px;font-size:11px;}
+  .journey{min-width:fit-content;}
+  .phase{flex:0 0 240px;}
+  .conn{width:16px;font-size:12px;}
+}
+
+/* Mobiel — verticale stack */
+@media(max-width:640px){
+  .hdr{padding:10px 12px;gap:6px;}
+  .hdr h1{font-size:11px;white-space:normal;}
+  .hdr-r{gap:3px;}
+  .fb{padding:3px 7px;font-size:9px;}
+  .flbl{display:none;}
+  .sep{height:14px;margin:0 2px;}
+  .leg{padding:8px 12px;gap:6px 10px;font-size:9px;}
+  .jw{padding:12px 12px 16px;overflow-x:hidden;}
+  .journey{flex-direction:column;gap:0;min-width:0;}
+  .phase{flex:none;width:100%;}
+  .conn{width:auto;padding:4px 0;font-size:14px;}
+  .ph{padding:10px 12px;}
+  .pname{font-size:15px;}
+  .pdesc{font-size:10px;}
+  .ch{padding:8px 8px 8px 12px;gap:6px;}
+  .ch-nm{font-size:12.5px;}
+  .cbi{padding:0 10px 10px;}
+  .tpl{font-size:7px;padding:1px 4px;}
+  .intent{font-size:7.5px;padding:2px 5px;}
+  #linkSvg{display:none;} /* Pijlen niet praktisch op mobiel */
+  .ftr{padding:32px 16px 40px;}
+  .ftr-logo{max-width:180px;}
+  .ftr-sub{font-size:11px;}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+<div class="hdr-l">
+  <div class="logo"><img src="data:image/png;base64,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" alt="Zoover" width="36" height="36"></div>
+  <div><h1>Zoover Journey Map</h1></div>
+</div>
+<div class="hdr-r">
+  <span class="flbl">Paginatype</span>
+  <button class="fb tpl-fb act" data-tpl="all" onclick="filterTpl('all')">Alles</button>
+  <button class="fb tpl-fb" data-tpl="lister" onclick="filterTpl('lister')"><span class="d" style="background:#C65D00"></span>Lister</button>
+  <button class="fb tpl-fb" data-tpl="content" onclick="filterTpl('content')"><span class="d" style="background:#2E7D32"></span>Content</button>
+  <button class="fb tpl-fb" data-tpl="hybrid" onclick="filterTpl('hybrid')"><span class="d" style="background:#00838F"></span>Hybrid</button>
+  <button class="fb tpl-fb" data-tpl="detail" onclick="filterTpl('detail')"><span class="d" style="background:#6A1B9A"></span>Detail</button>
+  <button class="fb tpl-fb" data-tpl="form" onclick="filterTpl('form')"><span class="d" style="background:#C2185B"></span>Formulier</button>
+  <button class="fb tpl-fb" data-tpl="conv" onclick="filterTpl('conv')"><span class="d" style="background:#1565C0"></span>Conversational</button>
+  <div class="sep"></div>
+  <span class="flbl">Social</span>
+  <button class="fb soc-fb act" data-soc="all" onclick="filterSoc('all')">Alles</button>
+  <button class="fb soc-fb ft" data-soc="tiktok" onclick="filterSoc('tiktok')"><span class="d" style="background:var(--tik)"></span>TikTok</button>
+  <button class="fb soc-fb fm" data-soc="insta" onclick="filterSoc('insta')"><span class="d" style="background:var(--insta)"></span>Insta</button>
+  <button class="fb soc-fb fp" data-soc="pinterest" onclick="filterSoc('pinterest')"><span class="d" style="background:var(--pin)"></span>Pinterest</button>
+  <div class="sep"></div>
+  <div class="link-toggle-wrap">
+    <span class="link-toggle-label">Uitgaand</span>
+    <label class="link-toggle" onclick="event.stopPropagation()">
+      <input type="checkbox" id="linkToggle" onchange="toggleLinkDir()">
+      <span class="link-slider"></span>
+    </label>
+    <span class="link-toggle-label">Inkomend</span>
+  </div>
+</div>
+</header>
+
+<div class="leg">
+  <div class="link-leg" id="linkLeg">
+    <div class="leg-i"><div class="leg-arrow leg-arr-fwd"></div>Vooruit</div>
+    <div class="leg-i"><div class="leg-arrow leg-arr-bwd"></div>Achteruit</div>
+    <div class="leg-i"><div class="leg-arrow leg-arr-bc"></div>Breadcrumb</div>
+    <div class="leg-i"><div class="leg-arrow leg-arr-same"></div>Zelfde fase</div>
+  </div>
+</div>
+
+<div class="jw" id="jw">
+<div class="journey" id="J"></div>
+<svg id="linkSvg" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="ah-fwd" markerWidth="24" markerHeight="18" refX="22" refY="9" orient="auto" markerUnits="userSpaceOnUse"><polygon points="0 0, 24 9, 0 18" fill="#2E7D32" opacity="0.85"/></marker>
+    <marker id="ah-bwd" markerWidth="24" markerHeight="18" refX="22" refY="9" orient="auto" markerUnits="userSpaceOnUse"><polygon points="0 0, 24 9, 0 18" fill="#C62828" opacity="0.85"/></marker>
+    <marker id="ah-bc" markerWidth="20" markerHeight="14" refX="18" refY="7" orient="auto" markerUnits="userSpaceOnUse"><polygon points="0 0, 20 7, 0 14" fill="#999999" opacity="0.6"/></marker>
+    <marker id="ah-same" markerWidth="20" markerHeight="14" refX="18" refY="7" orient="auto" markerUnits="userSpaceOnUse"><polygon points="0 0, 20 7, 0 14" fill="#2962B6" opacity="0.7"/></marker>
+  </defs>
+</svg>
+</div>
+
+<footer class="ftr">
+  <div class="ftr-logo"><img src="Zoover-logo-2021_RGB-pos.png" alt="Zoover" style="width:100%;height:auto;"></div>
+  <div class="ftr-sub">Customer Journey Map · SEO & GEO Strategie</div>
+</footer>
+
+<script>
+const phases=[
+{id:'p1',cls:'p1',step:'Fase 1',name:'Dromen',desc:'Vage vakantiewens, zoekt brede inspiratie',cards:[
+  {id:'homepage',nm:'Homepage',it:'nav',url:'zoover.nl',chs:['direct','google','llm'],
+   kwg:[
+     {label:'Brand-zoekwoorden',type:'brand',ex:['zoover','zoover.nl','zoover vakanties','zoover reviews']},
+     {label:'Generiek vakantie',type:'head',ex:['vakantie boeken','vakanties vergelijken','goedkope vakantie zoeken']}
+   ],
+   llm:['waar kan ik vakanties vergelijken en boeken?','welk boekingsplatform heeft ook reviews?','wat is zoover?','is zoover betrouwbaar?','waar vind ik eerlijke hotelreviews?'],
+   sp:'Overspant naar Oriënteren',miss:false},
+  {id:'inspi',nm:'Inspiratie',it:'info',url:'zoover.nl/i/spanje/costa-del-sol',chs:['google','llm'],
+   kwg:[
+     {label:'Bestemmingsnaam',type:'head',ex:['costa del sol','fuerteventura','chalkidiki']},
+     {label:'[bestemming] + vakantie',type:'body',ex:['vakantie costa del sol','costa del sol vakantie','vakantie fuerteventura']},
+     {label:'[land] + [bestemming]',type:'body',ex:['spanje costa del sol','griekenland chalkidiki']}
+   ],
+   llm:['is costa del sol geschikt voor gezinnen?','wat is de beste kant van fuerteventura?','wat moet je gezien hebben op chalkidiki?','wanneer is het beste weer aan de costa del sol?','welke dorpjes zijn leuk aan de costa del sol?'],
+   sp:'Overspant naar Oriënteren',miss:false,gap:'Wordt als "Lees meer over..."-link getoond op land/regio/bestemmingspagina\'s. Dit is een conversielek: gebruikers die al in commercial intent zitten worden teruggetrokken naar informational. Advies: /i/-link verwijderen uit lister-templates of vervangen door in-page content.'},
+  {id:'vertrek',nm:'Vertrek',it:'info',url:'zoover.nl/vakantie-vertrek-rotterdam-the-hague-airport',chs:['google','direct'],
+   kwg:[
+     {label:'Vertrek + [luchthaven]',type:'head',ex:['vertrek rotterdam airport','vertrek rotterdam']},
+     {label:'Vliegen vanaf + [stad]',type:'body',ex:['vliegen vanaf rotterdam','vluchten vanaf rotterdam']},
+     {label:'Vakantie + vertrek + [luchthaven]',type:'longtail',ex:['vakantie vertrek eindhoven','all inclusive vertrek schiphol','vliegvakantie vanaf rotterdam']}
+   ],
+   llm:['waar kan ik naartoe vliegen vanaf rotterdam?','goedkoopste vluchten vanaf rotterdam?','welke bestemmingen zijn bereikbaar vanaf eindhoven?','vluchten vanaf rotterdam naar spanje?','welke luchtvaartmaatschappijen vliegen vanaf rotterdam?'],sp:null,miss:false,gap:'Uitbreiden naar Eindhoven, Schiphol, Maastricht Airport.'},
+  {id:'blog',nm:'Blog',it:'info',url:'zoover.nl/blog/beste-stranden-spanje',chs:['google','llm','tiktok','insta'],
+   kwg:[
+     {label:'Inspirationele long-tail',type:'longtail',ex:['beste stranden spanje','leukste plekken europa','mooiste stranden wereld']},
+     {label:'Thematisch',type:'body',ex:['kindvriendelijke vakantie tips','romantisch weekendje weg europa','avontuurlijke vakantie ideeën']},
+     {label:'Seizoensgebonden',type:'body',ex:['zomervakantie tips','herfstvakantie inspiratie','pasen op vakantie']},
+     {label:'Lokale activiteiten',type:'longtail',ex:['wat te doen in barcelona','bezienswaardigheden malaga','tapasroute madrid']}
+   ],
+   llm:['waar moet ik naartoe op vakantie?','beste bestemmingen voor gezinnen?','wat zijn de mooiste stranden van spanje?','welke plekken in europa zijn kindvriendelijk?','wat zijn hidden gems in griekenland?'],
+   sp:null,miss:false},
+]},
+{id:'p2',cls:'p2',step:'Fase 2',name:'Oriënteren',desc:'Verkent landen en regio\'s — waar wil ik heen?',cards:[
+  {id:'land',nm:'Land',it:'comm',url:'zoover.nl/spanje',chs:['google','llm','direct'],
+   kwg:[
+     {label:'Vakantie + [land]',type:'head',ex:['vakantie spanje','spanje vakantie','goedkope vakantie spanje']},
+     {label:'[land] + qualifier',type:'body',ex:['spanje goedkoop','spanje met kinderen','spanje buiten de massa']},
+     {label:'[land A] of [land B]',type:'comparison',ex:['spanje of griekenland','spanje of portugal','griekenland of turkije']}
+   ],
+   llm:['mooiste plekken in spanje?','spanje of griekenland voor zomervakantie?','is spanje geschikt voor gezinnen?','wat is de beste reistijd voor spanje?','welke regio in spanje is het mooist?'],
+   sp:'Overspant naar Vergelijken',miss:false,gap:'"Lees meer over [land]"-link naar /i/-pagina trekt gebruikers terug naar informational. Overweeg verwijderen of vervangen door in-page content.'},
+  {id:'regio',nm:'Regio',it:'comm',url:'zoover.nl/spanje/costa-del-sol',chs:['google','llm'],
+   kwg:[
+     {label:'[regio] + vakantie',type:'head',ex:['costa del sol vakantie','vakantie costa del sol','goedkope vakantie costa del sol']},
+     {label:'[regio] + qualifier',type:'body',ex:['costa del sol met kinderen','costa del sol rustig strand','costa del sol tips']},
+     {label:'[regio A] of [regio B]',type:'comparison',ex:['costa del sol of costa blanca','kreta of rhodos','tenerife of lanzarote']}
+   ],
+   llm:['verschil costa del sol vs costa blanca?','is costa del sol geschikt voor gezinnen?','wat zijn de leukste dorpjes aan de costa del sol?','wanneer is het beste weer aan de costa del sol?','is costa del sol toeristisch?'],
+   sp:'Overspant naar Vergelijken',miss:false,gap:'"Lees meer over [regio]"-link naar /i/-pagina stuurt gebruikers terug de funnel in. Overweeg verwijderen of vervangen door in-page content.'},
+  {id:'seizoen',nm:'Seizoen',it:'comm',url:'zoover.nl/winterzon',chs:['google','llm'],
+   kwg:[
+     {label:'Seizoen + generiek',type:'head',ex:['winterzon','meivakantie','herfstvakantie']},
+     {label:'Vakantie + maand/periode',type:'body',ex:['vakantie oktober','vakantie mei','voorjaarsvakantie']},
+     {label:'Seizoen + bestemming',type:'longtail',ex:['winterzon spanje','herfstvakantie europa','kerstvakantie zon']}
+   ],
+   llm:['waar is het warm in de winter?','beste winterzonbestemming december?','wanneer is het goedkoopst op vakantie?','waar naartoe met de meivakantie?','welke bestemmingen zijn geschikt voor herfstvakantie?'],
+   sp:null,miss:false},
+  {id:'vaktype',nm:'Vakantietype',it:'comm',url:'zoover.nl/all-inclusive',chs:['google','llm'],
+   kwg:[
+     {label:'[type] + vakantie',type:'head',ex:['all inclusive vakantie','adults only vakantie','cruise vakantie']},
+     {label:'[type] + generiek',type:'head',ex:['aparthotel','aqua park','all inclusive']},
+     {label:'[type] + qualifier',type:'body',ex:['goedkope all inclusive','luxe cruise middellandse zee','all inclusive met vlucht']},
+     {label:'[type A] vs [type B]',type:'comparison',ex:['all inclusive of halfpension','camping of vakantiepark','hotel of appartement']}
+   ],
+   llm:['verschil all inclusive vs halfpension?','goede aquapark-hotels voor gezinnen?','wat kost een all inclusive vakantie gemiddeld?','is adults only hetzelfde als geen kinderen?','wat is een aparthotel precies?'],
+   sp:null,miss:false},
+  {id:'vera',nm:'Vera (AI Reisassistent)',it:'comm',url:'zoover.nl/vera',chs:['direct','google','llm','insta'],
+   kwg:[
+     {label:'Conversationele queries',type:'longtail',ex:['waar kan ik naartoe met 2 kinderen en 1500 euro budget','rustig strand spanje augustus','hotel met waterpark spanje gezin']},
+     {label:'Vergelijkende vragen',type:'comparison',ex:['costa del sol of costa blanca met kinderen?','all inclusive of halfpension voor budget?','welk eiland is het rustigst in juli?']},
+     {label:'Persoonlijke aanbeveling',type:'body',ex:['welk hotel past bij mij','beste vakantie voor ons gezin','wat raad je aan voor huwelijksreis']},
+     {label:'Zoover + Vera brand',type:'brand',ex:['zoover vera','zoover reisassistent','zoover AI hulp']}
+   ],
+   llm:['welk hotel past bij mijn wensen?','plan een vakantie voor 2 volwassenen en 2 kinderen','waar kan ik naartoe met een klein budget?','welke bestemming past bij mij?','wat is het beste hotel in marbella voor gezinnen?'],
+   sp:'Overspant Dromen t/m Boeken — begeleidt de hele journey',miss:false,gap:'AEO-kans: Vera-antwoorden optimaliseren als bron voor LLM-citaties.'},
+  {id:'zoekres',nm:'Zoekresultaten',it:'comm',url:'zoover.nl/zoeken?bestemming=spanje&datum=...',chs:['direct'],
+   kwg:[
+     {label:'Intern zoekgedrag',type:'local',ex:['Intern verkeer via zoekveld homepage/header','Geen SEO-keywords — niet geïndexeerd']},
+     {label:'Oriënterende zoekopdrachten',type:'longtail',ex:['spanje augustus 2 personen','all inclusive spanje juli 1 week','kindvriendelijk hotel costa del sol']}
+   ],
+   llm:[],sp:'Overspant naar Vergelijken',miss:false},
+]},
+{id:'p3',cls:'p3',step:'Fase 3',name:'Vergelijken',desc:'Specifieke plek gekozen of filter toegevoegd — vergelijkt accommodaties',cards:[
+  {id:'bestemming',nm:'Bestemming',it:'comm',url:'zoover.nl/spanje/costa-del-sol/marbella',chs:['google','llm','tiktok'],
+   kwg:[
+     {label:'[stad] + vakantie',type:'head',ex:['marbella vakantie','vakantie marbella','goedkope vakantie marbella']},
+     {label:'[stad] + tips',type:'body',ex:['marbella tips','marbella bezienswaardigheden','wat te doen in marbella']},
+     {label:'[stad] + doelgroep',type:'longtail',ex:['marbella gezinsvriendelijk','marbella met kinderen','marbella honeymoon']}
+   ],
+   llm:['is marbella geschikt voor gezinnen?','wat is de beste tijd om naar marbella te gaan?','wat moet je gezien hebben in marbella?','is marbella duur?','marbella of malaga, wat is leuker?'],
+   sp:null,miss:false},
+  {id:'bestfilter',nm:'Bestemming + kenmerk',it:'comm',url:'zoover.nl/spanje/costa-del-sol/marbella/winterzon',chs:['google','direct'],
+   kwg:[
+     {label:'[bestemming] + [kenmerk]',type:'body',ex:['marbella winterzon','marbella kindvriendelijk','marbella adults only']},
+     {label:'[bestemming] + [kenmerk] + [type]',type:'longtail',ex:['marbella luxe hotel','marbella spa hotel','marbella kindvriendelijk hotel']}
+   ],
+   llm:['luxe hotels in marbella?','kindvriendelijk verblijf in marbella?','winterzon in marbella, is dat de moeite?','adults only hotels marbella?','wat is het beste hotel in marbella?'],
+   sp:null,miss:false},
+  {id:'autovak',nm:'Autovakantie',it:'comm',url:'zoover.nl/spanje/campings/autovakantie',chs:['google','direct'],
+   kwg:[
+     {label:'Autovakantie + generiek',type:'head',ex:['autovakantie','autovakantie boeken','auto op vakantie']},
+     {label:'Autovakantie + [land]',type:'body',ex:['autovakantie spanje','autovakantie frankrijk','autovakantie kroatie']},
+     {label:'Campings + auto + [land]',type:'longtail',ex:['campings autovakantie spanje','vakantieparken autovakantie spanje','kamperen met auto spanje']}
+   ],
+   llm:['beste campings voor autovakantie in spanje?','autovakantie spanje of frankrijk?','wat kost een autovakantie naar spanje?','mooiste campings aan de costa brava?','is een autovakantie naar spanje de moeite?'],
+   sp:null,miss:false},
+  {id:'landfilter',nm:'Land + kenmerk',it:'comm',url:'zoover.nl/spanje/all-inclusive',chs:['google','llm'],
+   kwg:[
+     {label:'[land] + [type]',type:'head',ex:['spanje all inclusive','spanje kindvriendelijk','spanje adults only']},
+     {label:'[land] + [doelgroep]',type:'body',ex:['spanje gezinsvakantie','spanje met kinderen','spanje adults only']},
+     {label:'[land] + [accommodatie]',type:'body',ex:['spanje campings','spanje vakantieparken','spanje appartementen']}
+   ],
+   llm:['beste all inclusive resort in spanje?','kindvriendelijke hotels in spanje?','wat kost all inclusive in spanje?','goedkoopste all inclusive spanje?','spanje of turkije voor all inclusive?'],
+   sp:null,miss:false},
+  {id:'regiofilter',nm:'Regio + kenmerk',it:'comm',url:'zoover.nl/spanje/costa-del-sol/winterzon',chs:['google','direct'],
+   kwg:[
+     {label:'[regio] + [kenmerk]',type:'head',ex:['costa del sol winterzon','costa del sol adults only','costa del sol kindvriendelijk']},
+     {label:'[regio] + [kenmerk] + [type]',type:'body',ex:['costa del sol winterzon hotel','costa brava adults only resort','mallorca kindvriendelijk hotel']}
+   ],
+   llm:['adults only resorts aan de costa del sol?','winterzon aan de costa del sol, wat zijn de opties?','kindvriendelijke hotels costa del sol?','wanneer is het warm genoeg voor winterzon in spanje?','costa del sol of costa blanca voor winterzon?'],
+   sp:null,miss:false},
+  {id:'accovz',nm:'Accommodaties',it:'comm',url:'zoover.nl/spanje/costa-del-sol/marbella/hotels',chs:['google','direct'],
+   kwg:[
+     {label:'Hotels + [bestemming]',type:'head',ex:['hotels marbella','hotels costa del sol','beste hotels marbella']},
+     {label:'Beste hotels + [regio]',type:'body',ex:['beste hotels costa del sol','top hotels costa del sol','hotels met zwembad costa del sol']},
+     {label:'[type] + [bestemming]',type:'body',ex:['all inclusive resorts marbella','appartementen marbella','vakantieparken costa del sol']}
+   ],
+   llm:['welke hotels hebben de beste reviews in marbella?','top 5 hotels costa del sol?','goedkope hotels in marbella?','hotels met zwembad in marbella?','welk hotel in marbella heeft de beste ligging?'],
+   sp:null,miss:false},
+  {id:'accfilter',nm:'Accommodatietype',it:'comm',url:'zoover.nl/spanje/costa-del-sol/marbella/luxehotel',chs:['google','direct'],
+   kwg:[
+     {label:'[subtype] + [bestemming]',type:'head',ex:['luxe hotel marbella','boutique hotel marbella','adults only resort costa del sol']},
+     {label:'[subtype] + generiek',type:'body',ex:['adults only resort spanje','boutique hotels spanje','luxe all inclusive spanje']},
+     {label:'Appartementen + [bestemming]',type:'body',ex:['appartementen marbella','appartementen costa del sol']}
+   ],
+   llm:['luxe adults-only resorts in spanje?','beste boutique hotels aan de costa del sol?','verschil luxe hotel en boutique hotel?','adults only hotels in marbella?','wat is het meest luxe hotel in marbella?'],
+   sp:null,miss:false},
+  {id:'hotelstop',nm:'Hotels',it:'comm',url:'zoover.nl/hotels',chs:['google','direct'],
+   kwg:[
+     {label:'Brand + hotels',type:'brand',ex:['hotels zoover','zoover hotels']},
+     {label:'Generiek hotels',type:'head',ex:['goedkope hotels boeken','hotel reviews','hotels vergelijken']}
+   ],
+   llm:['waar vind ik eerlijke hotelreviews?','goedkope hotels boeken met reviews?','hotels vergelijken op prijs en reviews?','welk platform is het beste voor hotelreviews?','hoe vind ik het beste hotel voor mijn budget?'],
+   sp:null,miss:false},
+  {id:'hotelketen',nm:'Hotelketen',it:'comm',url:'zoover.nl/spanje/htop-hotels',chs:['google','direct'],
+   kwg:[
+     {label:'[keten] + [geo]',type:'brand',ex:['htop hotels spanje','htop hotels costa brava','htop hotels costa del sol']},
+     {label:'[keten] + generiek',type:'brand',ex:['htop hotels','htop hotels ervaringen','htop hotels boeken']}
+   ],
+   llm:['zijn htop hotels goed?','htop hotels ervaringen en reviews?','welk htop hotel is het beste in spanje?','htop hotels costa brava, welke aanrader?','wat kun je verwachten van een htop hotel?'],
+   sp:null,miss:false},
+]},
+{id:'p4',cls:'p4',step:'Fase 4',name:'Boeken',desc:'Klaar om te boeken',cards:[
+  {id:'lastminute',nm:'Last minute',it:'trans',url:'zoover.nl/lastminute',chs:['google','direct','insta'],
+   kwg:[
+     {label:'Last minute + [type]',type:'head',ex:['last minute all inclusive','last minute vakantie all inclusive','last minute zonvakantie']},
+     {label:'Last minute + [bestemming]',type:'body',ex:['last minute spanje','last minute costa del sol','last minute marbella']},
+     {label:'Last minute + deals',type:'body',ex:['last minute all inclusive deals','last minute aanbiedingen','goedkope last minute']}
+   ],
+   llm:['waar vind ik de beste last minute deals?','last minute naar spanje, wat zijn de opties?','hoeveel goedkoper is last minute boeken?','last minute all inclusive, waar moet ik zoeken?','wanneer vind je de beste last minute aanbiedingen?'],
+   sp:null,miss:false},
+  {id:'aanbiedingen',nm:'Aanbiedingen',it:'trans',url:'zoover.nl/aanbiedingen/spanje',chs:['direct','google','insta'],
+   kwg:[
+     {label:'[type] + aanbieding',type:'head',ex:['all inclusive aanbieding','vakantie aanbieding','zonvakantie aanbieding']},
+     {label:'Vroegboek',type:'body',ex:['vroegboekkorting','vroegboeken voordeel','vroegboek all inclusive']},
+     {label:'Deals + [bestemming]',type:'longtail',ex:['vakantie deals spanje','goedkope vakantie spanje','aanbieding costa del sol']}
+   ],
+   llm:['wanneer zijn de beste aanbiedingen voor spanje?','vroegboeken of last minute, wat is goedkoper?','waar vind ik de goedkoopste vakantiedeals?','all inclusive aanbiedingen spanje?','hoe herken ik een goede vakantiedeal?'],
+   sp:null,miss:false},
+  {id:'accboek',nm:'Accommodatie (boeken)',it:'trans',url:'zoover.nl/a/12345/hotel-amaragua-marbella',chs:['google','direct','insta','llm','tiktok'],
+   kwg:[
+     {label:'[hotelnaam] + boeken',type:'brand',ex:['hotel amaragua boeken','hotel amaragua zoover','hotel amaragua marbella']},
+     {label:'[hotelnaam] + reviews',type:'brand',ex:['hotel amaragua reviews','hotel amaragua ervaringen','zoover review hotel amaragua']},
+     {label:'[hotelnaam] + doelgroep',type:'longtail',ex:['hotel amaragua kindvriendelijk','hotel amaragua met baby','hotel amaragua all inclusive']},
+     {label:'Hotel + [plaats] + boeken',type:'head',ex:['hotel marbella boeken','hotel costa del sol boeken','all inclusive marbella boeken']},
+     {label:'[hotelnaam]',type:'body',ex:['hotel amaragua','hotel amaragua marbella','amaragua costa del sol']}
+   ],
+   llm:['wat is het beste hotel in marbella?','hotel amaragua ervaringen en prijzen?','is hotel amaragua gezinsvriendelijk?','heeft hotel amaragua een zwembad?','wat vinden mensen van hotel amaragua?'],
+   sp:null,miss:false,gap:'Structured data (Hotel, AggregateRating) volledig implementeren voor rich snippets. FAQ-content integreren op alle accommodatiepagina\'s.'},
+]},
+{id:'p5',cls:'p5',step:'Fase 5',name:'Na de reis',desc:'Deelt ervaringen, inspireert anderen',cards:[
+  {id:'reviewform',nm:'Reviews',it:'nav',url:'zoover.nl/review-schrijven',chs:['direct','google','tiktok'],
+   kwg:[
+     {label:'Review + zoover',type:'brand',ex:['review schrijven zoover','review plaatsen zoover','beoordeling achterlaten hotel']},
+     {label:'Review + generiek',type:'body',ex:['hotel review schrijven','vakantie beoordeling geven']}
+   ],
+   llm:['hoe schrijf ik een hotelreview op zoover?','kan ik een review plaatsen zonder te boeken?','hoe werkt het reviewsysteem van zoover?','worden zoover reviews geverifieerd?','hoe betrouwbaar zijn zoover reviews?'],sp:null,miss:false},
+  {id:'mijnzoover',nm:'Mijn Zoover',it:'nav',url:'zoover.nl/mijn-zoover',chs:['direct'],
+   kwg:[
+     {label:'Brand + account',type:'brand',ex:['mijn zoover inloggen','zoover account','zoover login']}
+   ],
+   llm:['hoe log ik in op mijn zoover account?','kan ik mijn boeking bekijken op zoover?','hoe verwijder ik mijn zoover account?','waar vind ik mijn verlanglijst op zoover?','hoe wijzig ik mijn zoover profiel?'],sp:null,miss:false,gap:'Personalisatie-engine op basis van history.'},
+]}
+];
+
+const phaseIdx={};
+phases.forEach((p,i)=>p.cards.forEach(c=>phaseIdx[c.id]=i));
+
+const linkData={
+  // FASE 1 — Dromen
+  homepage:[{to:'vaktype',type:'forward'},{to:'lastminute',type:'forward'},{to:'zoekres',type:'forward'},{to:'accboek',type:'forward'},{to:'land',type:'forward'},{to:'landfilter',type:'forward'}],
+  blog:[{to:'homepage',type:'breadcrumb'},{to:'vera',type:'forward'},{to:'land',type:'forward'},{to:'bestemming',type:'forward'},{to:'accboek',type:'forward'},{to:'vaktype',type:'forward'},{to:'inspi',type:'same'}],
+  inspi:[{to:'land',type:'forward'},{to:'regio',type:'forward'},{to:'bestemming',type:'forward'},{to:'accfilter',type:'forward'}],
+  vertrek:[{to:'zoekres',type:'forward'},{to:'land',type:'forward'},{to:'regio',type:'forward'},{to:'vertrek',type:'same'}],
+  // FASE 2 — Oriënteren
+  vera:[{to:'accboek',type:'forward'}],
+  land:[{to:'homepage',type:'breadcrumb'},{to:'regio',type:'same'},{to:'landfilter',type:'forward'},{to:'inspi',type:'backward'},{to:'accboek',type:'forward'}],
+  regio:[{to:'land',type:'breadcrumb'},{to:'bestemming',type:'forward'},{to:'regiofilter',type:'forward'},{to:'inspi',type:'backward'},{to:'accboek',type:'forward'}],
+  seizoen:[{to:'inspi',type:'backward'},{to:'land',type:'same'},{to:'accboek',type:'forward'}],
+  vaktype:[{to:'homepage',type:'breadcrumb'},{to:'inspi',type:'backward'},{to:'landfilter',type:'forward'},{to:'accboek',type:'forward'}],
+  zoekres:[{to:'accboek',type:'forward'}],
+  // FASE 3 — Vergelijken
+  bestemming:[{to:'regio',type:'breadcrumb'},{to:'accboek',type:'forward'}],
+  landfilter:[{to:'land',type:'breadcrumb'},{to:'accboek',type:'forward'}],
+  regiofilter:[{to:'regio',type:'breadcrumb'},{to:'accboek',type:'forward'}],
+  accovz:[{to:'bestemming',type:'breadcrumb'},{to:'accboek',type:'forward'}],
+  accfilter:[{to:'accovz',type:'breadcrumb'},{to:'accboek',type:'forward'}],
+  bestfilter:[{to:'bestemming',type:'breadcrumb'},{to:'accboek',type:'forward'}],
+  hotelketen:[{to:'land',type:'breadcrumb'},{to:'accboek',type:'forward'}],
+  hotelstop:[{to:'accboek',type:'forward'}],
+  autovak:[{to:'land',type:'breadcrumb'},{to:'accboek',type:'forward'}],
+  // FASE 4 — Boeken
+  lastminute:[{to:'accboek',type:'same'}],
+  aanbiedingen:[{to:'accboek',type:'same'}],
+  accboek:[{to:'accovz',type:'breadcrumb'},{to:'bestemming',type:'breadcrumb'},{to:'reviewform',type:'forward'},{to:'mijnzoover',type:'forward'},{to:'homepage',type:'backward'}],
+  // FASE 5 — Na de reis
+  reviewform:[{to:'accboek',type:'backward'},{to:'mijnzoover',type:'same'},{to:'vera',type:'backward'}],
+  mijnzoover:[{to:'homepage',type:'backward'},{to:'accboek',type:'backward'}]
+};
+
+const TPL={
+  homepage:'hybrid',blog:'content',vaktype:'lister',seizoen:'lister',inspi:'hybrid',
+  vera:'conv',land:'lister',regio:'lister',bestemming:'lister',landfilter:'lister',regiofilter:'lister',
+  accovz:'lister',accfilter:'lister',bestfilter:'lister',hotelketen:'lister',hotelstop:'lister',
+  zoekres:'lister',lastminute:'lister',aanbiedingen:'lister',
+  autovak:'lister',vertrek:'lister',accboek:'detail',
+  reviewform:'form',mijnzoover:'dash'
+};
+const TPLL={lister:'Lister',content:'Content',hybrid:'Hybrid',detail:'Detail',form:'Formulier',conv:'Conversational',dash:'Dashboard'};
+const TPLC={lister:'tpl-lister',content:'tpl-content',hybrid:'tpl-hybrid',detail:'tpl-detail',form:'tpl-form',conv:'tpl-conv',dash:'tpl-dash'};
+
+const IM={info:['Informational','i-i'],nav:['Navigational','i-n'],comm:['Commercial','i-c'],trans:['Transactional','i-t']};
+const CM={google:'var(--goo)',llm:'var(--llm)',tiktok:'var(--tik)',insta:'var(--insta)',pinterest:'var(--pin)',direct:'var(--dir)'};
+const CL={google:'Google',llm:'ChatGPT',tiktok:'TikTok',insta:'Instagram',pinterest:'Pinterest',direct:'Direct'};
+const CB={google:'cc-g',llm:'cc-l',tiktok:'cc-t',insta:'cc-m',pinterest:'cc-p',direct:'cc-d'};
+const KT={head:'kwg-type-head',body:'kwg-type-body',longtail:'kwg-type-longtail',local:'kwg-type-local',brand:'kwg-type-brand',comparison:'kwg-type-comparison'};
+const KTL={head:'Head',body:'Body',longtail:'Long-tail',local:'Intern',brand:'Brand',comparison:'Vergelijkend'};
+
+const COMPETITORS={
+  homepage:['Booking.com','TUI.nl','Corendon'],blog:['TUI.nl','ANWB','Reisreporter'],inspi:['TUI.nl','ANWB','Reisreporter'],
+  vaktype:['TUI.nl','ANWB','Booking.com'],seizoen:['TUI.nl','D-reizen','Sunweb'],
+  vera:['Booking.com','TUI.nl','Google Travel'],
+  land:['Booking.com','TUI.nl','Corendon'],regio:['Booking.com','TUI.nl','Corendon'],
+  bestemming:['Booking.com','TUI.nl','Corendon'],landfilter:['Booking.com','TUI.nl','Corendon'],
+  regiofilter:['Booking.com','TUI.nl','Corendon'],bestfilter:['Booking.com','TUI.nl','Corendon'],
+  accovz:['Booking.com','Trivago','Hotels.com'],
+  accfilter:['Booking.com','Trivago','Hotels.com'],hotelketen:['Booking.com','Trivago','Hotels.com'],
+  hotelstop:['Booking.com','Trivago','Hotels.com'],zoekres:['Booking.com','TUI.nl','Trivago'],
+  reviewform:['Tripadvisor','Google Reviews'],
+  lastminute:['D-reizen','Sunweb','Corendon'],aanbiedingen:['D-reizen','Sunweb','Corendon'],
+  autovak:['ANWB','Sunweb','D-reizen'],vertrek:['D-reizen','Sunweb','Corendon'],
+  accboek:['Booking.com','Trivago','Hotels.com'],mijnzoover:[]
+};
+
+// Social playbook per template — per kanaal: format, hook, cta
+const SOCIAL_PLAYBOOK={
+  homepage:{
+    tiktok:{format:'POV: je eerste vakantie boeken op Zoover',hook:'Brand awareness + herkenning',cta:'Homepage → zoekbalk'},
+    insta:{format:'Carousel: "5 redenen om via Zoover te boeken"',hook:'Trust-building + UGC reviews',cta:'Link in bio → homepage'},
+    pinterest:{format:'Pin: "Vakantie plannen stap voor stap"',hook:'Evergreen planning content',cta:'Homepage → inspiratie'}
+  },
+  inspi:{
+    tiktok:{format:'"Wist je dat…" reisfeitjes per bestemming',hook:'Edutainment + ontdekking',cta:'Link → inspiratiepagina'},
+    insta:{format:'Reels: drone shots + "droombestemmingen"',hook:'Visuele inspiratie + wanderlust',cta:'Story-link → inspiratie'},
+    pinterest:{format:'Board: "Droombestemmingen [jaar]"',hook:'Zoekbaar + seasonal boards',cta:'Pin → inspiratiepagina'}
+  },
+  vertrek:{
+    tiktok:{format:'"Alles wat je moet weten over vliegen vanaf [luchthaven]"',hook:'Praktisch + lokaal relevant',cta:'Link → vertrekpagina'},
+    insta:{format:'Story: "Vlieg je vanaf Rotterdam? Dit zijn je opties"',hook:'Lokale targeting',cta:'Swipe-up → vertrekpagina'},
+    pinterest:null
+  },
+  blog:{
+    tiktok:{format:'Storytelling: "3 dingen die ik leerde in [bestemming]"',hook:'Persoonlijk verhaal + tips',cta:'Link → blogartikel'},
+    insta:{format:'Carousel: tips uit het artikel visueel',hook:'Hapklare content uit longform',cta:'Link in bio → blog'},
+    pinterest:{format:'Pin: infographic van het artikel',hook:'Evergreen + zoekverkeer',cta:'Pin → blogartikel'}
+  },
+  land:{
+    tiktok:{format:'"Waarom iedereen naar [land] wil" — top 5',hook:'Trending bestemmingen + FOMO',cta:'Link → landpagina'},
+    insta:{format:'Carousel: "10 foto\'s die bewijzen dat [land] prachtig is"',hook:'Visuele pull + engagement',cta:'Story-link → landpagina'},
+    pinterest:{format:'Pin: "[Land] vakantiegids" met highlights',hook:'Zoekbaar travel guide',cta:'Pin → landpagina'}
+  },
+  regio:{
+    tiktok:{format:'POV: roadtrip door [regio]',hook:'Authentieke reiservaring',cta:'Link → regiopagina'},
+    insta:{format:'Reels: "Hidden gems in [regio]"',hook:'Ontdekking + insider tips',cta:'Story-link → regiopagina'},
+    pinterest:{format:'Pin: "[Regio] in 7 dagen — routekaart"',hook:'Planbaar + visueel',cta:'Pin → regiopagina'}
+  },
+  seizoen:{
+    tiktok:{format:'"Beste bestemmingen voor [seizoen]vakantie"',hook:'Seizoensgebonden urgentie',cta:'Link → seizoenpagina'},
+    insta:{format:'Carousel: "Waar naartoe deze [seizoen]?"',hook:'Timing + inspiratie',cta:'Story-link → seizoenpagina'},
+    pinterest:{format:'Pin: "[Seizoen]vakantie top 10 bestemmingen"',hook:'Seizoenszoekverkeer piek',cta:'Pin → seizoenpagina'}
+  },
+  vaktype:{
+    tiktok:{format:'"All inclusive vs halfpension — eerlijk verschil"',hook:'Vergelijking + eerlijk advies',cta:'Link → vaktypepagina'},
+    insta:{format:'Carousel: "Wat krijg je bij [type] vakantie?"',hook:'Educatief + visueel',cta:'Story-link → vaktypepagina'},
+    pinterest:{format:'Pin: "Complete gids [type] vakanties"',hook:'Zoekbaar + evergreen',cta:'Pin → vaktypepagina'}
+  },
+  vera:{
+    tiktok:{format:'Schermopname: "Ik liet AI mijn vakantie plannen"',hook:'AI-curiositeit + wow-effect',cta:'Link → Vera'},
+    insta:{format:'Reels: "Kijk hoe Vera je droomvakantie vindt"',hook:'Demo + innovatie',cta:'Story-link → Vera'},
+    pinterest:null
+  },
+  zoekres:null,
+  bestemming:{
+    tiktok:{format:'POV: "Eerste keer [stad]" vlog-stijl',hook:'Herkenning + FOMO',cta:'Link → bestemmingspagina'},
+    insta:{format:'Carousel: "[Stad] in 10 foto\'s"',hook:'Visuele bucket list',cta:'Story-link → bestemmingspagina'},
+    pinterest:{format:'Pin: "Wat te doen in [stad] — complete gids"',hook:'Activiteiten + planning',cta:'Pin → bestemmingspagina'}
+  },
+  bestfilter:{
+    tiktok:{format:'"Top 3 [kenmerk] hotels in [stad]"',hook:'Specifiek + actionable',cta:'Link → filterpagina'},
+    insta:{format:'Carousel: "Beste [kenmerk] verblijven [stad]"',hook:'Curated selectie',cta:'Story-link → filterpagina'},
+    pinterest:null
+  },
+  autovak:{
+    tiktok:{format:'"Road trip packing hacks" + "[land] met de auto"',hook:'Praktisch + relatable',cta:'Link → autovakantie'},
+    insta:{format:'Reels: "De mooiste autoroutes door [land]"',hook:'Visueel + avontuur',cta:'Story-link → autovakantie'},
+    pinterest:{format:'Pin: "Autovakantie [land] — route + campings"',hook:'Planning + routekaart',cta:'Pin → autovakantie'}
+  },
+  landfilter:{
+    tiktok:{format:'"Beste [type] hotels in [land] — mijn top 3"',hook:'Persoonlijke selectie',cta:'Link → filterpagina'},
+    insta:{format:'Carousel: "[Type] vakantie [land] — wat te verwachten"',hook:'Verwachtingsmanagement',cta:'Story-link → filterpagina'},
+    pinterest:null
+  },
+  regiofilter:{
+    tiktok:{format:'"[Kenmerk] vakantie [regio] — eerlijke review"',hook:'Authentiek + specifiek',cta:'Link → filterpagina'},
+    insta:{format:'Story: poll "Welk [kenmerk] resort in [regio]?"',hook:'Interactie + engagement',cta:'Swipe-up → filterpagina'},
+    pinterest:null
+  },
+  accovz:{
+    tiktok:{format:'"Top 5 hotels in [bestemming] volgens reviews"',hook:'Social proof + rankings',cta:'Link → hotellijst'},
+    insta:{format:'Carousel: "Hoogst beoordeelde hotels [bestemming]"',hook:'Review-based trust',cta:'Story-link → hotellijst'},
+    pinterest:null
+  },
+  accfilter:{
+    tiktok:{format:'"Wat maakt een [subtype] hotel anders?"',hook:'Educatief + niche',cta:'Link → filterpagina'},
+    insta:{format:'Carousel: "Mooiste [subtype] hotels in Europa"',hook:'Visueel + aspirationeel',cta:'Story-link → filterpagina'},
+    pinterest:{format:'Pin: "Beste [subtype] hotels [land]"',hook:'Zoekbaar niche-content',cta:'Pin → filterpagina'}
+  },
+  hotelstop:{
+    tiktok:{format:'"Zo vind je het perfecte hotel — 5 tips"',hook:'Educatief + universeel',cta:'Link → hotelpagina'},
+    insta:{format:'Carousel: "Waar let je op bij een hotel?"',hook:'Tips + expertise',cta:'Story-link → hotelpagina'},
+    pinterest:null
+  },
+  hotelketen:{
+    tiktok:{format:'"Eerlijke review: [keten] hotels — worth it?"',hook:'Eerlijkheid + transparantie',cta:'Link → ketenpagina'},
+    insta:{format:'Reels: hotel tour [keten]',hook:'Visueel + authentiek',cta:'Story-link → ketenpagina'},
+    pinterest:null
+  },
+  lastminute:{
+    tiktok:{format:'"Ik boekte een last minute voor €X — dit kreeg ik"',hook:'Prijs-shock + FOMO',cta:'Link → last minute'},
+    insta:{format:'Story: countdown "Last minute deals deze week"',hook:'Urgentie + deals',cta:'Swipe-up → last minute'},
+    pinterest:null
+  },
+  aanbiedingen:{
+    tiktok:{format:'"Vakantiedeals die je niet mag missen"',hook:'FOMO + prijsbewust',cta:'Link → aanbiedingen'},
+    insta:{format:'Story: "Deal van de week" recurring format',hook:'Terugkerend + herkenbaar',cta:'Swipe-up → aanbiedingen'},
+    pinterest:null
+  },
+  accboek:{
+    tiktok:{format:'Hotel room tour + "eerlijke review [hotel]"',hook:'UGC-stijl + transparantie',cta:'Link → boekingspagina'},
+    insta:{format:'Reels: "Een dag in [hotel]" mini-vlog',hook:'Ervaring + visueel',cta:'Story-link → boekingspagina'},
+    pinterest:{format:'Pin: "[Hotel] — foto\'s, reviews & prijzen"',hook:'Zoekbaar hotel-content',cta:'Pin → boekingspagina'}
+  },
+  reviewform:{
+    tiktok:{format:'"Deel je eerlijke review — help andere reizigers"',hook:'Community + purpose',cta:'Link → reviewformulier'},
+    insta:{format:'Story: "Jouw review doet ertoe" — UGC campaign',hook:'Community building',cta:'Story-link → review'},
+    pinterest:null
+  },
+  mijnzoover:null
+};
+
+// Dashboard metrics per template — vul aan met echte data
+// vis: 'sterk'|'goed'|'matig'|'slecht'|null
+// gVol: gem. Google zoekvolume/mnd  gClicks: gem. kliks/mnd  aiScore: AI-zichtbaarheid 0-100
+// brandVol: branded zoekvolume (bijv. "all inclusive zoover", "[hotel] zoover")
+const METRICS={
+  homepage:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  inspi:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  vertrek:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  blog:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  land:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  regio:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  seizoen:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  vaktype:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  vera:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  zoekres:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  bestemming:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  bestfilter:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  autovak:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  landfilter:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  regiofilter:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  accovz:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  accfilter:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  hotelstop:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  hotelketen:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  lastminute:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  aanbiedingen:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  accboek:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  reviewform:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  mijnzoover:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null}
+};
+const VIS_LABEL={sterk:'Sterk',goed:'Goed',matig:'Matig',slecht:'Slecht'};
+const VIS_COLOR={sterk:'#2E7D32',goed:'#558B2F',matig:'#E65100',slecht:'#C62828'};
+
+function fmtNL(n){return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.');}
+
+const VOL_OVERRIDE={
+  vera:8000,land:45000,regio:35000,bestemming:28000,landfilter:22000,regiofilter:6000,
+  accovz:18000,accfilter:8000,bestfilter:4000,hotelketen:3000,hotelstop:2000,zoekres:0,
+  lastminute:5000,aanbiedingen:4000,accboek:55000,
+  reviewform:1500,mijnzoover:800
+};
+function extractVolume(card){
+  let total=0;
+  card.kwg.forEach(g=>g.ex.forEach(e=>{const m=e.match(/\(([\d.]+)\)/);if(m)total+=parseInt(m[1].replace(/\./g,''));}));
+  return total||VOL_OVERRIDE[card.id]||0;
+}
+
+const PAGE_COUNT={land:97,regio:503,bestemming:1987,accovz:1089,accfilter:834,accboek:2632};
+function extractPages(card){
+  if(PAGE_COUNT[card.id])return PAGE_COUNT[card.id];
+  return 1;
+}
+
+function phaseStats(phase){
+  const tc=phase.cards.length;
+  let h=`<span class="phase-stat"><span class="ps-val">ntb</span> mnd. zoekvolume</span><span class="ps-sep">·</span>`;
+  h+=`<span class="phase-stat"><span class="ps-val">${tc}</span> templates</span>`;
+  h+=`<span class="ps-sep">·</span><span class="phase-stat"><span class="ps-val">ntb</span> pagina's</span>`;
+  return h;
+}
+
+function findCard(id){
+  for(const p of phases)for(const c of p.cards)if(c.id===id)return c;
+  return null;
+}
+
+function parseZooverUrl(url){
+  let path=url.replace(/^https?:\/\//,'').replace(/^(www\.)?zoover\.nl/,'').replace(/\?.*$/,'').replace(/\/$/,'');
+  if(!path.startsWith('/'))path='/'+path;
+  const parts=path.split('/').filter(Boolean);
+  const r={land:'',regio:'',bestemming:'',type:'',hotel:'',slug:path,parts:parts};
+  // /a/{id}/{slug} → accboek
+  if(parts[0]==='a'&&parts.length>=2){r.hotel=parts.slice(2).join(' ').replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase());return r;}
+  // /i/{...} → inspi
+  if(parts[0]==='i'){if(parts[1])r.land=cap(parts[1]);if(parts[2])r.regio=cap(parts[2]);return r;}
+  // /zoeken → zoekres
+  if(parts[0]==='zoeken')return r;
+  // /vakantie-vertrek-... → vertrek
+  if(parts[0]&&parts[0].startsWith('vakantie-vertrek'))return r;
+  // /lastminute, /aanbiedingen
+  if(['lastminute','aanbiedingen'].includes(parts[0]))return r;
+  // seizoen pages
+  const seizoenen=['meivakantie','zomervakantie','herfstvakantie','winterzon','zonvakanties','voorjaarsvakantie','kerstvakantie'];
+  if(seizoenen.some(s=>parts[0]&&parts[0].includes(s))){r.type=cap(parts[0]);return r;}
+  // vaktype pages
+  const vaktypes=['all-inclusive','adults-only','aparthotels','aqua-park','kindvriendelijk','luxe','stedentrips','campings','wintersport','cruise'];
+  if(vaktypes.some(v=>parts[0]&&parts[0].includes(v))){r.type=cap(parts[0]);if(parts[1])r.land=cap(parts[1]);return r;}
+  // /autovakantie or land/campings/autovakantie
+  if(parts.some(p=>p==='autovakantie'||p==='campings')){if(parts[0]!=='autovakantie')r.land=cap(parts[0]);return r;}
+  // Land/regio/bestemming hierarchy
+  if(parts[0])r.land=cap(parts[0]);
+  if(parts[1])r.regio=cap(parts[1]);
+  if(parts[2])r.bestemming=cap(parts[2]);
+  return r;
+}
+function cap(s){return s.replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase());}
+
+function getLoc(p){
+  // Returns the most specific location name
+  return p.bestemming||p.regio||p.land||'[bestemming]';
+}
+function getLocFull(p){
+  return [p.bestemming,p.regio,p.land].filter(Boolean).join(', ');
+}
+
+function briefH1(c,p){
+  const loc=getLoc(p);const type=p.type;const hotel=p.hotel;
+  let s='';
+  if(c.id==='accboek')s=`${hotel||'[Hotelnaam]'} boeken`;
+  else if(c.id==='land')s=`Vakantie ${p.land||'[Land]'} boeken`;
+  else if(c.id==='regio')s=`Vakantie ${p.regio||'[Regio]'} boeken`;
+  else if(c.id==='bestemming')s=`Vakantie in ${p.bestemming||'[Plaats]'} boeken`;
+  else if(c.id==='landfilter')s=`${type||'[Type]'} vakantie ${p.land||'[Land]'} boeken`;
+  else if(c.id==='regiofilter')s=`${type||'[Type]'} ${p.regio||'[Regio]'} boeken`;
+  else if(c.id==='vaktype')s=`${type||'[Vakantietype]'} vakantie boeken`;
+  else if(c.id==='seizoen')s=`${type||'[Seizoen]'} boeken`;
+  else if(c.id==='inspi')s=`Alles over ${loc}`;
+  else if(c.id==='blog')s='[Titel van het artikel]';
+  else if(c.id==='lastminute')s='Last minute vakantie boeken';
+  else if(c.id==='aanbiedingen')s='Vakantie aanbiedingen boeken';
+  else s=`${c.nm} boeken`;
+  return `<h4>H1 titel</h4><p><code>${s}</code></p>`;
+}
+
+function briefIntroText(c,p){
+  const land=p.land||'[land]';
+  const regio=p.regio||'';
+  const bestemming=p.bestemming||'';
+  const type=p.type||'';
+  const hotel=p.hotel||'';
+  const loc=bestemming||regio||land;
+
+  // Build the specific intro text template based on page type
+  let intro='';
+  if(c.id==='accboek'){
+    intro=`Boek snel en makkelijk {hotel}. Op boekingsplatform Zoover vergelijk je prijzen en lees je miljoenen eerlijke reviews van echte vakantiegangers. Bekijk alle beschikbare opties en boek direct jouw verblijf.`;
+  } else if(c.id==='inspi'){
+    intro=`Ontdek alles over vakantie naar {loc}. Lees wat je kunt verwachten, de beste tips en praktische info. Ben je overtuigd? Op boekingsplatform Zoover vergelijk je direct alle opties en boek je jouw vakantie naar {loc} aan de hand van miljoenen eerlijke reviews.`;
+  } else if(c.id==='blog'){
+    intro=`[Schrijf een pakkende opening die past bij het onderwerp]. Op boekingsplatform Zoover boek je snel en makkelijk jouw vakantie aan de hand van miljoenen eerlijke reviews van echte vakantiegangers.`;
+  } else if(type){
+    const locPart=loc!=='[land]'?` naar {loc}`:'';
+    intro=`Boek snel en makkelijk jouw ${type.toLowerCase()} vakantie${locPart}. Op boekingsplatform Zoover bekijk je alle opties aan de hand van miljoenen eerlijke reviews van echte vakantiegangers. Met de handige filters boek je supersnel jouw heerlijke (en goedkope) vakantie!`;
+  } else {
+    intro=`Boek snel en makkelijk je vakantie naar {loc}. Op boekingsplatform Zoover bekijk je snel alle opties in {loc} aan de hand van miljoenen eerlijke reviews van echte vakantiegangers. Met de handige filters hier links boek je supersnel jouw heerlijke (en goedkope) vakantie!`;
+  }
+
+  // Replace location/hotel placeholders
+  intro=intro.replace(/\{loc\}/g,loc).replace(/\{hotel\}/g,hotel||'[hotelnaam]');
+
+  // Highlight entities AND location keywords
+  const locRegex=new RegExp(`(vakantie naar ${loc.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}|vakantie ${loc.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}|${(hotel||'XNOMATCHX').replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`,'gi');
+
+  let highlighted=intro
+    .replace(/boekingsplatform Zoover/g,'<span class="entity">boekingsplatform Zoover</span>')
+    .replace(/miljoenen eerlijke reviews van echte vakantiegangers/g,'<span class="entity">miljoenen eerlijke reviews van echte vakantiegangers</span>')
+    .replace(/miljoenen eerlijke reviews/g,'<span class="entity">miljoenen eerlijke reviews</span>')
+    .replace(/vergelijk je prijzen/g,'<span class="entity">vergelijk je prijzen</span>')
+    .replace(/bekijk je(.*?)alle opties/g,'<span class="entity">bekijk je$1alle opties</span>')
+    .replace(/Boek snel/g,'<span class="entity">Boek</span> snel')
+    .replace(/boek je supersnel/g,'<span class="entity">boek</span> je supersnel')
+    .replace(/boek je direct/g,'<span class="entity">boek</span> je direct')
+    .replace(/boek je jouw/g,'<span class="entity">boek</span> je jouw');
+
+  // Now highlight location keywords (only if not already inside a span)
+  if(loc!=='[land]'&&loc!=='[bestemming]'){
+    highlighted=highlighted.replace(new RegExp(`(?<!<span[^>]*>)(vakantie naar ${loc.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`,'gi'),'<span class="entity">$1</span>');
+    highlighted=highlighted.replace(new RegExp(`(?<!<span[^>]*>)(alle opties in ${loc.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`,'gi'),'<span class="entity">$1</span>');
+  }
+
+  return `<h4>Introductietekst</h4>
+<p>Gebruik onderstaande tekst als basis. Je mag het herschrijven in je eigen woorden, maar zorg dat de <span class="entity">dikgedrukte kernwoorden</span> erin blijven staan.</p>
+<div style="background:var(--sf2);border-radius:6px;padding:10px 14px;margin:8px 0;line-height:1.7;font-size:11.5px;">
+${highlighted}
+</div>`;
+}
+
+function briefKeywords(c,p){
+  const land=p.land||'[land]';
+  const regio=p.regio||'[regio]';
+  const bestemming=p.bestemming||'[plaats]';
+  const type=p.type||'[type]';
+  const hotel=p.hotel||'[hotelnaam]';
+  const loc=p.bestemming||p.regio||p.land||'[bestemming]';
+
+  let kws=[];
+  // Generate simple, page-specific keywords only
+  if(c.id==='land'){
+    kws=[`vakantie ${land}`,`${land} vakantie`,`zoover ${land}`,`${land} boeken`,`goedkope vakantie ${land}`];
+  } else if(c.id==='regio'){
+    kws=[`vakantie ${regio}`,`${regio} vakantie`,`zoover ${regio}`,`${regio} boeken`];
+  } else if(c.id==='bestemming'){
+    kws=[`vakantie ${bestemming}`,`${bestemming} vakantie`,`zoover ${bestemming}`,`${bestemming} boeken`];
+  } else if(c.id==='landfilter'){
+    kws=[`${type} ${land}`,`${type} vakantie ${land}`,`${type} ${land} boeken`,`zoover ${type} ${land}`];
+  } else if(c.id==='regiofilter'){
+    kws=[`${type} ${regio}`,`${type} vakantie ${regio}`,`${type} ${regio} boeken`];
+  } else if(c.id==='vaktype'){
+    kws=[`${type} vakantie`,`${type} boeken`,`${type} vakantie boeken`,`zoover ${type}`];
+  } else if(c.id==='seizoen'){
+    kws=[`${type}`,`${type} boeken`,`${type} vakantie`,`goedkope ${type}`];
+  } else if(c.id==='accboek'){
+    kws=[`${hotel} boeken`,`${hotel} reviews`,`${hotel} zoover`,`${hotel}`];
+  } else if(c.id==='lastminute'){
+    kws=['last minute vakantie','last minute boeken','last minute all inclusive','goedkope last minute'];
+  } else if(c.id==='aanbiedingen'){
+    kws=['vakantie aanbiedingen','vakantie deals','zoover aanbiedingen','goedkope vakantie boeken'];
+  } else if(c.id==='inspi'){
+    kws=[`${loc}`,`vakantie ${loc}`,`${loc} tips`,`wat te doen in ${loc}`];
+  } else if(c.id==='blog'){
+    kws=['[hoofdonderwerp]','[hoofdonderwerp] + tips','[hoofdonderwerp] + vakantie'];
+  } else {
+    kws=[`${loc} boeken`,`vakantie ${loc}`,`zoover ${loc}`];
+  }
+
+  return `<h4>Zoekwoorden</h4>
+<p>Verwerk deze woorden op een natuurlijke manier in je introductietekst:</p>
+<ul>${kws.map(k=>`<li><code>${k.toLowerCase()}</code></li>`).join('\n')}</ul>`;
+}
+
+function briefFAQ(c,p){
+  const loc=p.bestemming||p.regio||p.land||'[bestemming]';
+  const hotel=p.hotel||'[hotelnaam]';
+  const land=p.land||'[land]';
+  const regio=p.regio||'[regio]';
+
+  // Start with card's LLM queries, replaced with actual location
+  let qs=(c.llm||[]).map(q=>{
+    return q.replace(/spanje|griekenland|turkije/gi,land)
+      .replace(/kreta|rhodos|costa del sol|mallorca/gi,p.regio||loc)
+      .replace(/chersonissos|marbella|hurghada/gi,p.bestemming||loc)
+      .replace(/nana golden beach|hotel X|hotel Y/gi,hotel);
+  });
+
+  // Add extra template-specific FAQ questions
+  const extras={
+    land:[`Wat is de beste reistijd voor ${land}?`,`Heb je een visum nodig voor ${land}?`,`Wat zijn de mooiste plekken in ${land}?`],
+    regio:[`Wat is het verschil tussen de regio's in ${land}?`,`Is ${regio} geschikt voor gezinnen?`,`Wat zijn de mooiste stranden in ${regio}?`],
+    bestemming:[`Wat kun je doen in ${loc}?`,`Hoe kom je het beste in ${loc}?`,`Is ${loc} geschikt voor een rustige vakantie?`],
+    landfilter:[`Wat zijn de beste ${(p.type||'').toLowerCase()} opties in ${land}?`,`Wat kost een ${(p.type||'').toLowerCase()} vakantie naar ${land}?`,`Wanneer boek je het goedkoopst?`],
+    regiofilter:[`Wat zijn de beste ${(p.type||'').toLowerCase()} opties in ${regio}?`,`Wat kost een ${(p.type||'').toLowerCase()} vakantie naar ${regio}?`],
+    vaktype:[`Wat houdt een ${(p.type||'').toLowerCase()} vakantie precies in?`,`Wat zijn de populairste bestemmingen voor ${(p.type||'').toLowerCase()}?`,`Wat kost een ${(p.type||'').toLowerCase()} vakantie gemiddeld?`],
+    seizoen:[`Waar is het warm tijdens de ${(p.type||'').toLowerCase()}?`,`Wanneer boek je het goedkoopst voor de ${(p.type||'').toLowerCase()}?`,`Wat zijn de populairste bestemmingen voor de ${(p.type||'').toLowerCase()}?`],
+    accboek:[`Wat vinden gasten van ${hotel}?`,`Welke faciliteiten heeft ${hotel}?`,`Is ${hotel} geschikt voor kinderen?`],
+    lastminute:['Wanneer vind je de beste last minute deals?','Hoeveel goedkoper is last minute boeken?','Waar vind je betrouwbare last minute aanbiedingen?'],
+    aanbiedingen:['Wanneer zijn vakantie-aanbiedingen het voordeligst?','Wat is het verschil tussen vroegboeken en last minute?','Hoe herken je een goede vakantiedeal?'],
+    inspi:[`Wat is de beste reistijd voor ${loc}?`,`Wat moet je gezien hebben in ${loc}?`,`Hoeveel dagen heb je nodig voor ${loc}?`],
+    blog:['[Bedenk 3 vragen die passen bij het onderwerp van het artikel]'],
+    vertrek:['Welke bestemmingen zijn bereikbaar vanaf deze luchthaven?','Welke luchtvaartmaatschappijen vliegen vanaf hier?','Hoe kom je het goedkoopst op vakantie vanaf deze luchthaven?']
+  };
+
+  const extra=extras[c.id]||[`Wat moet je weten over ${loc}?`,`Wanneer boek je het goedkoopst?`];
+  qs=[...qs,...extra];
+  // Deduplicate
+  qs=[...new Set(qs)];
+
+  return `<h4>FAQ-vragen voor AI-zoekmachines</h4>
+<p>Als er een FAQ-sectie op de pagina staat, gebruik dan deze vragen. Dit helpt om door ChatGPT en Google AI als bron geciteerd te worden.</p>
+<ul>${qs.map(q=>`<li>${q}</li>`).join('\n')}</ul>`;
+}
+
+function genBrief(id){
+  const c=findCard(id);if(!c)return;
+  const urlInput=document.getElementById('brief-url-'+id);
+  const outEl=document.getElementById('brief-out-'+id);
+  const url=urlInput.value.trim();
+  if(!url){urlInput.style.borderColor='#C62828';urlInput.setAttribute('placeholder','Vul een URL in, bijv. /spanje/costa-del-sol');setTimeout(()=>{urlInput.style.borderColor='';urlInput.setAttribute('placeholder','Plak een Zoover-URL, bijv. /spanje/costa-del-sol');},2000);return;}
+  const p=parseZooverUrl(url);
+  let html=briefH1(c,p)+briefIntroText(c,p)+briefKeywords(c,p)+briefFAQ(c,p);
+  html+=`<button class="brief-copy" onclick="copyGenBrief(event,'${id}')">📋 Kopieer als platte tekst</button>`;
+  outEl.innerHTML=html;
+  outEl.classList.add('vis');
+}
+
+function copyGenBrief(ev,id){
+  ev.stopPropagation();
+  const outEl=document.getElementById('brief-out-'+id);
+  const text=outEl.innerText.replace('📋 Kopieer als platte tekst','').trim();
+  const btn=ev.currentTarget;
+  navigator.clipboard.writeText(text).then(()=>{btn.classList.add('copied');btn.textContent='\u2713 Gekopieerd!';setTimeout(()=>{btn.classList.remove('copied');btn.textContent='📋 Kopieer als platte tekst';},2000);});
+}
+
+function renderJourney(){
+  const j=document.getElementById('J');
+  let h='';
+  phases.forEach((p,pi)=>{
+    if(pi>0) h+='<div class="conn">›</div>';
+    const pStats=phaseStats(p);
+    h+=`<div class="phase ${p.cls}"><div class="ph"><div class="pstep">${p.step}</div><div class="pname">${p.name}</div><div class="pdesc">${p.desc}</div></div><div class="phase-stats">${pStats}</div><div class="pcards">`;
+    p.cards.forEach(c=>{
+      const [iL,iC]=IM[c.it];
+      const tplType=TPL[c.id]||'';
+      const tplBadge=tplType?`<span class="tpl ${TPLC[tplType]}">${TPLL[tplType]}</span>`:'';
+      const dots=c.chs.map(ch=>`<div class="ch-c" style="background:${CM[ch]}"></div>`).join('');
+      const md=c.miss?'<div class="miss-d"></div>':'';
+      const sd=c.sp?'<div class="span-d"></div>':'';
+      const badges=c.chs.map(ch=>`<span class="cc ${CB[ch]}">${CL[ch]}</span>`).join('');
+      const met=METRICS[c.id]||{};
+      const pc=PAGE_COUNT[c.id]||1;
+      const visHtml=met.vis?`<div class="ch-vis"><div class="ch-vis-dot" style="background:${VIS_COLOR[met.vis]}"></div>${VIS_LABEL[met.vis]}</div>`:'';
+
+      // Dashboard metrics
+      function dashVal(v,suffix){return v!=null?`<div class="dash-val">${fmtNL(v)}${suffix||''}</div>`:`<div class="dash-val empty">Nog invullen</div>`;}
+      const dashHtml=`<div class="dash-grid">
+        <div class="dash-card"><div class="dash-label">Google zoekvolume</div>${dashVal(met.gVol,'/mnd')}<div class="dash-sub">gem. per pagina</div></div>
+        <div class="dash-card"><div class="dash-label">Google kliks</div>${dashVal(met.gClicks,'/mnd')}<div class="dash-sub">gem. per pagina</div></div>
+        <div class="dash-card"><div class="dash-label">Branded volume</div>${dashVal(met.brandVol,'/mnd')}<div class="dash-sub">zoeker + zoover</div></div>
+        <div class="dash-card"><div class="dash-label">AI-zichtbaarheid</div>${met.aiScore!=null?`<div class="dash-val">${met.aiScore}<span style="font-size:11px;font-weight:400">/100</span></div>`:`<div class="dash-val empty">Nog invullen</div>`}<div class="dash-sub">gem. score</div></div>
+      </div>`;
+
+      // Keyword groups (no type labels)
+      const kwgHtml=c.kwg.map(g=>{
+        const exs=g.ex.map(e=>`<span class="kwg-ex">${e}</span>`).join('');
+        return `<div class="kwg"><div class="kwg-label">${g.label}</div><div class="kwg-examples">${exs}</div></div>`;
+      }).join('');
+
+      const lqs=c.llm.length?c.llm.map(q=>`<div class="lq">${q}</div>`).join(''):'<div style="color:var(--fa);font-size:9px">Geen LLM-instappunten</div>';
+      const gp=c.gap?`<div class="cb-s"><div class="cb-lbl">Gap / Kans</div><div class="gap-b">${c.gap}</div></div>`:'';
+      const si=c.sp?`<div class="cb-s"><div class="cb-lbl">Positie in journey</div><div class="sp-i">${c.sp}</div></div>`:'';
+
+      h+=`<div class="card" data-id="${c.id}" data-chs="${c.chs.join(',')}" onclick="cardClick(this,'${c.id}')">
+        <div class="dir-badge db-fwd">Vooruit</div><div class="dir-badge db-bwd">Achteruit</div><div class="dir-badge db-bc">Breadcrumb</div><div class="dir-badge db-same">Zelfde fase</div>
+        <div class="ch"><div class="ch-nm">${c.nm}</div><div class="ch-stats"><span class="ch-pages">${fmtNL(pc)} pag.</span>${visHtml}</div><div class="ch-car">▾</div></div>
+        <div class="cb"><div class="cbi">
+          <div class="cb-meta">${tplBadge}<span class="intent ${iC}">${iL}</span></div>
+          <div class="cb-url">Voorbeeld: ${c.url}</div>
+          ${dashHtml}
+          <div class="cb-s"><div class="cb-lbl">Keyword-groepen voor content</div>${kwgHtml}</div>
+          <div class="cb-s"><div class="cb-lbl">LLM-queries (AEO)</div>${lqs}</div>
+          ${si}${gp}${(()=>{const co=COMPETITORS[c.id]||[];return co.length?`<div class="cb-s"><div class="cb-lbl">Concurrenten op deze intentie</div><div class="comp-tags">${co.map(x=>`<span class="comp-tag">${x}</span>`).join('')}</div></div>`:''})()}
+          <div class="cb-s"><div class="cb-lbl">Kanalen</div><div class="cb-chs">${badges}</div></div>
+          ${(()=>{const pb=SOCIAL_PLAYBOOK[c.id];if(!pb)return '';const channels=['tiktok','insta','pinterest'];const icons=channels.filter(ch=>pb[ch]).map(ch=>{const emoji={tiktok:'♪',insta:'◎',pinterest:'◉'}[ch];const label={tiktok:'TikTok',insta:'Instagram',pinterest:'Pinterest'}[ch];return `<div class="social-icon si-${ch}" onclick="event.stopPropagation();toggleSocial(this,'${c.id}','${ch}')" title="${label}">${emoji}</div>`;}).join('');return icons?`<div class="cb-s social-pb"><div class="cb-lbl">Social playbook</div><div class="social-icons">${icons}</div><div class="social-tip-container" id="social-tip-${c.id}"></div></div>`:''})()}
+          ${tplType==='lister'?`<div class="brief-tool" onclick="event.stopPropagation()">
+            <div class="brief-hdr" onclick="this.parentElement.classList.toggle('open')">
+              <span class="brief-icon">\uD83D\uDCDD</span>
+              <span class="brief-title">Contentbrief generator</span>
+              <span class="brief-caret">▾</span>
+            </div>
+            <div class="brief-body">
+              <div class="brief-inner">
+                <div class="brief-url-row">
+                  <input class="brief-url" id="brief-url-${c.id}" type="text" placeholder="Plak een Zoover-URL, bijv. /spanje/costa-del-sol" />
+                  <button class="brief-gen" onclick="genBrief('${c.id}')">Genereer brief</button>
+                </div>
+                <div class="brief-output" id="brief-out-${c.id}"></div>
+              </div>
+            </div>
+          </div>`:''}
+        </div></div></div>`;
+    });
+    h+='</div></div>';
+  });
+  j.innerHTML=h;
+}
+
+let linkDir='out',activeLinkCard=null;
+
+function getIncomingLinks(targetId){
+  const incoming=[];
+  for(const[srcId,links] of Object.entries(linkData)){
+    for(const link of links){
+      if(link.to===targetId) incoming.push({from:srcId,type:link.type});
+    }
+  }
+  return incoming;
+}
+
+function cardClick(el,id){
+  const wasOpen=el.classList.contains('open');
+  el.classList.toggle('open');
+  if(!wasOpen){
+    // Opening card → show links
+    showLinks(id);
+    // Redraw after expand animation completes so arrows follow new positions
+    setTimeout(()=>{if(activeLinkCard===id) drawArrows(id);},350);
+  } else {
+    // Closing card → clear links
+    clearLinks();
+  }
+}
+
+function toggleLinkDir(){
+  const cb=document.getElementById('linkToggle');
+  linkDir=cb.checked?'in':'out';
+  document.getElementById('linkLeg').classList.add('vis');
+  if(activeLinkCard) showLinks(activeLinkCard);
+}
+
+// Active filters
+let activeTpl='all',activeSoc='all';
+
+function applyFilters(){
+  document.querySelectorAll('.card').forEach(c=>{
+    const id=c.dataset.id;
+    const tpl=TPL[id]||'';
+    const pb=SOCIAL_PLAYBOOK[id];
+    const tplMatch=activeTpl==='all'||tpl===activeTpl;
+    const socMatch=activeSoc==='all'||(pb&&pb[activeSoc]);
+    if(tplMatch&&socMatch) c.classList.remove('dim');
+    else c.classList.add('dim');
+  });
+  if(activeLinkCard) clearLinks();
+}
+
+function filterTpl(tpl){
+  activeTpl=tpl;
+  document.querySelectorAll('.tpl-fb').forEach(b=>b.classList.remove('act'));
+  document.querySelector(`.tpl-fb[data-tpl="${tpl}"]`).classList.add('act');
+  applyFilters();
+}
+
+function filterSoc(ch){
+  activeSoc=ch;
+  document.querySelectorAll('.soc-fb').forEach(b=>b.classList.remove('act'));
+  document.querySelector(`.soc-fb[data-soc="${ch}"]`).classList.add('act');
+  applyFilters();
+}
+
+function toggleSocial(el,cardId,channel){
+  const container=document.getElementById('social-tip-'+cardId);
+  const wasActive=el.classList.contains('si-active');
+  // Reset all icons in this card
+  el.parentElement.querySelectorAll('.social-icon').forEach(i=>i.classList.remove('si-active'));
+  if(wasActive){container.innerHTML='';return;}
+  el.classList.add('si-active');
+  const pb=SOCIAL_PLAYBOOK[cardId];
+  if(!pb||!pb[channel]){container.innerHTML='';return;}
+  const tip=pb[channel];
+  const label={tiktok:'TikTok',insta:'Instagram',pinterest:'Pinterest'}[channel];
+  const color={tiktok:'#E1174A',insta:'#E1306C',pinterest:'#E60023'}[channel];
+  container.innerHTML=`<div class="social-tip" style="color:${color};border-left-color:${color}">
+    <div class="social-tip-label">${label}</div>
+    <div class="social-tip-format">${tip.format}</div>
+    <div class="social-tip-hook">${tip.hook}</div>
+    <div class="social-tip-cta">→ ${tip.cta}</div>
+  </div>`;
+}
+
+function showLinks(srcId){
+  // Clear previous highlights but keep activeLinkCard
+  const prevActive=activeLinkCard;
+  clearLinks();
+  activeLinkCard=srcId;
+  document.body.classList.add('has-sel');
+  document.getElementById('linkLeg').classList.add('vis');
+
+  if(linkDir==='out'){
+    // Outgoing links (default)
+    const links=linkData[srcId]||[];
+    const linkedIds=new Set(links.map(l=>l.to));
+    linkedIds.add(srcId);
+    document.querySelectorAll('.card').forEach(c=>{
+      const cid=c.dataset.id;
+      if(cid===srcId){c.classList.add('hl-src');c.classList.remove('dim');}
+      else if(linkedIds.has(cid)){
+        c.classList.remove('dim');
+        const link=links.find(l=>l.to===cid);
+        if(link){
+          const hlMap={forward:'fwd',backward:'bwd',breadcrumb:'bc',same:'same'};
+          c.classList.add('hl-'+(hlMap[link.type]||link.type));
+          c.querySelectorAll('.dir-badge').forEach(b=>b.style.display='none');
+          const cls={forward:'db-fwd',backward:'db-bwd',breadcrumb:'db-bc',same:'db-same'}[link.type];
+          const badge=c.querySelector('.'+cls);
+          if(badge) badge.style.display='block';
+        }
+      } else c.classList.add('dim');
+    });
+  } else {
+    // Incoming links
+    const incoming=getIncomingLinks(srcId);
+    const linkedIds=new Set(incoming.map(l=>l.from));
+    linkedIds.add(srcId);
+    document.querySelectorAll('.card').forEach(c=>{
+      const cid=c.dataset.id;
+      if(cid===srcId){c.classList.add('hl-src');c.classList.remove('dim');}
+      else if(linkedIds.has(cid)){
+        c.classList.remove('dim');
+        const link=incoming.find(l=>l.from===cid);
+        if(link){
+          const hlMap={forward:'fwd',backward:'bwd',breadcrumb:'bc',same:'same'};
+          c.classList.add('hl-'+(hlMap[link.type]||link.type));
+          c.querySelectorAll('.dir-badge').forEach(b=>b.style.display='none');
+          const cls={forward:'db-fwd',backward:'db-bwd',breadcrumb:'db-bc',same:'db-same'}[link.type];
+          const badge=c.querySelector('.'+cls);
+          if(badge) badge.style.display='block';
+        }
+      } else c.classList.add('dim');
+    });
+  }
+  drawArrows(srcId);
+}
+
+function clearLinks(){
+  activeLinkCard=null;
+  document.body.classList.remove('has-sel');
+  document.getElementById('linkLeg').classList.remove('vis');
+  document.querySelectorAll('.card').forEach(c=>{
+    c.classList.remove('dim','hl-fwd','hl-bwd','hl-bc','hl-same','hl-src');
+    c.querySelectorAll('.dir-badge').forEach(b=>b.style.display='none');
+  });
+  const svg=document.getElementById('linkSvg');
+  while(svg.childNodes.length>1) svg.removeChild(svg.lastChild);
+}
+
+function getCardCenter(id){
+  const el=document.querySelector(`[data-id="${id}"]`);
+  if(!el) return null;
+  const jw=document.getElementById('jw');
+  const jwR=jw.getBoundingClientRect();
+  const cR=el.getBoundingClientRect();
+  const sl=jw.scrollLeft;
+  return {cx:cR.left-jwR.left+sl+cR.width/2,cy:cR.top-jwR.top+cR.height/2,r:cR.right-jwR.left+sl,l:cR.left-jwR.left+sl};
+}
+
+function drawArrows(srcId){
+  const svg=document.getElementById('linkSvg');
+  while(svg.childNodes.length>1) svg.removeChild(svg.lastChild);
+  const jw=document.getElementById('jw');
+  svg.setAttribute('width',jw.scrollWidth);
+  svg.setAttribute('height',jw.scrollHeight);
+  svg.style.width=jw.scrollWidth+'px';
+  svg.style.height=jw.scrollHeight+'px';
+  const srcPos=getCardCenter(srcId);
+  if(!srcPos) return;
+
+  // Determine which links to draw
+  let arrowLinks=[];
+  if(linkDir==='out'){
+    arrowLinks=(linkData[srcId]||[]).map(l=>({from:srcId,to:l.to,type:l.type}));
+  } else {
+    arrowLinks=getIncomingLinks(srcId).map(l=>({from:l.from,to:srcId,type:l.type}));
+  }
+
+  arrowLinks.forEach(link=>{
+    const src=getCardCenter(link.from);
+    const tgt=getCardCenter(link.to);
+    if(!src||!tgt) return;
+    const hexColors={forward:'#2E7D32',backward:'#C62828',breadcrumb:'#999999',same:'#2962B6'};
+    const opacities={forward:.35,backward:.4,breadcrumb:.2,same:.25};
+    const widths={forward:2,backward:2,breadcrumb:1.5,same:1.5};
+    const arrowSize={forward:10,backward:10,breadcrumb:8,same:8};
+    const color=hexColors[link.type];
+    const opacity=opacities[link.type];
+    const sameCol=Math.abs(tgt.cx-src.cx)<50;
+    let x1,y1,x2,y2,cp1x,cp1y,cp2x,cp2y;
+    if(sameCol){
+      x1=src.r+2;y1=src.cy;x2=tgt.r+2;y2=tgt.cy;
+      cp1x=x1+40;cp1y=y1;cp2x=x2+40;cp2y=y2;
+    } else {
+      const goingRight=tgt.cx>src.cx;
+      if(goingRight){x1=src.r+2;y1=src.cy;x2=tgt.l-2;y2=tgt.cy;}
+      else{x1=src.l-2;y1=src.cy;x2=tgt.r+2;y2=tgt.cy;}
+      const arcStrength=Math.min(Math.abs(x2-x1)*0.15,80)+Math.abs(y2-y1)*0.1;
+      const cpy=Math.min(y1,y2)-arcStrength;
+      cp1x=x1+(x2-x1)*0.3;cp1y=cpy;cp2x=x1+(x2-x1)*0.7;cp2y=cpy;
+    }
+    // Calculate arrowhead direction from last control point to endpoint
+    const dx=x2-cp2x,dy=y2-cp2y;
+    const angle=Math.atan2(dy,dx);
+    const sz=arrowSize[link.type];
+    // Shorten the line so it ends where the arrowhead base begins
+    const endX=x2-sz*0.7*Math.cos(angle);
+    const endY=y2-sz*0.7*Math.sin(angle);
+    // Draw the line (shortened)
+    const path=document.createElementNS('http://www.w3.org/2000/svg','path');
+    path.setAttribute('d',`M${x1},${y1} C${cp1x},${cp1y} ${cp2x},${cp2y} ${endX},${endY}`);
+    path.setAttribute('stroke',color);path.setAttribute('stroke-width',widths[link.type]);
+    path.setAttribute('fill','none');path.setAttribute('opacity',opacity);
+    if(link.type==='breadcrumb') path.setAttribute('stroke-dasharray','6,4');
+    svg.appendChild(path);
+    // Draw arrowhead: slim triangle, tip at endpoint, base behind it
+    const tipX=x2,tipY=y2;
+    const halfW=sz*0.45; // half-width of the base
+    // Base center (behind tip)
+    const bcX=tipX-sz*Math.cos(angle);
+    const bcY=tipY-sz*Math.sin(angle);
+    // Perpendicular offset for base corners
+    const perpX=-Math.sin(angle)*halfW;
+    const perpY=Math.cos(angle)*halfW;
+    const arrow=document.createElementNS('http://www.w3.org/2000/svg','polygon');
+    arrow.setAttribute('points',`${tipX},${tipY} ${bcX+perpX},${bcY+perpY} ${bcX-perpX},${bcY-perpY}`);
+    arrow.setAttribute('fill',color);
+    arrow.setAttribute('opacity',Math.min(opacity+0.15,1));
+    svg.appendChild(arrow);
+  });
+}
+
+renderJourney();
+document.querySelector('.jw').addEventListener('scroll',()=>{if(activeLinkCard) drawArrows(activeLinkCard);});
+window.addEventListener('resize',()=>{if(activeLinkCard) drawArrows(activeLinkCard);});
+</script>
+</body>
+</html>

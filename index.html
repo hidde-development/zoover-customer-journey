@@ -773,7 +773,7 @@ function extractVolume(card){
   return total||VOL_OVERRIDE[card.id]||0;
 }
 
-const PAGE_COUNT={land:97,regio:503,bestemming:1987,accovz:1089,accfilter:834,accboek:2632};
+const PAGE_COUNT={land:51,regio:170,bestemming:500,landfilter:370,regiofilter:1000,accovz:1089,accfilter:834,accboek:2632};
 function extractPages(card){
   if(PAGE_COUNT[card.id])return PAGE_COUNT[card.id];
   return 1;

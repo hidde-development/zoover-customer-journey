@@ -112,12 +112,20 @@ body{font-family:'Afacad',sans-serif;font-weight:400;letter-spacing:0;line-heigh
 .ch-pages{opacity:.7;}
 .ch-vis{display:flex;align-items:center;gap:3px;font-weight:600;font-size:10px;letter-spacing:.03em;}
 .ch-vis-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
-.dash-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px;}
-.dash-card{background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:10px 12px;text-align:center;}
+.dash-wrap{position:relative;margin-bottom:12px;}
+.dash-track{overflow:hidden;border-radius:8px;}
+.dash-grid{display:flex;transition:transform .25s ease;}
+.dash-card{flex:0 0 100%;min-width:0;background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:10px 12px;text-align:center;box-sizing:border-box;}
 .dash-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--fa);margin-bottom:4px;}
 .dash-val{font-size:20px;font-weight:700;color:var(--fg);line-height:1.2;}
 .dash-val.empty{font-size:12px;font-weight:400;color:var(--fa);opacity:.6;}
 .dash-sub{font-size:10px;color:var(--fa);margin-top:2px;}
+.dash-nav{position:absolute;top:50%;transform:translateY(-50%);background:var(--bg);border:1px solid var(--bd);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:14px;line-height:1;z-index:2;color:var(--fg);user-select:none;}
+.dash-nav.dn-prev{left:-11px;}
+.dash-nav.dn-next{right:-11px;}
+.dash-dots{display:flex;justify-content:center;gap:5px;margin-top:6px;}
+.dash-dot{width:6px;height:6px;border-radius:50%;background:var(--bd);cursor:pointer;transition:background .2s;}
+.dash-dot.active{background:var(--fg);}
 .cb-s{margin-bottom:10px;}
 .cb-lbl{font-size:10px;font-weight:400;text-transform:uppercase;letter-spacing:0.12em;line-height:1.1;color:var(--mu);margin-bottom:5px;}
 .cb-chs{display:flex;flex-wrap:wrap;gap:3px;}
@@ -1029,11 +1037,21 @@ function renderJourney(){
 
       // Dashboard metrics
       function dashVal(v,suffix){return v!=null?`<div class="dash-val">${fmtNL(v)}${suffix||''}</div>`:`<div class="dash-val empty">Nog invullen</div>`;}
-      const dashHtml=`<div class="dash-grid">
-        <div class="dash-card"><div class="dash-label">Google zoekvolume</div>${dashVal(met.gVol,'/mnd')}<div class="dash-sub">gem. per pagina</div></div>
-        <div class="dash-card"><div class="dash-label">Google kliks</div>${dashVal(met.gClicks,'/mnd')}<div class="dash-sub">gem. per pagina</div></div>
-        <div class="dash-card"><div class="dash-label">Branded volume</div>${dashVal(met.brandVol,'/mnd')}<div class="dash-sub">zoeker + zoover</div></div>
-        <div class="dash-card"><div class="dash-label">AI-zichtbaarheid</div>${met.aiScore!=null?`<div class="dash-val">${met.aiScore}<span style="font-size:11px;font-weight:400">/100</span></div>`:`<div class="dash-val empty">Nog invullen</div>`}<div class="dash-sub">gem. score</div></div>
+      const dashHtml=`<div class="dash-wrap" id="dw-${c.id}">
+        <div class="dash-track"><div class="dash-grid" id="dg-${c.id}">
+          <div class="dash-card"><div class="dash-label">Google zoekvolume</div>${dashVal(met.gVol,'/mnd')}<div class="dash-sub">gem. per pagina</div></div>
+          <div class="dash-card"><div class="dash-label">Google kliks</div>${dashVal(met.gClicks,'/mnd')}<div class="dash-sub">gem. per pagina</div></div>
+          <div class="dash-card"><div class="dash-label">Branded volume</div>${dashVal(met.brandVol,'/mnd')}<div class="dash-sub">zoeker + zoover</div></div>
+          <div class="dash-card"><div class="dash-label">AI-zichtbaarheid</div>${met.aiScore!=null?`<div class="dash-val">${met.aiScore}<span style="font-size:11px;font-weight:400">/100</span></div>`:`<div class="dash-val empty">Nog invullen</div>`}<div class="dash-sub">gem. score</div></div>
+        </div></div>
+        <div class="dash-nav dn-prev" onclick="event.stopPropagation();dashNav('${c.id}',-1)">&#8249;</div>
+        <div class="dash-nav dn-next" onclick="event.stopPropagation();dashNav('${c.id}',1)">&#8250;</div>
+        <div class="dash-dots">
+          <div class="dash-dot active" id="dd-${c.id}-0" onclick="event.stopPropagation();dashGo('${c.id}',0)"></div>
+          <div class="dash-dot" id="dd-${c.id}-1" onclick="event.stopPropagation();dashGo('${c.id}',1)"></div>
+          <div class="dash-dot" id="dd-${c.id}-2" onclick="event.stopPropagation();dashGo('${c.id}',2)"></div>
+          <div class="dash-dot" id="dd-${c.id}-3" onclick="event.stopPropagation();dashGo('${c.id}',3)"></div>
+        </div>
       </div>`;
 
       // Keyword groups (no type labels)
@@ -1092,6 +1110,15 @@ function getIncomingLinks(targetId){
   }
   return incoming;
 }
+
+const _dashIdx={};
+function dashGo(id,i){
+  _dashIdx[id]=i;
+  const track=document.getElementById('dg-'+id);
+  if(track)track.style.transform=`translateX(${-i*100}%)`;
+  for(let j=0;j<4;j++){const d=document.getElementById('dd-'+id+'-'+j);if(d)d.classList.toggle('active',j===i);}
+}
+function dashNav(id,dir){dashGo(id,((_dashIdx[id]||0)+dir+4)%4);}
 
 function cardClick(el,id){
   const wasOpen=el.classList.contains('open');

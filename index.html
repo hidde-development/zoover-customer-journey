@@ -730,21 +730,22 @@ const SOCIAL_PLAYBOOK={
 // gVol: gem. Google zoekvolume/mnd  gClicks: gem. kliks/mnd  aiScore: AI-zichtbaarheid 0-100
 // brandVol: branded zoekvolume (bijv. "all inclusive zoover", "[hotel] zoover")
 const METRICS={
+  // Bron: Google Search Console, laatste 12 maanden. gVol = gem. vertoningen/mnd/pagina, gClicks = gem. kliks/mnd/pagina
   homepage:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
   inspi:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
   vertrek:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
   blog:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
-  land:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
-  regio:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  land:{vis:'goed',gVol:6700,gClicks:42,aiScore:null,brandVol:null},        // 12 landpagina's, gem. pos. 5–9
+  regio:{vis:'goed',gVol:1600,gClicks:23,aiScore:null,brandVol:null},       // 4 regiopagina's, gem. pos. 4
   seizoen:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
   vaktype:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
   vera:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
   zoekres:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
-  bestemming:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
-  bestfilter:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
-  autovak:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
-  landfilter:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
-  regiofilter:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
+  bestemming:{vis:'goed',gVol:1900,gClicks:25,aiScore:null,brandVol:null},  // 12 bestemmingen, gem. pos. 5
+  bestfilter:{vis:'matig',gVol:1900,gClicks:26,aiScore:null,brandVol:null}, // 8 bestemming+kenmerk, gem. pos. 6
+  autovak:{vis:'goed',gVol:5400,gClicks:95,aiScore:null,brandVol:null},     // 13 autovak-pagina's, gem. pos. 5, CTR 2–3%
+  landfilter:{vis:'matig',gVol:7000,gClicks:53,aiScore:null,brandVol:null}, // 12 land+filter (AI, hotels), gem. pos. 4, lage CTR
+  regiofilter:{vis:'matig',gVol:3300,gClicks:25,aiScore:null,brandVol:null},// 14 regio+filter, gem. pos. 5–7
   accovz:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
   accfilter:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},
   hotelstop:{vis:null,gVol:null,gClicks:null,aiScore:null,brandVol:null},

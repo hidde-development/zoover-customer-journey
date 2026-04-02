@@ -288,6 +288,38 @@ body.has-sel .card:not(.hl-src):not(.hl-fwd):not(.hl-bwd):not(.hl-bc):not(.hl-sa
   .ftr-logo{max-width:180px;}
   .ftr-sub{font-size:11px;}
 }
+
+/* ——— FAQ sectie ——— */
+.faq-sec{padding:40px 24px 48px;border-top:1px solid var(--bd);background:var(--sf);}
+.faq-wrap{max-width:1100px;margin:0 auto;}
+.faq-sec-title{font-size:18px;font-weight:700;color:var(--tx);margin-bottom:6px;}
+.faq-sec-sub{font-size:12px;color:var(--mu);margin-bottom:28px;}
+.faq-blocks{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+@media(max-width:800px){.faq-blocks{grid-template-columns:1fr;}}
+.faq-block{background:var(--bg);border:1px solid var(--bd);border-radius:10px;overflow:hidden;}
+.faq-block-hdr{padding:14px 16px;border-bottom:1px solid var(--bd);cursor:pointer;display:flex;align-items:center;gap:10px;user-select:none;}
+.faq-block-hdr:hover{background:var(--sf2);}
+.faq-block-icon{font-size:18px;flex-shrink:0;}
+.faq-block-titles{flex:1;}
+.faq-block-title{font-size:13px;font-weight:700;color:var(--tx);}
+.faq-block-sub{font-size:11px;color:var(--mu);margin-top:2px;}
+.faq-block-caret{font-size:14px;color:var(--mu);transition:transform .25s;flex-shrink:0;}
+.faq-block.open .faq-block-caret{transform:rotate(180deg);}
+.faq-body{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+.faq-block.open .faq-body{max-height:1000px;}
+.faq-list{list-style:none;padding:0;margin:0;}
+.faq-item{border-bottom:1px solid var(--bd);font-size:12px;color:var(--tx);line-height:1.4;}
+.faq-item:last-child{border-bottom:none;}
+.faq-q{display:flex;gap:8px;align-items:flex-start;padding:11px 16px;cursor:pointer;user-select:none;}
+.faq-q:hover{background:var(--sf2);}
+.faq-item-num{flex-shrink:0;font-size:10px;font-weight:700;color:var(--fa);margin-top:1px;min-width:16px;}
+.faq-q-text{flex:1;}
+.faq-q-caret{flex-shrink:0;font-size:12px;color:var(--mu);transition:transform .2s;margin-top:1px;}
+.faq-item.open .faq-q-caret{transform:rotate(180deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease;}
+.faq-item.open .faq-a{max-height:400px;}
+.faq-a-inner{padding:4px 16px 14px 40px;font-size:12px;color:var(--mu);font-style:italic;}
+.faq-var{display:inline;background:rgba(232,119,34,.12);color:#C65D00;border-radius:3px;padding:1px 4px;font-size:11px;font-weight:600;font-family:'SF Mono','Fira Code',monospace;}
 </style>
 </head>
 <body>
@@ -344,6 +376,63 @@ body.has-sel .card:not(.hl-src):not(.hl-fwd):not(.hl-bwd):not(.hl-bc):not(.hl-sa
   </defs>
 </svg>
 </div>
+
+<section class="faq-sec">
+  <div class="faq-wrap">
+    <div class="faq-sec-title">FAQ's per paginatype</div>
+    <div class="faq-sec-sub">Gebruik deze vragen in FAQ-secties op de betreffende pagina's — dit vergroot de kans op citaties in ChatGPT, Perplexity en Google AI Overviews.</div>
+    <div class="faq-blocks">
+
+      <!-- PDP: Accommodatie-detailpagina -->
+      <div class="faq-block open" onclick="this.classList.toggle('open')">
+        <div class="faq-block-hdr">
+          <span class="faq-block-icon">🏨</span>
+          <div class="faq-block-titles">
+            <div class="faq-block-title">Accommodatie-detailpagina (PDP)</div>
+            <div class="faq-block-sub">8 FAQ-vragen voor <code class="faq-var">{AccommodatieNaam}</code></div>
+          </div>
+          <span class="faq-block-caret">▾</span>
+        </div>
+        <div class="faq-body">
+          <ol class="faq-list">
+            <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">1</span><span class="faq-q-text">Wie is Zoover en wat zijn de voordelen van hier je vakantie boeken?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner">Antwoord volgt nog.</div></div></li>
+            <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">2</span><span class="faq-q-text">Boek ik via Zoover altijd een pakketreis? Zijn transfer en vlucht inbegrepen?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner">Antwoord volgt nog.</div></div></li>
+            <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">3</span><span class="faq-q-text">Is het veilig en betrouwbaar om <code class="faq-var">{AccommodatieNaam}</code> te boeken via Zoover?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner">Antwoord volgt nog.</div></div></li>
+            <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">4</span><span class="faq-q-text">Heb ik garantie als ik mijn vakantie boek via Zoover?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner">Antwoord volgt nog.</div></div></li>
+            <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">5</span><span class="faq-q-text">Welke annuleringsvoorwaarden gelden op boekingsplatform Zoover?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner">Antwoord volgt nog.</div></div></li>
+            <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">6</span><span class="faq-q-text">Is <code class="faq-var">{AccommodatieNaam}</code> toegankelijk voor rolstoelgebruikers of mensen met een fysieke beperking?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner">Antwoord volgt nog.</div></div></li>
+            <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">7</span><span class="faq-q-text">Is <code class="faq-var">{AccommodatieNaam}</code> een duurzame of eco-vriendelijke vakantiekeuze?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner">Antwoord volgt nog.</div></div></li>
+            <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">8</span><span class="faq-q-text">Zijn huisdieren, zoals honden, toegestaan tijdens een verblijf in <code class="faq-var">{AccommodatieNaam}</code>?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner">Antwoord volgt nog.</div></div></li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- PLP: Listerpagina -->
+      <div class="faq-block open" onclick="this.classList.toggle('open')">
+        <div class="faq-block-hdr">
+          <span class="faq-block-icon">📋</span>
+          <div class="faq-block-titles">
+            <div class="faq-block-title">Listerpagina (PLP — Bestemmingen, Landen &amp; Thema's)</div>
+            <div class="faq-block-sub">7 FAQ-vragen voor <code class="faq-var">{Bestemming}</code></div>
+          </div>
+          <span class="faq-block-caret">▾</span>
+        </div>
+        <div class="faq-body">
+          <ol class="faq-list">
+            <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">1</span><span class="faq-q-text">Wat zijn de top accommodaties in <code class="faq-var">{Bestemming}</code> in <code class="faq-var">{HuidigJaar}</code>?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner">Antwoord volgt nog.</div></div></li>
+            <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">2</span><span class="faq-q-text">Wie is Zoover en wat zijn de voordelen van hier je vakantie boeken?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner">Antwoord volgt nog.</div></div></li>
+            <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">3</span><span class="faq-q-text">Hoe werkt het boeken van een vakantie naar <code class="faq-var">{Bestemming}</code> via Zoover?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner">Antwoord volgt nog.</div></div></li>
+            <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">4</span><span class="faq-q-text">Hoe garandeert Zoover de laagste prijs voor een vakantie naar <code class="faq-var">{Bestemming}</code>?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner">Antwoord volgt nog.</div></div></li>
+            <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">5</span><span class="faq-q-text">Welke keurmerken en garanties heeft Zoover?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner">Antwoord volgt nog.</div></div></li>
+            <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">6</span><span class="faq-q-text">Zijn de reviews voor accommodaties in <code class="faq-var">{Bestemming}</code> op Zoover betrouwbaar?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner">Antwoord volgt nog.</div></div></li>
+            <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">7</span><span class="faq-q-text">Wat zijn de annuleringsvoorwaarden als ik een vakantie boek via Zoover?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner">Antwoord volgt nog.</div></div></li>
+          </ol>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <footer class="ftr">
   <div class="ftr-logo"><img src="Zoover-logo-2021_RGB-pos.png" alt="Zoover" style="width:100%;height:auto;"></div>

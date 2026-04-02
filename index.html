@@ -294,8 +294,9 @@ body.has-sel .card:not(.hl-src):not(.hl-fwd):not(.hl-bwd):not(.hl-bc):not(.hl-sa
 .faq-wrap{max-width:1100px;margin:0 auto;}
 .faq-sec-title{font-size:18px;font-weight:700;color:var(--tx);margin-bottom:6px;}
 .faq-sec-sub{font-size:12px;color:var(--mu);margin-bottom:28px;}
-.faq-blocks{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-@media(max-width:800px){.faq-blocks{grid-template-columns:1fr;}}
+.faq-blocks{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;}
+@media(max-width:1100px){.faq-blocks{grid-template-columns:1fr 1fr;}}
+@media(max-width:700px){.faq-blocks{grid-template-columns:1fr;}}
 .faq-block{background:var(--bg);border:1px solid var(--bd);border-radius:10px;overflow:hidden;}
 .faq-block-hdr{padding:14px 16px;border-bottom:1px solid var(--bd);cursor:pointer;display:flex;align-items:center;gap:10px;user-select:none;}
 .faq-block-hdr:hover{background:var(--sf2);}
@@ -394,7 +395,7 @@ body.has-sel .card:not(.hl-src):not(.hl-fwd):not(.hl-bwd):not(.hl-bc):not(.hl-sa
         <div class="faq-block-hdr">
           <span class="faq-block-icon">🏨</span>
           <div class="faq-block-titles">
-            <div class="faq-block-title">Accommodatie-detailpagina (PDP)</div>
+            <div class="faq-block-title">PDP vliegvakantie</div>
             <div class="faq-block-sub">9 FAQ-vragen voor <code class="faq-var">{AccommodatieNaam}</code></div>
           </div>
           <span class="faq-block-caret">▾</span>
@@ -433,6 +434,30 @@ body.has-sel .card:not(.hl-src):not(.hl-fwd):not(.hl-bwd):not(.hl-bc):not(.hl-sa
             <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">5</span><span class="faq-q-text">Welke keurmerken en garanties heeft Zoover?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner"><div class="faq-a-brief">Geef aan dat Zoover voldoet aan alle belangrijke en relevante keurmerken, en leg uit waar elk keurmerk voor staat.</div><div class="faq-a-kws"><span class="faq-a-kw">keurmerken</span><span class="faq-a-kw">certificering</span><span class="faq-a-kw">garanties</span><span class="faq-a-kw">betrouwbaar</span><span class="faq-a-kw">erkend</span></div><span class="faq-a-link">→ Keurmerken</span></div></div></li>
             <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">6</span><span class="faq-q-text">Zijn de reviews voor accommodaties in <code class="faq-var">{Bestemming}</code> op Zoover betrouwbaar?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner"><div class="faq-a-brief">Vertel dat Zoover is begonnen als recensieplatform en daarom veel waarde hecht aan reviews. Leg uit dat alle beoordelingen worden gecontroleerd zodat je altijd de ervaringen van échte mensen leest.</div><div class="faq-a-kws"><span class="faq-a-kw">recensieplatform</span><span class="faq-a-kw">gecontroleerde reviews</span><span class="faq-a-kw">echte ervaringen</span><span class="faq-a-kw">betrouwbare beoordelingen</span><span class="faq-a-kw">geverifieerd</span></div></div></div></li>
             <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">7</span><span class="faq-q-text">Wat zijn de annuleringsvoorwaarden als ik een vakantie boek via Zoover?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner"><div class="faq-a-brief">Geef aan dat annuleren altijd mogelijk is, maar dat reisorganisaties dit in het algemeen niet vergoeden — Zoover dus ook niet. Benadruk dat reizigers zelf een annuleringsverzekering moeten hebben afgesloten.</div><div class="faq-a-kws"><span class="faq-a-kw">annuleren</span><span class="faq-a-kw">annuleringsverzekering</span><span class="faq-a-kw">reisorganisatie</span><span class="faq-a-kw">niet vergoed</span><span class="faq-a-kw">voorwaarden</span></div><span class="faq-a-link">→ Boekingsvoorwaarden</span></div></div></li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- PDP: Autovakantie -->
+      <div class="faq-block open" onclick="this.classList.toggle('open')">
+        <div class="faq-block-hdr">
+          <span class="faq-block-icon">🚗</span>
+          <div class="faq-block-titles">
+            <div class="faq-block-title">PDP autovakantie</div>
+            <div class="faq-block-sub">Alleen accommodatie — camping, hotel of vakantiepark</div>
+          </div>
+          <span class="faq-block-caret">▾</span>
+        </div>
+        <div class="faq-body">
+          <ol class="faq-list">
+            <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">1</span><span class="faq-q-text">Wie is Zoover en wat zijn de voordelen van hier je vakantie boeken?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner"><div class="faq-a-brief">Omschrijf wat Zoover uniek maakt: hoe we zijn gegroeid van reviewplatform naar boekingswebsite, en wat de concrete voordelen zijn voor de reiziger.</div><div class="faq-a-kws"><span class="faq-a-kw">reviewplatform</span><span class="faq-a-kw">boekingswebsite</span><span class="faq-a-kw">lage-prijsgarantie</span><span class="faq-a-kw">echte reviews</span><span class="faq-a-kw">makkelijk boeken</span><span class="faq-a-kw">onderscheidend</span></div><span class="faq-a-link">→ Over ons</span></div></div></li>
+            <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">2</span><span class="faq-q-text">Is er een online reisassistent die mij kan helpen bij het boeken van een vakantie?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner"><div class="faq-a-vera">Ja! Onze reisassistent Vera geeft antwoord op al je vragen en doet suggesties voor jouw ideale vakantie.</div></div></div></li>
+            <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">3</span><span class="faq-q-text">Is het veilig en betrouwbaar om <code class="faq-var">{AccommodatieNaam}</code> te boeken via Zoover?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner"><div class="faq-a-brief">Geef aan dat Zoover goed staat aangeschreven, voldoet aan alle relevante keurmerken, en dat je dus met een gerust hart kunt boeken.</div><div class="faq-a-kws"><span class="faq-a-kw">keurmerken</span><span class="faq-a-kw">betrouwbaar</span><span class="faq-a-kw">veilig boeken</span><span class="faq-a-kw">gerust hart</span><span class="faq-a-kw">aangeschreven</span></div><span class="faq-a-link">→ Boekingsvoorwaarden</span> <span class="faq-a-link">→ Mijn Zoover</span></div></div></li>
+            <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">4</span><span class="faq-q-text">Heb ik garantie als ik mijn vakantie boek via Zoover?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner"><div class="faq-a-brief">Geef aan dat garanties per situatie kunnen verschillen, omdat Zoover ook met andere partijen samenwerkt. Wees hier transparant over.</div><div class="faq-a-kws"><span class="faq-a-kw">garantie</span><span class="faq-a-kw">per situatie</span><span class="faq-a-kw">samenwerking partijen</span><span class="faq-a-kw">transparant</span></div><span class="faq-a-link">→ Boekingsvoorwaarden</span></div></div></li>
+            <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">5</span><span class="faq-q-text">Welke annuleringsvoorwaarden gelden op boekingsplatform Zoover?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner"><div class="faq-a-brief">Geef aan dat annuleren altijd mogelijk is, maar dat reisorganisaties dit in het algemeen niet vergoeden — Zoover dus ook niet. Benadruk dat reizigers zelf een annuleringsverzekering moeten hebben afgesloten.</div><div class="faq-a-kws"><span class="faq-a-kw">annuleren</span><span class="faq-a-kw">annuleringsverzekering</span><span class="faq-a-kw">reisorganisatie</span><span class="faq-a-kw">niet vergoed</span><span class="faq-a-kw">voorwaarden</span></div><span class="faq-a-link">→ Boekingsvoorwaarden</span></div></div></li>
+            <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">6</span><span class="faq-q-text">Is <code class="faq-var">{AccommodatieNaam}</code> toegankelijk voor rolstoelgebruikers of mensen met een fysieke beperking?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner"><div class="faq-a-auto">⚙ Wordt gegenereerd vanuit de paginacontent van {AccommodatieNaam}.</div></div></div></li>
+            <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">7</span><span class="faq-q-text">Is <code class="faq-var">{AccommodatieNaam}</code> een duurzame of eco-vriendelijke vakantiekeuze?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner"><div class="faq-a-auto">⚙ Wordt gegenereerd vanuit de paginacontent van {AccommodatieNaam}.</div></div></div></li>
+            <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">8</span><span class="faq-q-text">Zijn huisdieren, zoals honden, toegestaan tijdens een verblijf in <code class="faq-var">{AccommodatieNaam}</code>?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner"><div class="faq-a-auto">⚙ Wordt gegenereerd vanuit de paginacontent van {AccommodatieNaam}.</div></div></div></li>
           </ol>
         </div>
       </div>

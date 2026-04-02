@@ -321,8 +321,10 @@ body.has-sel .card:not(.hl-src):not(.hl-fwd):not(.hl-bwd):not(.hl-bc):not(.hl-sa
 .faq-item.open .faq-a{max-height:400px;}
 .faq-a-inner{padding:8px 16px 14px 40px;font-size:12px;}
 .faq-a-brief{color:var(--mu);margin-bottom:7px;line-height:1.5;}
-.faq-a-kws{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px;}
-.faq-a-kw{background:var(--sf2);border:1px solid var(--bd);border-radius:3px;padding:2px 7px;font-size:11px;color:var(--tx);font-weight:600;}
+.faq-a-kws{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:0;}
+.faq-a-kws::before{content:"Entiteiten";display:block;width:100%;font-size:10px;font-weight:700;color:var(--fa);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;}
+.faq-a-kw{background:rgba(106,27,154,.08);border:1px solid rgba(106,27,154,.2);border-radius:3px;padding:2px 7px;font-size:11px;color:#6A1B9A;font-weight:600;}
+.faq-a-ent-lbl{display:none;}
 .faq-a-link{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;color:var(--c2);border:1px solid rgba(232,119,34,.3);border-radius:4px;padding:3px 9px;background:rgba(232,119,34,.06);}
 .faq-a-vera{color:var(--llm);font-size:12px;line-height:1.5;}
 .faq-a-auto{font-size:11px;color:var(--fa);font-style:italic;}

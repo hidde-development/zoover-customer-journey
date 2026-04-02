@@ -327,6 +327,13 @@ body.has-sel .card:not(.hl-src):not(.hl-fwd):not(.hl-bwd):not(.hl-bc):not(.hl-sa
 .faq-a-link{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;color:var(--c2);border:1px solid rgba(232,119,34,.3);border-radius:4px;padding:3px 9px;background:rgba(232,119,34,.06);}
 .faq-a-vera{color:var(--llm);font-size:12px;line-height:1.5;}
 .faq-a-auto{font-size:11px;color:var(--fa);font-style:italic;}
+.faq-notice{display:flex;align-items:flex-start;gap:8px;margin:0 16px 12px;padding:8px 12px;background:rgba(232,119,34,.08);border:1px solid rgba(232,119,34,.25);border-radius:6px;font-size:11px;color:#C65D00;line-height:1.4;}
+.meta-ex{background:var(--bg);border:1px solid var(--bd);border-radius:6px;padding:8px 10px;font-size:11px;line-height:1.5;}
+.meta-ex-row{margin-bottom:5px;}
+.meta-ex-row:last-child{margin-bottom:0;}
+.meta-ex-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--fa);margin-bottom:2px;}
+.meta-ex-title{color:#1A73E8;font-weight:600;}
+.meta-ex-desc{color:var(--mu);}
 .faq-a-ent-lbl{font-size:10px;font-weight:700;color:var(--fa);text-transform:uppercase;letter-spacing:.5px;margin-top:7px;margin-bottom:4px;}
 .faq-a-ents{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:4px;}
 .faq-a-ent{background:rgba(106,27,154,.08);border:1px solid rgba(106,27,154,.2);border-radius:3px;padding:2px 7px;font-size:11px;color:#6A1B9A;font-weight:600;}
@@ -478,11 +485,12 @@ body.has-sel .card:not(.hl-src):not(.hl-fwd):not(.hl-bwd):not(.hl-bc):not(.hl-sa
           <span class="faq-block-icon">✨</span>
           <div class="faq-block-titles">
             <div class="faq-block-title">Online Reisassistent (Vera)</div>
-            <div class="faq-block-sub">7 FAQ-vragen over Vera</div>
+            <div class="faq-block-sub">7 FAQ-vragen over Vera · nog te controleren</div>
           </div>
           <span class="faq-block-caret">▾</span>
         </div>
         <div class="faq-body">
+          <div class="faq-notice">⚠ Deze vragen zijn een startselectie en moeten persoonlijk nog worden aangevuld en gecontroleerd.</div>
           <ol class="faq-list">
             <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">1</span><span class="faq-q-text">Wat is Vera en hoe kan de reisassistent mij helpen?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner"><div class="faq-a-brief">Introduceer Vera als de slimme, nederlandstalige AI-reisassistent van Zoover. Vera helpt je bij het vinden van de perfecte vakantie op basis van jouw wensen, budget en reisgezelschap.</div><div class="faq-a-kws"><span class="faq-a-kw">AI-reisassistent</span><span class="faq-a-kw">persoonlijk advies</span><span class="faq-a-kw">vakantie op maat</span><span class="faq-a-kw">Zoover Vera</span></div></div></div></li>
             <li class="faq-item"><div class="faq-q" onclick="event.stopPropagation();this.parentElement.classList.toggle('open')"><span class="faq-item-num">2</span><span class="faq-q-text">Is Vera gratis te gebruiken?</span><span class="faq-q-caret">▾</span></div><div class="faq-a"><div class="faq-a-inner"><div class="faq-a-brief">Geef aan dat Vera gratis beschikbaar is voor alle bezoekers van Zoover, zonder registratie of abonnement.</div><div class="faq-a-kws"><span class="faq-a-kw">gratis</span><span class="faq-a-kw">geen registratie</span><span class="faq-a-kw">toegankelijk</span></div></div></div></li>
@@ -1177,6 +1185,42 @@ function copyGenBrief(ev,id){
   navigator.clipboard.writeText(text).then(()=>{btn.classList.add('copied');btn.textContent='\u2713 Gekopieerd!';setTimeout(()=>{btn.classList.remove('copied');btn.textContent='📋 Kopieer als platte tekst';},2000);});
 }
 
+function metaExamples(c){
+  const tpl=TPL[c.id]||'';
+  const ex={
+    homepage:{t:'Zoover — Vakanties vergelijken & boeken met echte reviews',d:'Vergelijk vakanties op Zoover en boek met vertrouwen. Lees echte reviews van reizigers en vind de beste prijs. Lage-prijsgarantie.'},
+    inspi:{t:'[Bestemming] vakantie ideeën & inspiratie | Zoover',d:'Laat je inspireren voor je volgende vakantie naar [Bestemming]. Ontdek tips, ervaringen en de mooiste plekken.'},
+    vertrek:{t:'Vakanties vanaf [Luchthaven] boeken | Zoover',d:'Bekijk alle vakanties die vertrekken vanaf [Luchthaven]. Vergelijk prijzen en lees echte reviews op Zoover.'},
+    blog:{t:'[Onderwerp]: tips, ervaringen & advies | Zoover Blog',d:'Alles over [onderwerp]: handige tips, eerlijke ervaringen van reizigers en praktisch reisadvies van Zoover.'},
+    land:{t:'Vakantie [Land] [Jaar] — Aanbiedingen & reviews | Zoover',d:'Plan jouw vakantie naar [Land]. Vergelijk accommodaties, lees echte reviews en boek voor de laagste prijs op Zoover.'},
+    regio:{t:'Vakantie [Regio] [Jaar] — Hotels, campings & meer | Zoover',d:'Ontdek de mooiste accommodaties in [Regio]. Lees beoordelingen van echte reizigers en boek met lage-prijsgarantie.'},
+    seizoen:{t:'[Seizoen] vakantie [Jaar] — Bestemmingen & aanbiedingen | Zoover',d:'Op zoek naar een [seizoen] vakantie? Bekijk de populairste bestemmingen en boek voor de beste prijs op Zoover.'},
+    vaktype:{t:'[Type] vakantie boeken [Jaar] — Vergelijk & boek | Zoover',d:'Boek jouw [type] vakantie op Zoover. Vergelijk het aanbod, lees reviews en profiteer van de lage-prijsgarantie.'},
+    vera:{t:'Vera — Jouw persoonlijke AI-reisassistent | Zoover',d:'Vertel Vera wat je zoekt en ontvang direct persoonlijk reisadvies. Gratis, nederlandstalig en altijd beschikbaar op Zoover.'},
+    zoekres:{t:'Zoekresultaten voor [Zoekopdracht] | Zoover',d:'Bekijk alle vakanties die overeenkomen met jouw zoekopdracht. Vergelijk prijzen en lees echte reviews op Zoover.'},
+    bestemming:{t:'Vakantie [Bestemming] [Jaar] — Hotels & reviews | Zoover',d:'Alles over een vakantie in [Bestemming]: top accommodaties, echte reizigersreviews en de beste prijzen op Zoover.'},
+    bestfilter:{t:'[Bestemming] + [Kenmerk] vakantie [Jaar] | Zoover',d:'Op zoek naar een [kenmerk] vakantie in [Bestemming]? Vergelijk het aanbod en boek voor de laagste prijs op Zoover.'},
+    autovak:{t:'Autovakantie [Jaar] — Campings, hotels & vakantieparken | Zoover',d:'Plan jouw autovakantie via Zoover. Vergelijk campings, hotels en vakantieparken en lees echte reviews.'},
+    landfilter:{t:'[Type] vakantie [Land] [Jaar] — Vergelijk & boek | Zoover',d:'Bekijk het beste [type] aanbod in [Land]. Lees reviews, vergelijk prijzen en boek met lage-prijsgarantie op Zoover.'},
+    regiofilter:{t:'[Type] vakantie [Regio] [Jaar] | Zoover',d:'Ontdek de beste [type] vakanties in [Regio]. Vergelijk accommodaties en boek voor de laagste prijs op Zoover.'},
+    accovz:{t:'Hotels in [Bestemming] [Jaar] — Reviews & prijzen | Zoover',d:'Vergelijk hotels in [Bestemming] op Zoover. Lees echte beoordelingen van reizigers en boek met lage-prijsgarantie.'},
+    accfilter:{t:'[Subtype] in [Bestemming] [Jaar] | Zoover',d:'Bekijk alle [subtype] opties in [Bestemming]. Vergelijk faciliteiten, lees reviews en boek voor de beste prijs.'},
+    hotelstop:{t:'Hotels vergelijken & boeken met echte reviews | Zoover',d:'Vind het perfecte hotel op Zoover. Lees beoordelingen van echte reizigers en profiteer van de lage-prijsgarantie.'},
+    hotelketen:{t:'[Keten] hotels — Reviews & aanbiedingen | Zoover',d:'Alles over [Keten] hotels: ervaringen van gasten, beschikbare locaties en de beste prijzen via Zoover.'},
+    lastminute:{t:'Last minute vakantie [Jaar] — Aanbiedingen & deals | Zoover',d:'Ontdek de beste last minute vakanties op Zoover. Boek snel voor de laagste prijs en lees echte reviews.'},
+    aanbiedingen:{t:'Vakantie aanbiedingen & deals [Jaar] | Zoover',d:'Bekijk de nieuwste vakantiedeals op Zoover. Van last minute tot vroegboekkorting — altijd voor de laagste prijs.'},
+    accboek:{t:'[AccommodatieNaam] in [Bestemming] boeken — Reviews [Jaar] | Zoover',d:'Boek [AccommodatieNaam] via Zoover en lees echte reviews van reizigers. Lage-prijsgarantie en veilig betalen.'},
+    reviewform:{t:'Schrijf een review over jouw vakantie | Zoover',d:'Deel jouw reiservaring op Zoover en help andere reizigers. Schrijf een eerlijke beoordeling van jouw accommodatie.'},
+    mijnzoover:{t:'Mijn Zoover — Jouw boekingen & voorkeuren | Zoover',d:'Bekijk en beheer jouw boekingen, sla favorieten op en volg jouw reishistorie in jouw persoonlijke Zoover-account.'}
+  };
+  const e=ex[c.id];
+  if(!e)return '';
+  return `<div class="cb-s"><div class="cb-lbl">Meta title &amp; description</div><div class="meta-ex">
+    <div class="meta-ex-row"><div class="meta-ex-lbl">Title <span style="font-weight:400;color:var(--fa)">(max. 60 tekens)</span></div><div class="meta-ex-title">${e.t}</div></div>
+    <div class="meta-ex-row"><div class="meta-ex-lbl">Description <span style="font-weight:400;color:var(--fa)">(max. 155 tekens)</span></div><div class="meta-ex-desc">${e.d}</div></div>
+  </div></div>`;
+}
+
 function renderJourney(){
   const j=document.getElementById('J');
   let h='';
@@ -1233,6 +1277,7 @@ function renderJourney(){
           <div class="cb-url">Voorbeeld: ${c.url}</div>
           ${dashHtml}
           <div class="cb-s"><div class="cb-lbl">Keyword-groepen voor content</div>${kwgHtml}</div>
+          ${metaExamples(c)}
           <div class="cb-s"><div class="cb-lbl">LLM-queries (AEO)</div>${lqs}</div>
           ${si}${gp}${(()=>{const co=COMPETITORS[c.id]||[];return co.length?`<div class="cb-s"><div class="cb-lbl">Concurrenten op deze intentie</div><div class="comp-tags">${co.map(x=>`<span class="comp-tag">${x}</span>`).join('')}</div></div>`:''})()}
           <div class="cb-s"><div class="cb-lbl">Kanalen</div><div class="cb-chs">${badges}</div></div>

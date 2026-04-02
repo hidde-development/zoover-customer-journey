@@ -120,6 +120,7 @@ body{font-family:'Afacad',sans-serif;font-weight:400;letter-spacing:0;line-heigh
 .dash-val{font-size:20px;font-weight:700;color:var(--fg);line-height:1.2;}
 .dash-val.empty{font-size:12px;font-weight:400;color:var(--fa);opacity:.6;}
 .dash-sub{font-size:10px;color:var(--fa);margin-top:2px;}
+.dash-verified{display:inline-flex;align-items:center;gap:3px;font-size:10px;font-weight:700;color:var(--fwd);margin-top:6px;}
 .dash-nav{position:absolute;top:50%;transform:translateY(-50%);background:var(--bg);border:1px solid var(--bd);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:14px;line-height:1;z-index:2;color:var(--fg);user-select:none;}
 .dash-nav.dn-prev{left:-11px;}
 .dash-nav.dn-next{right:-11px;}
@@ -512,6 +513,7 @@ const phases=[
 {id:'p2',cls:'p2',step:'Fase 2',name:'Oriënteren',desc:'Verkent landen en regio\'s — waar wil ik heen?',cards:[
   {id:'land',nm:'Land',it:'comm',url:'zoover.nl/spanje',chs:['google','llm','direct'],
    kwg:[
+     {label:'Gemeten top-zoekwoorden ✓',type:'head',ex:['vakantie [land]','[land] vakantie','vakantie in [land]','vakantie naar [land]']},
      {label:'Vakantie + [land]',type:'head',ex:['vakantie spanje','spanje vakantie','goedkope vakantie spanje']},
      {label:'[land] + qualifier',type:'body',ex:['spanje goedkoop','spanje met kinderen','spanje buiten de massa']},
      {label:'[land A] of [land B]',type:'comparison',ex:['spanje of griekenland','spanje of portugal','griekenland of turkije']}
@@ -520,6 +522,7 @@ const phases=[
    sp:'Overspant naar Vergelijken',miss:false,gap:'"Lees meer over [land]"-link naar /i/-pagina trekt gebruikers terug naar informational. Overweeg verwijderen of vervangen door in-page content.'},
   {id:'regio',nm:'Regio',it:'comm',url:'zoover.nl/spanje/costa-del-sol',chs:['google','llm'],
    kwg:[
+     {label:'Gemeten top-zoekwoorden ✓',type:'head',ex:['vakantie [regio]','[regio] vakantie','vakantie [plaats binnen regio]','vakantie [regio] [land]']},
      {label:'[regio] + vakantie',type:'head',ex:['costa del sol vakantie','vakantie costa del sol','goedkope vakantie costa del sol']},
      {label:'[regio] + qualifier',type:'body',ex:['costa del sol met kinderen','costa del sol rustig strand','costa del sol tips']},
      {label:'[regio A] of [regio B]',type:'comparison',ex:['costa del sol of costa blanca','kreta of rhodos','tenerife of lanzarote']}
@@ -536,6 +539,7 @@ const phases=[
    sp:null,miss:false},
   {id:'vaktype',nm:'Vakantietype',it:'comm',url:'zoover.nl/all-inclusive',chs:['google','llm'],
    kwg:[
+     {label:'Gemeten top-zoekwoorden ✓',type:'head',ex:['autovakantie','vliegvakantie','zonvakantie','last minute [type vakantie] [bestemming]']},
      {label:'[type] + vakantie',type:'head',ex:['all inclusive vakantie','adults only vakantie','cruise vakantie']},
      {label:'[type] + generiek',type:'head',ex:['aparthotel','aqua park','all inclusive']},
      {label:'[type] + qualifier',type:'body',ex:['goedkope all inclusive','luxe cruise middellandse zee','all inclusive met vlucht']},
@@ -562,6 +566,7 @@ const phases=[
 {id:'p3',cls:'p3',step:'Fase 3',name:'Vergelijken',desc:'Specifieke plek gekozen of filter toegevoegd — vergelijkt accommodaties',cards:[
   {id:'bestemming',nm:'Bestemming',it:'comm',url:'zoover.nl/spanje/costa-del-sol/marbella',chs:['google','llm','tiktok'],
    kwg:[
+     {label:'Gemeten top-zoekwoorden ✓',type:'head',ex:['vakantie [bestemming]','[bestemming] vakantie','vakantie [plaats] [land]','vakantie [plaats] [regio]']},
      {label:'[stad] + vakantie',type:'head',ex:['marbella vakantie','vakantie marbella','goedkope vakantie marbella']},
      {label:'[stad] + tips',type:'body',ex:['marbella tips','marbella bezienswaardigheden','wat te doen in marbella']},
      {label:'[stad] + doelgroep',type:'longtail',ex:['marbella gezinsvriendelijk','marbella met kinderen','marbella honeymoon']}
@@ -585,6 +590,7 @@ const phases=[
    sp:null,miss:false},
   {id:'landfilter',nm:'Land + kenmerk',it:'comm',url:'zoover.nl/spanje/all-inclusive',chs:['google','llm'],
    kwg:[
+     {label:'Gemeten top-zoekwoorden ✓',type:'head',ex:['all inclusive vakantie','all inclusive [land]','all inclusive [regio]','last minute all inclusive [bestemming]']},
      {label:'[land] + [type]',type:'head',ex:['spanje all inclusive','spanje kindvriendelijk','spanje adults only']},
      {label:'[land] + [doelgroep]',type:'body',ex:['spanje gezinsvakantie','spanje met kinderen','spanje adults only']},
      {label:'[land] + [accommodatie]',type:'body',ex:['spanje campings','spanje vakantieparken','spanje appartementen']}
@@ -632,6 +638,7 @@ const phases=[
 {id:'p4',cls:'p4',step:'Fase 4',name:'Boeken',desc:'Klaar om te boeken',cards:[
   {id:'lastminute',nm:'Last minute',it:'trans',url:'zoover.nl/lastminute',chs:['google','direct','insta'],
    kwg:[
+     {label:'Gemeten top-zoekwoorden ✓',type:'head',ex:['last minute vakantie','last minute [land]','last minute [stad]','last minute vakantie [bestemming]']},
      {label:'Last minute + [type]',type:'head',ex:['last minute all inclusive','last minute vakantie all inclusive','last minute zonvakantie']},
      {label:'Last minute + [bestemming]',type:'body',ex:['last minute spanje','last minute costa del sol','last minute marbella']},
      {label:'Last minute + deals',type:'body',ex:['last minute all inclusive deals','last minute aanbiedingen','goedkope last minute']}
@@ -640,6 +647,7 @@ const phases=[
    sp:null,miss:false},
   {id:'aanbiedingen',nm:'Aanbiedingen',it:'trans',url:'zoover.nl/aanbiedingen/spanje',chs:['direct','google','insta'],
    kwg:[
+     {label:'Gemeten top-zoekwoorden ✓',type:'head',ex:['vakantie aanbiedingen','vakantie deals','vakantie aanbiedingen [land]','last minute vakantie deals [bestemming]']},
      {label:'[type] + aanbieding',type:'head',ex:['all inclusive aanbieding','vakantie aanbieding','zonvakantie aanbieding']},
      {label:'Vroegboek',type:'body',ex:['vroegboekkorting','vroegboeken voordeel','vroegboek all inclusive']},
      {label:'Deals + [bestemming]',type:'longtail',ex:['vakantie deals spanje','goedkope vakantie spanje','aanbieding costa del sol']}
@@ -867,23 +875,23 @@ const METRICS={
   inspi:{vis:'slecht',gVol:200,gClicks:5,aiScore:null,brandVol:null},          // niet in top 1000 GSC-pagina's
   vertrek:{vis:'slecht',gVol:150,gClicks:3,aiScore:null,brandVol:null},       // niet in top 1000 GSC-pagina's
   blog:{vis:'matig',gVol:2500,gClicks:80,aiScore:null,brandVol:null},         // ~220 blogpagina's, gem. pos. 12–15
-  land:{vis:'goed',gVol:6700,gClicks:42,aiScore:null,brandVol:null},          // 12 landpagina's, gem. pos. 5–9
-  regio:{vis:'goed',gVol:1600,gClicks:23,aiScore:null,brandVol:null},         // 4 regiopagina's, gem. pos. 4
+  land:{vis:'goed',gVol:92587,gClicks:42,aiScore:null,brandVol:null,verified:true},   // 12 landpagina's, gem. pos. 5–9 | bron: tabel GSC-data
+  regio:{vis:'goed',gVol:17125,gClicks:23,aiScore:null,brandVol:null,verified:true}, // 4 regiopagina's, gem. pos. 4 | bron: tabel GSC-data
   seizoen:{vis:'slecht',gVol:300,gClicks:6,aiScore:null,brandVol:null},        // niet in top 1000 GSC-pagina's
-  vaktype:{vis:'matig',gVol:19700,gClicks:338,aiScore:null,brandVol:null},    // 4 pages: campings/hotels/all-inclusive/vakantieparken, gem. pos. 10–15
+  vaktype:{vis:'matig',gVol:74953,gClicks:338,aiScore:null,brandVol:null,verified:true},  // vakantietype-pagina's, gem. pos. 10–15 | bron: tabel GSC-data
   vera:{vis:'slecht',gVol:100,gClicks:2,aiScore:null,brandVol:null},           // niet in top 1000 GSC-pagina's
   zoekres:{vis:'matig',gVol:52900,gClicks:146,aiScore:null,brandVol:null},    // zoover.nl/zoeken, CTR 0.28%, pos. 5.56
-  bestemming:{vis:'goed',gVol:1900,gClicks:25,aiScore:null,brandVol:null},    // 12 bestemmingen, gem. pos. 5
+  bestemming:{vis:'goed',gVol:2740,gClicks:25,aiScore:null,brandVol:null,verified:true},  // 12 bestemmingen, gem. pos. 5 | bron: tabel GSC-data
   bestfilter:{vis:'matig',gVol:1900,gClicks:26,aiScore:null,brandVol:null},   // 8 bestemming+kenmerk, gem. pos. 6
   autovak:{vis:'goed',gVol:5400,gClicks:95,aiScore:null,brandVol:null},       // 13 autovak-pagina's, gem. pos. 5, CTR 2–3%
-  landfilter:{vis:'matig',gVol:7000,gClicks:53,aiScore:null,brandVol:null},   // 12 land+filter (AI, hotels), gem. pos. 4, lage CTR
+  landfilter:{vis:'matig',gVol:616440,gClicks:53,aiScore:null,brandVol:null,verified:true}, // all-inclusive [land/regio] pages | bron: tabel GSC-data
   regiofilter:{vis:'matig',gVol:3300,gClicks:25,aiScore:null,brandVol:null},  // 14 regio+filter, gem. pos. 5–7
   accovz:{vis:'slecht',gVol:250,gClicks:5,aiScore:null,brandVol:null},         // niet in top 1000 GSC-pagina's
   accfilter:{vis:'slecht',gVol:200,gClicks:4,aiScore:null,brandVol:null},     // niet in top 1000 GSC-pagina's
   hotelstop:{vis:'slecht',gVol:180,gClicks:3,aiScore:null,brandVol:null},     // niet in top 1000 GSC-pagina's
   hotelketen:{vis:'slecht',gVol:150,gClicks:3,aiScore:null,brandVol:null},    // niet in top 1000 GSC-pagina's
-  lastminute:{vis:'slecht',gVol:22500,gClicks:60,aiScore:null,brandVol:null}, // zoover.nl/last-minute, CTR 0.27%, pos. 23
-  aanbiedingen:{vis:'matig',gVol:5400,gClicks:40,aiScore:null,brandVol:null}, // zoover.nl/deals, CTR 0.73%, pos. 8
+  lastminute:{vis:'slecht',gVol:647310,gClicks:60,aiScore:null,brandVol:null,verified:true}, // zoover.nl/last-minute, CTR 0.27%, pos. 23 | bron: tabel GSC-data
+  aanbiedingen:{vis:'matig',gVol:11380,gClicks:40,aiScore:null,brandVol:null,verified:true}, // zoover.nl/deals, CTR 0.73%, pos. 8 | bron: tabel GSC-data
   accboek:{vis:'goed',gVol:5500,gClicks:150,aiScore:null,brandVol:null},      // ~500 accopagina's, CTR 3–5%, gem. pos. 3–5
   reviewform:{vis:'sterk',gVol:1500,gClicks:264,aiScore:null,brandVol:null},  // zoover.nl/review, CTR 17.9%, pos. 1.83
   mijnzoover:{vis:'sterk',gVol:37800,gClicks:2839,aiScore:null,brandVol:null} // login/mijn-zoover, CTR 7.5%, pos. 3.25
@@ -1163,7 +1171,7 @@ function renderJourney(){
       function dashVal(v,suffix){return v!=null?`<div class="dash-val">${fmtNL(v)}${suffix||''}</div>`:`<div class="dash-val empty">Nog invullen</div>`;}
       const dashHtml=`<div class="dash-wrap" id="dw-${c.id}">
         <div class="dash-track"><div class="dash-grid" id="dg-${c.id}">
-          <div class="dash-card"><div class="dash-label">Google zoekvolume</div>${dashVal(met.gVol,'/mnd')}<div class="dash-sub">gem. per pagina</div></div>
+          <div class="dash-card"><div class="dash-label">Google zoekvolume</div>${dashVal(met.gVol,'/mnd')}<div class="dash-sub">gem. per pagina</div>${met.verified?'<div class="dash-verified">✓ geverifieerd</div>':''}</div>
           <div class="dash-card"><div class="dash-label">Google kliks</div>${dashVal(met.gClicks,'/mnd')}<div class="dash-sub">gem. per pagina</div></div>
           <div class="dash-card"><div class="dash-label">Branded volume</div>${dashVal(met.brandVol,'/mnd')}<div class="dash-sub">zoeker + zoover</div></div>
           <div class="dash-card"><div class="dash-label">AI-zichtbaarheid</div>${met.aiScore!=null?`<div class="dash-val">${met.aiScore}<span style="font-size:11px;font-weight:400">/100</span></div>`:`<div class="dash-val empty">Nog invullen</div>`}<div class="dash-sub">gem. score</div></div>

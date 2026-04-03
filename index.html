@@ -641,21 +641,16 @@ const phases=[
    ],
    llm:['adults only resorts aan de costa del sol?','winterzon aan de costa del sol, wat zijn de opties?','kindvriendelijke hotels costa del sol?','wanneer is het warm genoeg voor winterzon in spanje?','costa del sol of costa blanca voor winterzon?'],
    sp:null,miss:false},
-  {id:'accovz',nm:'Accommodaties',it:'comm',url:'zoover.nl/spanje/costa-del-sol/marbella/hotels',chs:['google','direct'],
+  {id:'accfilter',nm:'Accommodaties & type',it:'comm',url:'zoover.nl/spanje/costa-del-sol/marbella/hotels',chs:['google','direct'],
    kwg:[
      {label:'Hotels + [bestemming]',type:'head',ex:['hotels marbella','hotels costa del sol','beste hotels marbella']},
      {label:'Beste hotels + [regio]',type:'body',ex:['beste hotels costa del sol','top hotels costa del sol','hotels met zwembad costa del sol']},
-     {label:'[type] + [bestemming]',type:'body',ex:['all inclusive resorts marbella','appartementen marbella','vakantieparken costa del sol']}
-   ],
-   llm:['welke hotels hebben de beste reviews in marbella?','top 5 hotels costa del sol?','goedkope hotels in marbella?','hotels met zwembad in marbella?','welk hotel in marbella heeft de beste ligging?'],
-   sp:null,miss:false},
-  {id:'accfilter',nm:'Accommodatietype',it:'comm',url:'zoover.nl/spanje/costa-del-sol/marbella/luxehotel',chs:['google','direct'],
-   kwg:[
+     {label:'[type] + [bestemming]',type:'body',ex:['all inclusive resorts marbella','appartementen marbella','vakantieparken costa del sol']},
      {label:'[subtype] + [bestemming]',type:'head',ex:['luxe hotel marbella','boutique hotel marbella','adults only resort costa del sol']},
      {label:'[subtype] + generiek',type:'body',ex:['adults only resort spanje','boutique hotels spanje','luxe all inclusive spanje']},
      {label:'Appartementen + [bestemming]',type:'body',ex:['appartementen marbella','appartementen costa del sol']}
    ],
-   llm:['luxe adults-only resorts in spanje?','beste boutique hotels aan de costa del sol?','verschil luxe hotel en boutique hotel?','adults only hotels in marbella?','wat is het meest luxe hotel in marbella?'],
+   llm:['welke hotels hebben de beste reviews in marbella?','top 5 hotels costa del sol?','goedkope hotels in marbella?','hotels met zwembad in marbella?','luxe adults-only resorts in spanje?','beste boutique hotels aan de costa del sol?','adults only hotels in marbella?'],
    sp:null,miss:false},
   {id:'hotelstop',nm:'Hotels',it:'comm',url:'zoover.nl/hotels',chs:['google','direct'],
    kwg:[
@@ -755,7 +750,7 @@ const linkData={
 const TPL={
   homepage:'hybrid',blog:'content',vaktype:'lister',seizoen:'lister',inspi:'hybrid',
   vera:'conv',land:'lister',regio:'lister',bestemming:'lister',landfilter:'lister',regiofilter:'lister',
-  accovz:'lister',accfilter:'lister',bestfilter:'lister',hotelketen:'lister',hotelstop:'lister',
+  accfilter:'lister',bestfilter:'lister',hotelketen:'lister',hotelstop:'lister',
   zoekres:'lister',lastminute:'lister',aanbiedingen:'lister',
   autovak:'lister',vertrek:'lister',accboek:'detail',
   reviewform:'form',mijnzoover:'dash'
@@ -923,8 +918,7 @@ const METRICS={
   autovak:{vis:'goed',gVol:5400,gClicks:95,aiScore:null,brandVol:0,brandVerified:true},
   landfilter:{vis:'matig',gVol:616440,gClicks:53,aiScore:null,brandVol:0,brandVerified:true,verified:true},
   regiofilter:{vis:'matig',gVol:3300,gClicks:25,aiScore:null,brandVol:0,brandVerified:true},
-  accovz:{vis:'slecht',gVol:250,gClicks:5,aiScore:null,brandVol:0,brandVerified:true},
-  accfilter:{vis:'slecht',gVol:200,gClicks:4,aiScore:null,brandVol:0,brandVerified:true},
+  accfilter:{vis:'slecht',gVol:250,gClicks:5,aiScore:null,brandVol:0,brandVerified:true},
   hotelstop:{vis:'slecht',gVol:180,gClicks:3,aiScore:null,brandVol:103,brandVerified:true}, // bron: tabel branded data
   hotelketen:{vis:'slecht',gVol:150,gClicks:3,aiScore:null,brandVol:18,brandVerified:true}, // bron: tabel branded data
   lastminute:{vis:'slecht',gVol:647310,gClicks:60,aiScore:null,brandVol:0,brandVerified:true,verified:true},
@@ -954,7 +948,7 @@ const PAGE_COUNT={
   homepage:1,blog:1153,
   land:117,regio:299,bestemming:1129,
   landfilter:481,regiofilter:1072,bestfilter:2140,
-  autovak:42,accfilter:24,hotelketen:18,
+  autovak:42,accfilter:33166,hotelketen:18,
   vaktype:11,seizoen:8,vertrek:5,
   accovz:33166,accboek:33167
 };

@@ -950,7 +950,13 @@ function extractVolume(card){
   return total||VOL_OVERRIDE[card.id]||0;
 }
 
-const PAGE_COUNT={land:51,regio:170,bestemming:500,landfilter:370,regiofilter:1000,accovz:1089,accfilter:834,accboek:33167};
+const PAGE_COUNT={
+  land:117,regio:299,bestemming:1129,
+  landfilter:481,regiofilter:1072,bestfilter:2140,
+  autovak:42,accfilter:24,hotelketen:18,
+  vaktype:11,seizoen:8,vertrek:5,
+  accboek:33167
+};
 function extractPages(card){
   if(PAGE_COUNT[card.id])return PAGE_COUNT[card.id];
   return 1;

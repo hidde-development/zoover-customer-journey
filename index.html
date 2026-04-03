@@ -951,11 +951,12 @@ function extractVolume(card){
 }
 
 const PAGE_COUNT={
+  homepage:1,blog:1153,
   land:117,regio:299,bestemming:1129,
   landfilter:481,regiofilter:1072,bestfilter:2140,
   autovak:42,accfilter:24,hotelketen:18,
   vaktype:11,seizoen:8,vertrek:5,
-  accboek:33167
+  accovz:33166,accboek:33167
 };
 function extractPages(card){
   if(PAGE_COUNT[card.id])return PAGE_COUNT[card.id];

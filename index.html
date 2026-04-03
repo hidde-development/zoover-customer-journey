@@ -909,26 +909,26 @@ const SOCIAL_PLAYBOOK={
 const METRICS={
   // Bron: Google Search Console, laatste 12 maanden. gVol = gem. vertoningen/mnd/pagina, gClicks = gem. kliks/mnd/pagina
   homepage:{vis:'sterk',gVol:133600,gClicks:9091,aiScore:null,brandVol:1892,brandVerified:true}, // brandVol = gem. branded kliks/mnd | bron: tabel branded data
-  inspi:{vis:'slecht',gVol:200,gClicks:5,aiScore:null,brandVol:null},
-  vertrek:{vis:'slecht',gVol:150,gClicks:3,aiScore:null,brandVol:null},
-  blog:{vis:'matig',gVol:2500,gClicks:80,aiScore:null,brandVol:null},
-  land:{vis:'goed',gVol:92587,gClicks:42,aiScore:null,brandVol:17,brandVerified:true,verified:true},   // bron: tabel GSC-data + branded data
-  regio:{vis:'goed',gVol:17125,gClicks:23,aiScore:null,brandVol:null,verified:true},
-  seizoen:{vis:'slecht',gVol:300,gClicks:6,aiScore:null,brandVol:null},
-  vaktype:{vis:'matig',gVol:74953,gClicks:338,aiScore:null,brandVol:28,brandVerified:true,verified:true}, // bron: tabel GSC-data + branded data
-  vera:{vis:'slecht',gVol:100,gClicks:2,aiScore:null,brandVol:null},
-  zoekres:{vis:'matig',gVol:52900,gClicks:146,aiScore:null,brandVol:null},
-  bestemming:{vis:'goed',gVol:2740,gClicks:25,aiScore:null,brandVol:null,verified:true},
-  bestfilter:{vis:'matig',gVol:1900,gClicks:26,aiScore:null,brandVol:null},
-  autovak:{vis:'goed',gVol:5400,gClicks:95,aiScore:null,brandVol:null},
-  landfilter:{vis:'matig',gVol:616440,gClicks:53,aiScore:null,brandVol:null,verified:true},
-  regiofilter:{vis:'matig',gVol:3300,gClicks:25,aiScore:null,brandVol:null},
-  accovz:{vis:'slecht',gVol:250,gClicks:5,aiScore:null,brandVol:null},
-  accfilter:{vis:'slecht',gVol:200,gClicks:4,aiScore:null,brandVol:null},
+  inspi:{vis:'slecht',gVol:200,gClicks:5,aiScore:null,brandVol:0,brandVerified:true},
+  vertrek:{vis:'slecht',gVol:150,gClicks:3,aiScore:null,brandVol:0,brandVerified:true},
+  blog:{vis:'matig',gVol:2500,gClicks:80,aiScore:null,brandVol:0,brandVerified:true},
+  land:{vis:'goed',gVol:92587,gClicks:42,aiScore:null,brandVol:17,brandVerified:true,verified:true},
+  regio:{vis:'goed',gVol:17125,gClicks:23,aiScore:null,brandVol:0,brandVerified:true,verified:true},
+  seizoen:{vis:'slecht',gVol:300,gClicks:6,aiScore:null,brandVol:0,brandVerified:true},
+  vaktype:{vis:'matig',gVol:74953,gClicks:338,aiScore:null,brandVol:28,brandVerified:true,verified:true},
+  vera:{vis:'slecht',gVol:100,gClicks:2,aiScore:null,brandVol:0,brandVerified:true},
+  zoekres:{vis:'matig',gVol:52900,gClicks:146,aiScore:null,brandVol:0,brandVerified:true},
+  bestemming:{vis:'goed',gVol:2740,gClicks:25,aiScore:null,brandVol:0,brandVerified:true,verified:true},
+  bestfilter:{vis:'matig',gVol:1900,gClicks:26,aiScore:null,brandVol:0,brandVerified:true},
+  autovak:{vis:'goed',gVol:5400,gClicks:95,aiScore:null,brandVol:0,brandVerified:true},
+  landfilter:{vis:'matig',gVol:616440,gClicks:53,aiScore:null,brandVol:0,brandVerified:true,verified:true},
+  regiofilter:{vis:'matig',gVol:3300,gClicks:25,aiScore:null,brandVol:0,brandVerified:true},
+  accovz:{vis:'slecht',gVol:250,gClicks:5,aiScore:null,brandVol:0,brandVerified:true},
+  accfilter:{vis:'slecht',gVol:200,gClicks:4,aiScore:null,brandVol:0,brandVerified:true},
   hotelstop:{vis:'slecht',gVol:180,gClicks:3,aiScore:null,brandVol:103,brandVerified:true}, // bron: tabel branded data
   hotelketen:{vis:'slecht',gVol:150,gClicks:3,aiScore:null,brandVol:18,brandVerified:true}, // bron: tabel branded data
-  lastminute:{vis:'slecht',gVol:647310,gClicks:60,aiScore:null,brandVol:null,verified:true},
-  aanbiedingen:{vis:'matig',gVol:11380,gClicks:40,aiScore:null,brandVol:null,verified:true},
+  lastminute:{vis:'slecht',gVol:647310,gClicks:60,aiScore:null,brandVol:0,brandVerified:true,verified:true},
+  aanbiedingen:{vis:'matig',gVol:11380,gClicks:40,aiScore:null,brandVol:0,brandVerified:true,verified:true},
   accboek:{vis:'goed',gVol:5500,gClicks:150,aiScore:null,brandVol:23,brandVerified:true},   // bron: tabel branded data
   reviewform:{vis:'sterk',gVol:1500,gClicks:264,aiScore:null,brandVol:163,brandVerified:true}, // bron: tabel branded data
   mijnzoover:{vis:'sterk',gVol:37800,gClicks:2839,aiScore:null,brandVol:211,brandVerified:true} // bron: tabel branded data
@@ -1246,7 +1246,7 @@ function renderJourney(){
         <div class="dash-track"><div class="dash-grid" id="dg-${c.id}">
           <div class="dash-card"><div class="dash-label">Google zoekvolume</div>${dashVal(met.gVol,'/mnd')}<div class="dash-sub">gem. per pagina</div>${met.verified?'<div class="dash-verified">✓ geverifieerd</div>':''}</div>
           <div class="dash-card"><div class="dash-label">Google kliks</div>${dashVal(met.gClicks,'/mnd')}<div class="dash-sub">gem. per pagina</div></div>
-          <div class="dash-card"><div class="dash-label">Branded volume</div>${dashVal(met.brandVol,'/mnd')}<div class="dash-sub">gem. kliks/mnd</div>${met.brandVerified?'<div class="dash-verified">✓ geverifieerd</div>':''}</div>
+          <div class="dash-card"><div class="dash-label">Branded volume</div>${met.brandVol===0?'<div class="dash-val" style="font-size:14px;color:var(--fa)">Geen</div>':dashVal(met.brandVol,'/mnd')}<div class="dash-sub">gem. kliks/mnd</div>${met.brandVerified?'<div class="dash-verified">✓ geverifieerd</div>':''}</div>
           <div class="dash-card"><div class="dash-label">AI-zichtbaarheid</div>${met.aiScore!=null?`<div class="dash-val">${met.aiScore}<span style="font-size:11px;font-weight:400">/100</span></div>`:`<div class="dash-val empty">Nog invullen</div>`}<div class="dash-sub">gem. score</div></div>
         </div></div>
         <div class="dash-nav dn-prev" onclick="event.stopPropagation();dashNav('${c.id}',-1)">&#8249;</div>

@@ -338,6 +338,47 @@ body.has-sel .card:not(.hl-src):not(.hl-fwd):not(.hl-bwd):not(.hl-bc):not(.hl-sa
 .faq-a-ents{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:4px;}
 .faq-a-ent{background:rgba(106,27,154,.08);border:1px solid rgba(106,27,154,.2);border-radius:3px;padding:2px 7px;font-size:11px;color:#6A1B9A;font-weight:600;}
 .faq-var{display:inline;background:rgba(232,119,34,.12);color:#C65D00;border-radius:3px;padding:1px 4px;font-size:11px;font-weight:600;font-family:'SF Mono','Fira Code',monospace;}
+/* ——— Structured Data Carousel ——— */
+.sd-sec{padding:40px 24px 56px;border-top:1px solid var(--bd);background:var(--bg);}
+.sd-wrap{max-width:900px;margin:0 auto;}
+.sd-sec-title{font-size:18px;font-weight:700;color:var(--tx);margin-bottom:6px;}
+.sd-sec-sub{font-size:12px;color:var(--mu);margin-bottom:28px;}
+.sd-track-outer{overflow:hidden;border-radius:12px;}
+.sd-track{display:flex;transition:transform .4s cubic-bezier(.4,0,.2,1);}
+.sd-slide{min-width:100%;padding:28px 32px;background:var(--sf);border:1px solid var(--bd);border-radius:12px;box-sizing:border-box;}
+.sd-slide-title{font-size:16px;font-weight:700;color:var(--tx);margin-bottom:10px;}
+.sd-slide-text{font-size:13px;color:var(--mu);line-height:1.65;margin-bottom:20px;}
+.sd-btn{display:inline-flex;align-items:center;gap:6px;background:var(--c2);color:#fff;border:none;border-radius:6px;padding:7px 14px;font-size:12px;font-weight:600;cursor:pointer;transition:opacity .2s;font-family:inherit;}
+.sd-btn:hover{opacity:.88;}
+.sd-code-block{margin-top:14px;background:#1e1e1e;border-radius:8px;overflow:hidden;display:none;}
+.sd-code-block.open{display:block;}
+.sd-code-header{display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:#2d2d2d;}
+.sd-code-lang{font-size:11px;color:#aaa;font-family:'SF Mono','Fira Code',monospace;font-weight:600;}
+.sd-copy-btn{display:flex;align-items:center;gap:5px;background:transparent;border:1px solid #555;border-radius:4px;padding:3px 10px;font-size:11px;color:#ccc;cursor:pointer;transition:all .2s;font-family:inherit;}
+.sd-copy-btn:hover{background:#444;color:#fff;}
+.sd-copy-btn.copied{border-color:#E87722;color:#E87722;}
+.sd-code-body{padding:16px;overflow-x:auto;max-height:360px;overflow-y:auto;}
+.sd-code-body pre{margin:0;font-family:'SF Mono','Fira Code',monospace;font-size:11.5px;line-height:1.65;color:#d4d4d4;white-space:pre;}
+.sd-nav{display:flex;align-items:center;justify-content:space-between;margin-top:18px;gap:12px;}
+.sd-arrow{width:34px;height:34px;border-radius:50%;background:var(--sf);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:15px;color:var(--tx);transition:background .2s;flex-shrink:0;font-family:inherit;}
+.sd-arrow:hover{background:var(--sf2);}
+.sd-arrow:disabled{opacity:.35;cursor:default;pointer-events:none;}
+.sd-dots{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;flex:1;}
+.sd-dot{width:8px;height:8px;border-radius:50%;background:var(--bd2);cursor:pointer;transition:background .2s,transform .2s;border:none;padding:0;}
+.sd-dot.active{background:var(--c2);transform:scale(1.3);}
+.sd-counter{font-size:11px;color:var(--mu);min-width:42px;text-align:right;}
+.sd-roadmap-cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:20px;}
+.sd-col-head{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:6px 10px;border-radius:6px;margin-bottom:10px;text-align:center;}
+.sd-col-head.s1{background:rgba(46,125,50,.1);color:#2E7D32;}
+.sd-col-head.s2{background:rgba(232,119,34,.1);color:#C65D00;}
+.sd-col-head.ph2{background:rgba(0,0,0,.05);color:#777;}
+.sd-rm-item{font-size:11.5px;color:var(--mu);padding:5px 0;border-bottom:1px solid var(--bd);line-height:1.45;}
+.sd-rm-item:last-child{border-bottom:none;}
+.sd-pill{display:inline-block;border-radius:3px;padding:1px 6px;font-size:10px;font-weight:700;margin-top:3px;}
+.sd-pill.must{background:rgba(46,125,50,.12);color:#2E7D32;}
+.sd-pill.rec{background:rgba(232,119,34,.12);color:#C65D00;}
+.sd-pill.nice{background:rgba(0,0,0,.06);color:#888;}
+@media(max-width:600px){.sd-slide{padding:20px 16px;}.sd-roadmap-cols{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -503,6 +544,153 @@ body.has-sel .card:not(.hl-src):not(.hl-fwd):not(.hl-bwd):not(.hl-bc):not(.hl-sa
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<section class="sd-sec">
+  <div class="sd-wrap">
+    <div class="sd-sec-title">Structured Data Plan</div>
+    <div class="sd-sec-sub">Het complete geneste JSON-LD schema voor Zoover — één slide per paginatype, met kopieerbare code.</div>
+    <div class="sd-track-outer">
+      <div class="sd-track" id="sdTrack">
+
+        <!-- Slide 1: Introductie -->
+        <div class="sd-slide">
+          <div class="sd-slide-title">What is structured data?</div>
+          <div class="sd-slide-text">The web has two audiences: people and machines. Structured data is the translation layer for machines — a way of labelling information on each page so search engines and AI models understand exactly what they are looking at. Not just that a page exists, but what Zoover is, what a hotel offers, and what a user can do there. This plan applies that labelling to every page type on Zoover.</div>
+        </div>
+
+        <!-- Slide 2: WebSite -->
+        <div class="sd-slide">
+          <div class="sd-slide-title">Site-wide — WebSite</div>
+          <div class="sd-slide-text">Staat op elke pagina. Maakt de zoekfunctie van Zoover machine-leesbaar via een SearchAction, en verankert de websiteidentiteit met een vaste @id waaraan alle andere entiteiten refereren.</div>
+          <button class="sd-btn" onclick="sdToggle(this,'s2')">▷ Bekijk schema</button>
+          <div class="sd-code-block" id="sdBlock-s2">
+            <div class="sd-code-header"><span class="sd-code-lang">JSON-LD</span><button class="sd-copy-btn" onclick="sdCopy(this,'s2')">⎘ Kopieer</button></div>
+            <div class="sd-code-body"><pre id="sdPre-s2"></pre></div>
+          </div>
+        </div>
+
+        <!-- Slide 3: Organization -->
+        <div class="sd-slide">
+          <div class="sd-slide-title">Site-wide — Organization (TravelAgency)</div>
+          <div class="sd-slide-text">Het meest strategische element. Definieert Zoover als TravelAgency met oprichtingsjaar, keurmerken (ANVR 05507, SGR 3732), publishingPrinciples, en sameAs-koppelingen naar Wikipedia, Trustpilot en alle sociale kanalen. Corrigeert de verouderde reviewplatform-perceptie bij AI-modellen.</div>
+          <button class="sd-btn" onclick="sdToggle(this,'s3')">▷ Bekijk schema</button>
+          <div class="sd-code-block" id="sdBlock-s3">
+            <div class="sd-code-header"><span class="sd-code-lang">JSON-LD</span><button class="sd-copy-btn" onclick="sdCopy(this,'s3')">⎘ Kopieer</button></div>
+            <div class="sd-code-body"><pre id="sdPre-s3"></pre></div>
+          </div>
+        </div>
+
+        <!-- Slide 4: Homepage -->
+        <div class="sd-slide">
+          <div class="sd-slide-title">Homepage — FAQPage</div>
+          <div class="sd-slide-text">Vier platformvragen over Zoover die direct extraheerbaar zijn voor Google rich results en AI-antwoorden. Strategisch ingezet om de boekingsidentiteit van Zoover te verankeren naast het reviewerfgoed.</div>
+          <button class="sd-btn" onclick="sdToggle(this,'s4')">▷ Bekijk schema</button>
+          <div class="sd-code-block" id="sdBlock-s4">
+            <div class="sd-code-header"><span class="sd-code-lang">JSON-LD</span><button class="sd-copy-btn" onclick="sdCopy(this,'s4')">⎘ Kopieer</button></div>
+            <div class="sd-code-body"><pre id="sdPre-s4"></pre></div>
+          </div>
+        </div>
+
+        <!-- Slide 5: Listing pages -->
+        <div class="sd-slide">
+          <div class="sd-slide-title">Listing pages — TouristDestination + ItemList</div>
+          <div class="sd-slide-text">Elke landpagina, regio en bestemming krijgt een TouristDestination-entiteit met een isContainedInPlace-hiërarchie. De bestaande ItemList met hotelfoto's blijft intact — alleen genest in de @graph zodat de SERP-afbeeldingen behouden blijven.</div>
+          <button class="sd-btn" onclick="sdToggle(this,'s5')">▷ Bekijk schema</button>
+          <div class="sd-code-block" id="sdBlock-s5">
+            <div class="sd-code-header"><span class="sd-code-lang">JSON-LD</span><button class="sd-copy-btn" onclick="sdCopy(this,'s5')">⎘ Kopieer</button></div>
+            <div class="sd-code-body"><pre id="sdPre-s5"></pre></div>
+          </div>
+        </div>
+
+        <!-- Slide 6: Filter pages -->
+        <div class="sd-slide">
+          <div class="sd-slide-title">Filter pages — touristType</div>
+          <div class="sd-slide-text">All-inclusive, kindvriendelijk, campings en andere filterpagina's erven de TouristDestination-structuur met een specifiek touristType-attribuut. De H1 wordt als alternateName opgenomen.</div>
+          <button class="sd-btn" onclick="sdToggle(this,'s6')">▷ Bekijk schema</button>
+          <div class="sd-code-block" id="sdBlock-s6">
+            <div class="sd-code-header"><span class="sd-code-lang">JSON-LD</span><button class="sd-copy-btn" onclick="sdCopy(this,'s6')">⎘ Kopieer</button></div>
+            <div class="sd-code-body"><pre id="sdPre-s6"></pre></div>
+          </div>
+        </div>
+
+        <!-- Slide 7: Accommodation -->
+        <div class="sd-slide">
+          <div class="sd-slide-title">Accommodation page — full nested structure</div>
+          <div class="sd-slide-text">De meest complete @graph op de site. Combineert Hotel/Resort/Campground met AggregateRating, zes subratings, drie reviews met reisgezelschapstype, GeoCoordinates, contactgegevens, een FAQPage met 12 vragen en een ReserveAction voor agentic-gereedheid.</div>
+          <button class="sd-btn" onclick="sdToggle(this,'s7')">▷ Bekijk schema</button>
+          <div class="sd-code-block" id="sdBlock-s7">
+            <div class="sd-code-header"><span class="sd-code-lang">JSON-LD</span><button class="sd-copy-btn" onclick="sdCopy(this,'s7')">⎘ Kopieer</button></div>
+            <div class="sd-code-body"><pre id="sdPre-s7"></pre></div>
+          </div>
+        </div>
+
+        <!-- Slide 8: FAQPage strategy -->
+        <div class="sd-slide">
+          <div class="sd-slide-title">FAQPage — per page type</div>
+          <div class="sd-slide-text">Elke pagina krijgt een contextspecifieke FAQPage. Listerpagina's: 7 vragen met [DESTINATION_NAME] en [CURRENT_YEAR] als placeholders. Accommodatiepagina's: 12 vragen met [ACCOMMODATION_NAME]. De vragen zijn zichtbaar in de HTML én in de structured data — zodat er nooit schema drift ontstaat.</div>
+          <button class="sd-btn" onclick="sdToggle(this,'s8')">▷ Bekijk schema</button>
+          <div class="sd-code-block" id="sdBlock-s8">
+            <div class="sd-code-header"><span class="sd-code-lang">JSON-LD</span><button class="sd-copy-btn" onclick="sdCopy(this,'s8')">⎘ Kopieer</button></div>
+            <div class="sd-code-body"><pre id="sdPre-s8"></pre></div>
+          </div>
+        </div>
+
+        <!-- Slide 9: Agentic readiness -->
+        <div class="sd-slide">
+          <div class="sd-slide-title">Agentic readiness — ReserveAction + WebMCP</div>
+          <div class="sd-slide-text">ReserveAction maakt Zoover machine-herkenbaar als boekingsplatform — nu al, zonder dat Google dit als rich result toont. WebMCP (fase 2) voegt daar een Tool Contract aan toe waarmee AI-agenten straks direct kunnen zoeken, filteren en een boeking starten op Zoover.</div>
+          <button class="sd-btn" onclick="sdToggle(this,'s9')">▷ Bekijk schema</button>
+          <div class="sd-code-block" id="sdBlock-s9">
+            <div class="sd-code-header"><span class="sd-code-lang">JSON-LD + WebMCP</span><button class="sd-copy-btn" onclick="sdCopy(this,'s9')">⎘ Kopieer</button></div>
+            <div class="sd-code-body"><pre id="sdPre-s9"></pre></div>
+          </div>
+        </div>
+
+        <!-- Slide 10: Implementation roadmap -->
+        <div class="sd-slide">
+          <div class="sd-slide-title">Implementation roadmap</div>
+          <div class="sd-slide-text">Het plan wordt in drie fasen uitgerold. Sprint 1 borgt de SERP-afbeeldingen en legt de semantische basis. Sprint 2 voegt AI-optimalisaties toe. Fase 2 bereidt Zoover voor op het agentic web.</div>
+          <div class="sd-roadmap-cols">
+            <div>
+              <div class="sd-col-head s1">Sprint 1</div>
+              <div class="sd-rm-item">WebSite + SearchAction<br><span class="sd-pill must">Must-have</span></div>
+              <div class="sd-rm-item">Organization als TravelAgency<br><span class="sd-pill must">Must-have</span></div>
+              <div class="sd-rm-item">sameAs: Wikipedia + socials<br><span class="sd-pill must">Must-have</span></div>
+              <div class="sd-rm-item">BreadcrumbList alle pagina's<br><span class="sd-pill must">Must-have</span></div>
+              <div class="sd-rm-item">ItemList + @id op listings<br><span class="sd-pill must">Must-have</span></div>
+              <div class="sd-rm-item">AggregateRating + 6 subratings<br><span class="sd-pill must">Must-have</span></div>
+              <div class="sd-rm-item">ReserveAction accommodaties<br><span class="sd-pill must">Must-have</span></div>
+              <div class="sd-rm-item">FAQPage homepage (4 vragen)<br><span class="sd-pill must">Must-have</span></div>
+            </div>
+            <div>
+              <div class="sd-col-head s2">Sprint 2</div>
+              <div class="sd-rm-item">TouristDestination alle pagina's<br><span class="sd-pill must">Must-have</span></div>
+              <div class="sd-rm-item">FAQPage listings (7 vragen)<br><span class="sd-pill must">Must-have</span></div>
+              <div class="sd-rm-item">FAQPage accommodaties (12 vragen)<br><span class="sd-pill must">Must-have</span></div>
+              <div class="sd-rm-item">publishingPrinciples + E-E-A-T<br><span class="sd-pill rec">Recommended</span></div>
+              <div class="sd-rm-item">AboutPage + WebApplication Vera<br><span class="sd-pill rec">Recommended</span></div>
+              <div class="sd-rm-item">touristType filterpagina's<br><span class="sd-pill rec">Recommended</span></div>
+            </div>
+            <div>
+              <div class="sd-col-head ph2">Fase 2</div>
+              <div class="sd-rm-item">amenityFeature op accommodaties<br><span class="sd-pill nice">Nice-to-have</span></div>
+              <div class="sd-rm-item">Wikidata item aanmaken<br><span class="sd-pill nice">Nice-to-have</span></div>
+              <div class="sd-rm-item">WebMCP Tool Contract<br><span class="sd-pill nice">Nice-to-have</span></div>
+              <div class="sd-rm-item">speakable homepage + about<br><span class="sd-pill nice">Nice-to-have</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="sd-nav">
+      <button class="sd-arrow" id="sdPrev" onclick="sdNav(-1)" disabled>←</button>
+      <div class="sd-dots" id="sdDots"></div>
+      <span class="sd-counter" id="sdCounter">1 / 10</span>
+      <button class="sd-arrow" id="sdNext" onclick="sdNav(1)">→</button>
     </div>
   </div>
 </section>
@@ -1550,6 +1738,563 @@ function drawArrows(srcId){
 renderJourney();
 document.querySelector('.jw').addEventListener('scroll',()=>{if(activeLinkCard) drawArrows(activeLinkCard);});
 window.addEventListener('resize',()=>{if(activeLinkCard) drawArrows(activeLinkCard);});
+
+// ——— Structured Data Carousel ———
+const sdTotal=10;
+let sdCur=0;
+const sdCodeMap={
+s2:`{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.zoover.nl/#website",
+      "name": "Zoover",
+      "alternateName": "Zoover - Boek je vakantie!",
+      "url": "https://www.zoover.nl/",
+      "inLanguage": "nl-NL",
+      "description": "Zoover is the largest Dutch holiday platform with 3.9 million genuine reviews and over 150,000 bookable accommodations.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.zoover.nl/zoeken?bestemming={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}`,
+s3:`{
+  "@type": ["TravelAgency", "Organization"],
+  "@id": "https://www.zoover.nl/#organization",
+  "name": "Zoover",
+  "legalName": "Zoover (onderdeel van Vakanties.nl B.V.)",
+  "url": "https://www.zoover.nl/",
+  "logo": "https://www.zoover.nl/logo.svg",
+  "foundingDate": "2005",
+  "foundingLocation": { "@type": "Place", "name": "Zeist, Netherlands" },
+  "description": "Zoover is a Dutch holiday platform, founded in 2005 as a review site and grown since 2020 into a full-service booking platform. With 3.9 million genuine Dutch reviews, over 150,000 accommodations and a lowest-price guarantee, Zoover helps holiday makers find and directly book their ideal holiday.",
+  "slogan": "De start van je vakantie",
+  "identifier": [
+    { "@type": "PropertyValue", "name": "SGR", "value": "3732" },
+    { "@type": "PropertyValue", "name": "ANVR", "value": "05507" },
+    { "@type": "PropertyValue", "name": "KvK Zoover International GmbH", "value": "CH-020.4.082.835-0" }
+  ],
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "name": "ANVR member", "url": "https://www.anvr.nl/" },
+    { "@type": "EducationalOccupationalCredential", "name": "SGR certified", "url": "https://www.sgr.nl/" },
+    { "@type": "EducationalOccupationalCredential", "name": "Calamiteitenfonds", "url": "https://www.calamiteitenfonds.nl/" }
+  ],
+  "publishingPrinciples": "https://www.zoover.nl/richtlijnen",
+  "verificationFactCheckingPolicy": "https://www.zoover.nl/richtlijnen",
+  "areaServed": { "@type": "Country", "name": "Netherlands" },
+  "knowsAbout": [
+    "holiday reviews", "accommodation booking", "travel destinations",
+    "all-inclusive holidays", "campsites", "city trips", "last-minute travel"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "availableLanguage": "nl",
+    "description": "Available 24/7 in emergency situations"
+  },
+  "sameAs": [
+    "https://nl.wikipedia.org/wiki/Zoover",
+    "https://nl.trustpilot.com/review/www.zoover.nl",
+    "https://www.facebook.com/Zoover/?locale=nl_NL",
+    "https://www.instagram.com/zoover.nl/",
+    "https://www.youtube.com/@zoovernl",
+    "https://www.tiktok.com/@zoover.nl",
+    "https://www.linkedin.com/company/zoover/",
+    "https://nl.pinterest.com/zoover/"
+  ]
+}`,
+s4:`{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@id": "https://www.zoover.nl/#website" },
+    { "@id": "https://www.zoover.nl/#organization" },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.zoover.nl/#webpage",
+      "url": "https://www.zoover.nl/",
+      "name": "Zoover - Boek je vakantie!",
+      "isPartOf": { "@id": "https://www.zoover.nl/#website" },
+      "publisher": { "@id": "https://www.zoover.nl/#organization" },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".intro-text"]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.zoover.nl/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I book a holiday through Zoover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Zoover has been a full booking platform since 2020. In addition to 3.9 million genuine reviews you will find over 150,000 bookable accommodations, from campsites to all-inclusive resorts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Zoover lowest-price guarantee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you find the same holiday on the same day cheaper elsewhere, Zoover refunds the difference."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the reviews on Zoover reliable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. All 3.9 million reviews are written by Dutch holidaymakers who actually stayed at the accommodation. Zoover moderates every review and randomly verifies stays. The review guidelines can be found at zoover.nl/richtlijnen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the online travel assistant Vera work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vera is the AI travel assistant of Zoover. You share your holiday preferences and Vera finds matching accommodations. Vera directs you to the exact booking page — payment is completed by you, keeping you in control."
+          }
+        }
+      ]
+    }
+  ]
+}`,
+s5:`{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@id": "https://www.zoover.nl/#website" },
+    { "@id": "https://www.zoover.nl/#organization" },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.zoover.nl/[COUNTRY_SLUG]#webpage",
+      "url": "https://www.zoover.nl/[COUNTRY_SLUG]",
+      "name": "Holiday [COUNTRY_NAME] | Reviews & Hotels | Zoover",
+      "isPartOf": { "@id": "https://www.zoover.nl/#website" },
+      "publisher": { "@id": "https://www.zoover.nl/#organization" },
+      "breadcrumb": { "@id": "https://www.zoover.nl/[COUNTRY_SLUG]#breadcrumb" },
+      "about": { "@id": "https://www.zoover.nl/[COUNTRY_SLUG]#destination" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.zoover.nl/[COUNTRY_SLUG]#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Zoover", "item": "https://www.zoover.nl/" },
+        { "@type": "ListItem", "position": 2, "name": "[COUNTRY_NAME]", "item": "https://www.zoover.nl/[COUNTRY_SLUG]" }
+      ]
+    },
+    {
+      "@type": "TouristDestination",
+      "@id": "https://www.zoover.nl/[COUNTRY_SLUG]#destination",
+      "name": "[COUNTRY_NAME]",
+      "description": "[DESTINATION_DESCRIPTION]",
+      "url": "https://www.zoover.nl/[COUNTRY_SLUG]",
+      "touristType": ["Beach holiday", "All-inclusive", "Family holiday"]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.zoover.nl/[COUNTRY_SLUG]#hotellist",
+      "name": "Popular accommodations in [COUNTRY_NAME]",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Hotel",
+            "@id": "[ACCOMMODATION_URL]#hotel",
+            "name": "[ACCOMMODATION_NAME]",
+            "image": "[IMAGE_URL]",
+            "starRating": { "@type": "Rating", "ratingValue": "[STARS]" },
+            "url": "[ACCOMMODATION_URL]",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "[LOCALITY]",
+              "addressRegion": "[REGION]",
+              "addressCountry": "[COUNTRY_CODE]"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "[RATING_VALUE]",
+              "bestRating": 10,
+              "worstRating": 1,
+              "ratingCount": "[RATING_COUNT]",
+              "reviewCount": "[RATING_COUNT]"
+            }
+          }
+        }
+        // repeat for each accommodation in the list
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.zoover.nl/[COUNTRY_SLUG]#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the top accommodations in [COUNTRY_NAME] in [CURRENT_YEAR]?",
+          "acceptedAnswer": { "@type": "Answer", "text": "..." }
+        }
+        // 6 remaining FAQ questions with [COUNTRY_NAME] placeholder
+      ]
+    }
+  ]
+}`,
+s6:`// URL pattern → touristType mapping
+// /[country]/all-inclusive          → touristType: "All-inclusive"
+// /[country]/kindvriendelijk        → touristType: "Family holiday"
+// /[country]/campings               → touristType: "Camping"
+// /[country]/campings/autovakanties → touristType: ["Camping", "Road trip"]
+// /[country]/stedentrip             → touristType: "City trip"
+// /[country]/hotels                 → touristType: "Hotel"
+// /[country]/appartementen          → touristType: "Apartment"
+
+{
+  "@type": "TouristDestination",
+  "@id": "https://www.zoover.nl/[COUNTRY_SLUG]/[FILTER]#destination",
+  "name": "All-inclusive holidays [COUNTRY_NAME]",
+  "alternateName": "All inclusive vakantie boeken [COUNTRY_NAME]",
+  "description": "[DESTINATION_DESCRIPTION]",
+  "url": "https://www.zoover.nl/[COUNTRY_SLUG]/[FILTER]",
+  "isContainedInPlace": {
+    "@type": "TouristDestination",
+    "@id": "https://www.zoover.nl/[COUNTRY_SLUG]#destination",
+    "name": "[COUNTRY_NAME]"
+  },
+  "touristType": ["All-inclusive"]
+}`,
+s7:`{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@id": "https://www.zoover.nl/#website" },
+    { "@id": "https://www.zoover.nl/#organization" },
+    {
+      "@type": "WebPage",
+      "@id": "[ACCOMMODATION_URL]#webpage",
+      "url": "[ACCOMMODATION_URL]",
+      "name": "[ACCOMMODATION_NAME] | Reviews & Prices | Zoover",
+      "isPartOf": { "@id": "https://www.zoover.nl/#website" },
+      "publisher": { "@id": "https://www.zoover.nl/#organization" },
+      "breadcrumb": { "@id": "[ACCOMMODATION_URL]#breadcrumb" },
+      "about": { "@id": "[ACCOMMODATION_URL]#hotel" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "[ACCOMMODATION_URL]#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Zoover", "item": "https://www.zoover.nl/" },
+        { "@type": "ListItem", "position": 2, "name": "[COUNTRY_NAME]", "item": "https://www.zoover.nl/[COUNTRY]" },
+        { "@type": "ListItem", "position": 3, "name": "[REGION_NAME]", "item": "https://www.zoover.nl/[COUNTRY]/[REGION]" },
+        { "@type": "ListItem", "position": 4, "name": "[DESTINATION_NAME]", "item": "https://www.zoover.nl/[COUNTRY]/[REGION]/[DESTINATION]" },
+        { "@type": "ListItem", "position": 5, "name": "[ACCOMMODATION_NAME]" }
+      ]
+    },
+    {
+      "@type": "[HOTEL_TYPE]",
+      "@id": "[ACCOMMODATION_URL]#hotel",
+      "name": "[ACCOMMODATION_NAME]",
+      "image": "[IMAGE_URL]",
+      "description": "[ACCOMMODATION_DESCRIPTION]",
+      "telephone": "[TELEPHONE]",
+      "email": "[EMAIL]",
+      "url": "[HOTEL_WEBSITE]",
+      "priceRange": "From \u20AC[PRICE_FROM] p.p. including flight",
+      "starRating": { "@type": "Rating", "ratingValue": "[STARS]" },
+      "award": "[HAS_ZOOVER_AWARD]",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "[STREET_ADDRESS]",
+        "addressLocality": "[LOCALITY]",
+        "addressRegion": "[REGION]",
+        "addressCountry": "[COUNTRY_CODE]"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "[GEO_LAT]",
+        "longitude": "[GEO_LONG]"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "[RATING_VALUE]",
+        "bestRating": 10,
+        "worstRating": 1,
+        "ratingCount": "[RATING_COUNT]",
+        "reviewCount": "[RATING_COUNT]",
+        "reviewAspect": [
+          { "@type": "Rating", "name": "Child-friendly", "ratingValue": "[SUBRATING_CHILD_FRIENDLY]" },
+          { "@type": "Rating", "name": "Hygiene", "ratingValue": "[SUBRATING_HYGIENE]" },
+          { "@type": "Rating", "name": "Location", "ratingValue": "[SUBRATING_LOCATION]" },
+          { "@type": "Rating", "name": "Price/quality", "ratingValue": "[SUBRATING_PRICE_QUALITY]" },
+          { "@type": "Rating", "name": "Rooms", "ratingValue": "[SUBRATING_ROOMS]" },
+          { "@type": "Rating", "name": "Service", "ratingValue": "[SUBRATING_SERVICE]" }
+        ]
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "name": "[REVIEW_1_TITLE]",
+          "reviewBody": "[REVIEW_1_BODY]",
+          "datePublished": "[REVIEW_1_DATE]",
+          "description": "Travelled with [REVIEW_1_PARTY]",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "[REVIEW_1_SCORE]",
+            "bestRating": 10,
+            "worstRating": 1
+          },
+          "author": { "@type": "Person", "name": "[REVIEW_1_AUTHOR]" },
+          "publisher": { "@id": "https://www.zoover.nl/#organization" }
+        }
+        // review 2 and 3: identical pattern
+      ],
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "name": "Book [ACCOMMODATION_NAME] via Zoover",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "[ACCOMMODATION_URL]",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform"
+          ]
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Holiday booking via Zoover",
+          "provider": { "@id": "https://www.zoover.nl/#organization" }
+        }
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "[ACCOMMODATION_URL]#faq",
+      "mainEntity": [
+        // 12 FAQ questions with [ACCOMMODATION_NAME] as placeholder
+      ]
+    }
+  ]
+}`,
+s8:`// ——— Listerpagina (7 vragen) ———
+{
+  "@type": "FAQPage",
+  "@id": "https://www.zoover.nl/[COUNTRY_SLUG]#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the top accommodations in [DESTINATION_NAME] in [CURRENT_YEAR]?",
+      "acceptedAnswer": { "@type": "Answer", "text": "..." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best time to visit [DESTINATION_NAME]?",
+      "acceptedAnswer": { "@type": "Answer", "text": "..." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there all-inclusive options in [DESTINATION_NAME]?",
+      "acceptedAnswer": { "@type": "Answer", "text": "..." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which accommodations in [DESTINATION_NAME] are child-friendly?",
+      "acceptedAnswer": { "@type": "Answer", "text": "..." }
+    },
+    {
+      "@type": "Question",
+      "name": "What do Dutch travellers say about [DESTINATION_NAME]?",
+      "acceptedAnswer": { "@type": "Answer", "text": "..." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I book a last-minute holiday to [DESTINATION_NAME] via Zoover?",
+      "acceptedAnswer": { "@type": "Answer", "text": "..." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the lowest price guarantee for [DESTINATION_NAME] holidays?",
+      "acceptedAnswer": { "@type": "Answer", "text": "..." }
+    }
+  ]
+}
+
+// ——— Accommodatiepagina (12 vragen) ———
+{
+  "@type": "FAQPage",
+  "@id": "[ACCOMMODATION_URL]#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the overall rating of [ACCOMMODATION_NAME]?",
+      "acceptedAnswer": { "@type": "Answer", "text": "..." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is [ACCOMMODATION_NAME] suitable for families with children?",
+      "acceptedAnswer": { "@type": "Answer", "text": "..." }
+    },
+    {
+      "@type": "Question",
+      "name": "What facilities does [ACCOMMODATION_NAME] offer?",
+      "acceptedAnswer": { "@type": "Answer", "text": "..." }
+    },
+    {
+      "@type": "Question",
+      "name": "How far is [ACCOMMODATION_NAME] from the beach?",
+      "acceptedAnswer": { "@type": "Answer", "text": "..." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does [ACCOMMODATION_NAME] offer all-inclusive arrangements?",
+      "acceptedAnswer": { "@type": "Answer", "text": "..." }
+    },
+    {
+      "@type": "Question",
+      "name": "What do guests say about the service at [ACCOMMODATION_NAME]?",
+      "acceptedAnswer": { "@type": "Answer", "text": "..." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the price per person for [ACCOMMODATION_NAME]?",
+      "acceptedAnswer": { "@type": "Answer", "text": "..." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is [ACCOMMODATION_NAME] a Zoover Award winner?",
+      "acceptedAnswer": { "@type": "Answer", "text": "..." }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the location of [ACCOMMODATION_NAME] rated?",
+      "acceptedAnswer": { "@type": "Answer", "text": "..." }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the room ratings at [ACCOMMODATION_NAME]?",
+      "acceptedAnswer": { "@type": "Answer", "text": "..." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I book [ACCOMMODATION_NAME] directly via Zoover?",
+      "acceptedAnswer": { "@type": "Answer", "text": "..." }
+    },
+    {
+      "@type": "Question",
+      "name": "What travel party types recommend [ACCOMMODATION_NAME]?",
+      "acceptedAnswer": { "@type": "Answer", "text": "..." }
+    }
+  ]
+}`,
+s9:`// ——— ReserveAction (onderdeel van accommodatie @graph) ———
+"potentialAction": {
+  "@type": "ReserveAction",
+  "name": "Book [ACCOMMODATION_NAME] via Zoover",
+  "target": {
+    "@type": "EntryPoint",
+    "urlTemplate": "[ACCOMMODATION_URL]",
+    "actionPlatform": [
+      "http://schema.org/DesktopWebPlatform",
+      "http://schema.org/MobileWebPlatform"
+    ]
+  },
+  "result": {
+    "@type": "Reservation",
+    "name": "Holiday booking via Zoover",
+    "provider": { "@id": "https://www.zoover.nl/#organization" }
+  }
+}
+
+// ——— WebMCP Tool Contract (fase 2) ———
+// navigator.modelContext — Tool Contract voor Zoover
+{
+  "tools": [
+    {
+      "name": "searchVacations",
+      "description": "Search Zoover holiday inventory by destination, date and filters.",
+      "parameters": {
+        "destination": { "type": "string", "description": "Country, region or city" },
+        "departureDate": { "type": "string", "format": "date" },
+        "duration": { "type": "integer", "description": "Number of nights" },
+        "filters": {
+          "type": "array",
+          "items": { "enum": ["all-inclusive", "family-friendly", "small-scale", "camping"] }
+        }
+      }
+    },
+    {
+      "name": "getAccommodationDetails",
+      "description": "Retrieve details for an accommodation including reviews and price.",
+      "parameters": {
+        "accommodationId": { "type": "string", "description": "Zoover accommodation ID" }
+      }
+    },
+    {
+      "name": "startReservation",
+      "description": "Initiate the booking process for an accommodation on Zoover.",
+      "parameters": {
+        "accommodationId": { "type": "string" },
+        "departureDate": { "type": "string", "format": "date" },
+        "travelers": { "type": "integer" },
+        "mealplan": { "type": "string", "enum": ["AI", "HB", "BB", "RO"] }
+      }
+    }
+  ]
+}`
+};
+
+function sdNav(dir){sdGo(sdCur+dir);}
+function sdGo(idx){
+  sdCur=Math.max(0,Math.min(sdTotal-1,idx));
+  document.getElementById('sdTrack').style.transform='translateX(-'+(sdCur*100)+'%)';
+  document.querySelectorAll('.sd-dot').forEach(function(d,i){d.classList.toggle('active',i===sdCur);});
+  document.getElementById('sdCounter').textContent=(sdCur+1)+' / '+sdTotal;
+  document.getElementById('sdPrev').disabled=sdCur===0;
+  document.getElementById('sdNext').disabled=sdCur===sdTotal-1;
+}
+function sdToggle(btn,key){
+  const block=document.getElementById('sdBlock-'+key);
+  const open=block.classList.toggle('open');
+  btn.textContent=open?'▽ Verberg schema':'▷ Bekijk schema';
+}
+function sdCopy(btn,key){
+  const text=sdCodeMap[key];
+  const done=function(){
+    btn.classList.add('copied');btn.textContent='✓ Copied!';
+    setTimeout(function(){btn.classList.remove('copied');btn.textContent='⎘ Kopieer';},2000);
+  };
+  if(navigator.clipboard){navigator.clipboard.writeText(text).then(done).catch(function(){sdCopyFallback(text,done);});}
+  else{sdCopyFallback(text,done);}
+}
+function sdCopyFallback(text,done){
+  const t=document.createElement('textarea');t.value=text;t.style.position='fixed';t.style.opacity='0';
+  document.body.appendChild(t);t.focus();t.select();
+  try{document.execCommand('copy');done();}catch(e){}
+  document.body.removeChild(t);
+}
+(function sdInit(){
+  const dots=document.getElementById('sdDots');
+  for(let i=0;i<sdTotal;i++){
+    const d=document.createElement('button');
+    d.className='sd-dot'+(i===0?' active':'');
+    d.setAttribute('aria-label','Ga naar slide '+(i+1));
+    d.onclick=function(){sdGo(i);};
+    dots.appendChild(d);
+  }
+  Object.keys(sdCodeMap).forEach(function(k){
+    const pre=document.getElementById('sdPre-'+k);
+    if(pre)pre.textContent=sdCodeMap[k];
+  });
+})();
+document.addEventListener('keydown',function(e){
+  if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA')return;
+  if(e.key==='ArrowLeft')sdNav(-1);
+  if(e.key==='ArrowRight')sdNav(1);
+});
 </script>
 </body>
 </html>

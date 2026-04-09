@@ -369,9 +369,11 @@ body.has-sel .card:not(.hl-src):not(.hl-fwd):not(.hl-bwd):not(.hl-bc):not(.hl-sa
 .sd-counter{font-size:11px;color:var(--mu);min-width:42px;text-align:right;}
 .sd-roadmap-cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:20px;}
 .sd-col-head{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:6px 10px;border-radius:6px;margin-bottom:10px;text-align:center;}
-.sd-col-head.s1{background:rgba(46,125,50,.1);color:#2E7D32;}
+.sd-col-head.s1{background:rgba(26,127,75,.1);color:#1A7F4B;}
 .sd-col-head.s2{background:rgba(232,119,34,.1);color:#C65D00;}
-.sd-col-head.ph2{background:rgba(0,0,0,.05);color:#777;}
+.sd-col-head.ph2{background:rgba(140,153,170,.12);color:#8C99AA;}
+.sd-code-label-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px;margin-top:16px;}
+.sd-code-label{font-size:11px;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:.5px;}
 .sd-rm-item{font-size:11.5px;color:var(--mu);padding:5px 0;border-bottom:1px solid var(--bd);line-height:1.45;}
 .sd-rm-item:last-child{border-bottom:none;}
 .sd-pill{display:inline-block;border-radius:3px;padding:1px 6px;font-size:10px;font-weight:700;margin-top:3px;}
@@ -588,27 +590,22 @@ body.has-sel .card:not(.hl-src):not(.hl-fwd):not(.hl-bwd):not(.hl-bc):not(.hl-sa
     <div class="sd-track-outer">
       <div class="sd-track" id="sdTrack">
 
-        <!-- Slide 1: Introductie -->
+        <!-- Slide 1: Lost in Translation -->
         <div class="sd-slide">
-          <div class="sd-slide-title">What is structured data?</div>
-          <div class="sd-slide-text">The web has two audiences: people and machines. Structured data is the translation layer for machines — a way of labelling information on each page so search engines and AI models understand exactly what they are looking at. Not just that a page exists, but what Zoover is, what a hotel offers, and what a user can do there. This plan applies that labelling to every page type on Zoover.</div>
+          <div class="sd-slide-title">Lost in Translation</div>
+          <div class="sd-slide-text">The web has two audiences: people and machines. This structured data plan is the translation layer for machines — labelling every page on Zoover so search engines and AI models understand exactly what Zoover is, what it offers, and what a user can do there. The result: a consistent, machine-readable identity that strengthens both traditional SEO and AI visibility.</div>
         </div>
 
-        <!-- Slide 2: WebSite -->
+        <!-- Slide 2: Strategic opportunity -->
         <div class="sd-slide">
-          <div class="sd-slide-title">Site-wide — WebSite</div>
-          <div class="sd-slide-text">Staat op elke pagina. Maakt de zoekfunctie van Zoover machine-leesbaar via een SearchAction, en verankert de websiteidentiteit met een vaste @id waaraan alle andere entiteiten refereren.</div>
-          <button class="sd-btn" onclick="sdToggle(this,'s2')">▷ Bekijk schema</button>
-          <div class="sd-code-block" id="sdBlock-s2">
-            <div class="sd-code-header"><span class="sd-code-lang">JSON-LD</span><button class="sd-copy-btn" onclick="sdCopy(this,'s2')">⎘ Kopieer</button></div>
-            <div class="sd-code-body"><pre id="sdPre-s2"></pre></div>
-          </div>
+          <div class="sd-slide-title">From review platform to booking platform</div>
+          <div class="sd-slide-text">Most AI models already describe Zoover as a hybrid platform — but the picture is inconsistent. Some still lead with the review framing; others cite outdated figures from third-party sources. Structured data gives Zoover direct control over its own narrative. More importantly, it positions Zoover's 3.9 million verified reviews not as a legacy feature, but as a core competitive advantage that Booking.com and TUI cannot replicate.</div>
         </div>
 
-        <!-- Slide 3: Organization -->
+        <!-- Slide 3: @graph architecture -->
         <div class="sd-slide">
-          <div class="sd-slide-title">Site-wide — Organization (TravelAgency)</div>
-          <div class="sd-slide-text">Het meest strategische element. Definieert Zoover als TravelAgency met oprichtingsjaar, keurmerken (ANVR 05507, SGR 3732), publishingPrinciples, en sameAs-koppelingen naar Wikipedia, Trustpilot en alle sociale kanalen. Corrigeert de verouderde reviewplatform-perceptie bij AI-modellen.</div>
+          <div class="sd-slide-title">@graph: from isolated blocks to a knowledge network</div>
+          <div class="sd-slide-text">The current implementation uses standalone schema blocks that don't talk to each other. This plan replaces them with a single @graph block per page where every entity references every other via @id. The hotel links to the destination, the review links to the hotel, everything links back to Zoover as the trusted publisher. That is the difference between being indexed and being understood.</div>
           <button class="sd-btn" onclick="sdToggle(this,'s3')">▷ Bekijk schema</button>
           <div class="sd-code-block" id="sdBlock-s3">
             <div class="sd-code-header"><span class="sd-code-lang">JSON-LD</span><button class="sd-copy-btn" onclick="sdCopy(this,'s3')">⎘ Kopieer</button></div>
@@ -616,10 +613,10 @@ body.has-sel .card:not(.hl-src):not(.hl-fwd):not(.hl-bwd):not(.hl-bc):not(.hl-sa
           </div>
         </div>
 
-        <!-- Slide 4: Homepage -->
+        <!-- Slide 4: Entity association strategy -->
         <div class="sd-slide">
-          <div class="sd-slide-title">Homepage — FAQPage</div>
-          <div class="sd-slide-text">Vier platformvragen over Zoover die direct extraheerbaar zijn voor Google rich results en AI-antwoorden. Strategisch ingezet om de boekingsidentiteit van Zoover te verankeren naast het reviewerfgoed.</div>
+          <div class="sd-slide-title">Claiming Zoover's conceptual territory</div>
+          <div class="sd-slide-text">Structured data is not just about describing pages — it is about claiming which concepts and places Zoover wants to be associated with. The Organization entity links Zoover to 13 destination countries via Wikidata, to brand concepts like "verified reviews", "lowest-price guarantee" and "all-inclusive holidays", and to the Dutch travel trust network via ANVR, SGR and Calamiteitenfonds.</div>
           <button class="sd-btn" onclick="sdToggle(this,'s4')">▷ Bekijk schema</button>
           <div class="sd-code-block" id="sdBlock-s4">
             <div class="sd-code-header"><span class="sd-code-lang">JSON-LD</span><button class="sd-copy-btn" onclick="sdCopy(this,'s4')">⎘ Kopieer</button></div>
@@ -627,10 +624,10 @@ body.has-sel .card:not(.hl-src):not(.hl-fwd):not(.hl-bwd):not(.hl-bc):not(.hl-sa
           </div>
         </div>
 
-        <!-- Slide 5: Listing pages -->
+        <!-- Slide 5: Organization -->
         <div class="sd-slide">
-          <div class="sd-slide-title">Listing pages — TouristDestination + ItemList</div>
-          <div class="sd-slide-text">Elke landpagina, regio en bestemming krijgt een TouristDestination-entiteit met een isContainedInPlace-hiërarchie. De bestaande ItemList met hotelfoto's blijft intact — alleen genest in de @graph zodat de SERP-afbeeldingen behouden blijven.</div>
+          <div class="sd-slide-title">Site-wide — Organization (TravelAgency)</div>
+          <div class="sd-slide-text">Defined on every page. Declares Zoover as a TravelAgency — not a review site — with founding date, legal name, certifications (ANVR 05507, SGR 3732), publishingPrinciples linking to the review guidelines, and sameAs references to Wikipedia, Trustpilot and all social channels. This is the most strategically important element of the entire plan.</div>
           <button class="sd-btn" onclick="sdToggle(this,'s5')">▷ Bekijk schema</button>
           <div class="sd-code-block" id="sdBlock-s5">
             <div class="sd-code-header"><span class="sd-code-lang">JSON-LD</span><button class="sd-copy-btn" onclick="sdCopy(this,'s5')">⎘ Kopieer</button></div>
@@ -638,10 +635,10 @@ body.has-sel .card:not(.hl-src):not(.hl-fwd):not(.hl-bwd):not(.hl-bc):not(.hl-sa
           </div>
         </div>
 
-        <!-- Slide 6: Filter pages -->
+        <!-- Slide 6: WebSite -->
         <div class="sd-slide">
-          <div class="sd-slide-title">Filter pages — touristType</div>
-          <div class="sd-slide-text">All-inclusive, kindvriendelijk, campings en andere filterpagina's erven de TouristDestination-structuur met een specifiek touristType-attribuut. De H1 wordt als alternateName opgenomen.</div>
+          <div class="sd-slide-title">Site-wide — WebSite + SearchAction</div>
+          <div class="sd-slide-text">Also on every page. Makes Zoover's search function machine-readable via a SearchAction, and anchors the website identity with a fixed @id that all other entities reference back to.</div>
           <button class="sd-btn" onclick="sdToggle(this,'s6')">▷ Bekijk schema</button>
           <div class="sd-code-block" id="sdBlock-s6">
             <div class="sd-code-header"><span class="sd-code-lang">JSON-LD</span><button class="sd-copy-btn" onclick="sdCopy(this,'s6')">⎘ Kopieer</button></div>
@@ -649,10 +646,10 @@ body.has-sel .card:not(.hl-src):not(.hl-fwd):not(.hl-bwd):not(.hl-bc):not(.hl-sa
           </div>
         </div>
 
-        <!-- Slide 7: Accommodation -->
+        <!-- Slide 7: Homepage FAQPage -->
         <div class="sd-slide">
-          <div class="sd-slide-title">Accommodation page — full nested structure</div>
-          <div class="sd-slide-text">De meest complete @graph op de site. Combineert Hotel/Resort/Campground met AggregateRating, zes subratings, drie reviews met reisgezelschapstype, GeoCoordinates, contactgegevens, een FAQPage met 12 vragen en een ReserveAction voor agentic-gereedheid.</div>
+          <div class="sd-slide-title">Homepage — FAQPage</div>
+          <div class="sd-slide-text">Four platform questions that make Zoover's booking identity directly extractable for Google rich results and AI answers. Strategically chosen to correct the review-platform perception: the first question explicitly addresses whether you can book through Zoover.</div>
           <button class="sd-btn" onclick="sdToggle(this,'s7')">▷ Bekijk schema</button>
           <div class="sd-code-block" id="sdBlock-s7">
             <div class="sd-code-header"><span class="sd-code-lang">JSON-LD</span><button class="sd-copy-btn" onclick="sdCopy(this,'s7')">⎘ Kopieer</button></div>
@@ -660,10 +657,10 @@ body.has-sel .card:not(.hl-src):not(.hl-fwd):not(.hl-bwd):not(.hl-bc):not(.hl-sa
           </div>
         </div>
 
-        <!-- Slide 8: FAQPage strategy -->
+        <!-- Slide 8: Listing pages -->
         <div class="sd-slide">
-          <div class="sd-slide-title">FAQPage — per page type</div>
-          <div class="sd-slide-text">Elke pagina krijgt een contextspecifieke FAQPage. Listerpagina's: 7 vragen met [DESTINATION_NAME] en [CURRENT_YEAR] als placeholders. Accommodatiepagina's: 12 vragen met [ACCOMMODATION_NAME]. De vragen zijn zichtbaar in de HTML én in de structured data — zodat er nooit schema drift ontstaat.</div>
+          <div class="sd-slide-title">Listing pages — TouristDestination + ItemList</div>
+          <div class="sd-slide-text">Every country, region and destination page gets a TouristDestination entity with an isContainedInPlace hierarchy — so AI models understand that Tsilivi is part of Zakynthos, which is part of Greece. The existing ItemList with accommodation images is preserved exactly as-is, only nested within the @graph to maintain SERP image display.</div>
           <button class="sd-btn" onclick="sdToggle(this,'s8')">▷ Bekijk schema</button>
           <div class="sd-code-block" id="sdBlock-s8">
             <div class="sd-code-header"><span class="sd-code-lang">JSON-LD</span><button class="sd-copy-btn" onclick="sdCopy(this,'s8')">⎘ Kopieer</button></div>
@@ -671,48 +668,73 @@ body.has-sel .card:not(.hl-src):not(.hl-fwd):not(.hl-bwd):not(.hl-bc):not(.hl-sa
           </div>
         </div>
 
-        <!-- Slide 9: Agentic readiness -->
+        <!-- Slide 9: Accommodation page -->
         <div class="sd-slide">
-          <div class="sd-slide-title">Agentic readiness — ReserveAction + WebMCP</div>
-          <div class="sd-slide-text">ReserveAction maakt Zoover machine-herkenbaar als boekingsplatform — nu al, zonder dat Google dit als rich result toont. WebMCP (fase 2) voegt daar een Tool Contract aan toe waarmee AI-agenten straks direct kunnen zoeken, filteren en een boeking starten op Zoover.</div>
+          <div class="sd-slide-title">Accommodation page — full nested structure</div>
+          <div class="sd-slide-text">The most complete @graph on the site. Combines Hotel/Resort/Campground with touristType (all-inclusive, family-friendly), meal plan, six sub-ratings, three reviews with travel party type, GeoCoordinates, contact details, a FAQPage with 12 questions and a ReserveAction for agentic readiness. Every field is dynamically populated from the existing database.</div>
           <button class="sd-btn" onclick="sdToggle(this,'s9')">▷ Bekijk schema</button>
           <div class="sd-code-block" id="sdBlock-s9">
-            <div class="sd-code-header"><span class="sd-code-lang">JSON-LD + WebMCP</span><button class="sd-copy-btn" onclick="sdCopy(this,'s9')">⎘ Kopieer</button></div>
+            <div class="sd-code-header"><span class="sd-code-lang">JSON-LD</span><button class="sd-copy-btn" onclick="sdCopy(this,'s9')">⎘ Kopieer</button></div>
             <div class="sd-code-body"><pre id="sdPre-s9"></pre></div>
           </div>
         </div>
 
-        <!-- Slide 10: Implementation roadmap -->
+        <!-- Slide 10: Agentic readiness -->
+        <div class="sd-slide">
+          <div class="sd-slide-title">Ready for the agentic web</div>
+          <div class="sd-slide-text">Google is evolving from a search engine into an agent manager that completes tasks on behalf of users. The ReserveAction in this plan tells any AI agent that booking via Zoover is possible — right now. WebMCP (phase 2) adds a Tool Contract that lets AI agents search, filter and initiate bookings directly. Zoover can already sign up for the WebMCP preview at developer.chrome.com/docs/ai/join-epp.</div>
+          <div class="sd-code-label-row">
+            <span class="sd-code-label">ReserveAction (JSON-LD)</span>
+            <button class="sd-btn" onclick="sdToggle(this,'s10a')">▷ Bekijk schema</button>
+          </div>
+          <div class="sd-code-block" id="sdBlock-s10a">
+            <div class="sd-code-header"><span class="sd-code-lang">JSON-LD</span><button class="sd-copy-btn" onclick="sdCopy(this,'s10a')">⎘ Kopieer</button></div>
+            <div class="sd-code-body"><pre id="sdPre-s10a"></pre></div>
+          </div>
+          <div class="sd-code-label-row">
+            <span class="sd-code-label">WebMCP Tool Contract (phase 2)</span>
+            <button class="sd-btn" onclick="sdToggle(this,'s10b')">▷ Bekijk schema</button>
+          </div>
+          <div class="sd-code-block" id="sdBlock-s10b">
+            <div class="sd-code-header"><span class="sd-code-lang">JSON</span><button class="sd-copy-btn" onclick="sdCopy(this,'s10b')">⎘ Kopieer</button></div>
+            <div class="sd-code-body"><pre id="sdPre-s10b"></pre></div>
+          </div>
+        </div>
+
+        <!-- Slide 11: Implementation roadmap -->
         <div class="sd-slide">
           <div class="sd-slide-title">Implementation roadmap</div>
-          <div class="sd-slide-text">Het plan wordt in drie fasen uitgerold. Sprint 1 borgt de SERP-afbeeldingen en legt de semantische basis. Sprint 2 voegt AI-optimalisaties toe. Fase 2 bereidt Zoover voor op het agentic web.</div>
+          <div class="sd-slide-text">Three phases. Sprint 1 secures the existing SERP appearance and lays the semantic foundation. Sprint 2 adds AI optimisations and entity associations. Phase 2 prepares Zoover for the agentic web.</div>
           <div class="sd-roadmap-cols">
             <div>
               <div class="sd-col-head s1">Sprint 1</div>
-              <div class="sd-rm-item">WebSite + SearchAction<br><span class="sd-pill must">Must-have</span></div>
-              <div class="sd-rm-item">Organization als TravelAgency<br><span class="sd-pill must">Must-have</span></div>
-              <div class="sd-rm-item">sameAs: Wikipedia + socials<br><span class="sd-pill must">Must-have</span></div>
-              <div class="sd-rm-item">BreadcrumbList alle pagina's<br><span class="sd-pill must">Must-have</span></div>
-              <div class="sd-rm-item">ItemList + @id op listings<br><span class="sd-pill must">Must-have</span></div>
-              <div class="sd-rm-item">AggregateRating + 6 subratings<br><span class="sd-pill must">Must-have</span></div>
-              <div class="sd-rm-item">ReserveAction accommodaties<br><span class="sd-pill must">Must-have</span></div>
-              <div class="sd-rm-item">FAQPage homepage (4 vragen)<br><span class="sd-pill must">Must-have</span></div>
+              <div class="sd-rm-item">Site-wide @graph: WebSite + SearchAction<br><span class="sd-pill must">Must-have</span></div>
+              <div class="sd-rm-item">Organization as TravelAgency + knowsAbout<br><span class="sd-pill must">Must-have</span></div>
+              <div class="sd-rm-item">sameAs: Wikipedia + social + Trustpilot<br><span class="sd-pill must">Must-have</span></div>
+              <div class="sd-rm-item">parentOrganization: Vakanties.nl<br><span class="sd-pill must">Must-have</span></div>
+              <div class="sd-rm-item">BreadcrumbList nested in @graph<br><span class="sd-pill must">Must-have</span></div>
+              <div class="sd-rm-item">ItemList with @id on all listing pages<br><span class="sd-pill must">Must-have</span></div>
+              <div class="sd-rm-item">AggregateRating + 6 sub-ratings<br><span class="sd-pill must">Must-have</span></div>
+              <div class="sd-rm-item">touristType on accommodation objects<br><span class="sd-pill must">Must-have</span></div>
+              <div class="sd-rm-item">ReserveAction on all accommodation pages<br><span class="sd-pill must">Must-have</span></div>
+              <div class="sd-rm-item">FAQPage on homepage (4 questions)<br><span class="sd-pill must">Must-have</span></div>
             </div>
             <div>
               <div class="sd-col-head s2">Sprint 2</div>
-              <div class="sd-rm-item">TouristDestination alle pagina's<br><span class="sd-pill must">Must-have</span></div>
-              <div class="sd-rm-item">FAQPage listings (7 vragen)<br><span class="sd-pill must">Must-have</span></div>
-              <div class="sd-rm-item">FAQPage accommodaties (12 vragen)<br><span class="sd-pill must">Must-have</span></div>
-              <div class="sd-rm-item">publishingPrinciples + E-E-A-T<br><span class="sd-pill rec">Recommended</span></div>
+              <div class="sd-rm-item">TouristDestination on all listing pages<br><span class="sd-pill must">Must-have</span></div>
+              <div class="sd-rm-item">FAQPage on listing pages (7 questions)<br><span class="sd-pill must">Must-have</span></div>
+              <div class="sd-rm-item">FAQPage on accommodation pages (12 questions)<br><span class="sd-pill must">Must-have</span></div>
+              <div class="sd-rm-item">publishingPrinciples + verificationFactCheckingPolicy<br><span class="sd-pill rec">Recommended</span></div>
               <div class="sd-rm-item">AboutPage + WebApplication Vera<br><span class="sd-pill rec">Recommended</span></div>
-              <div class="sd-rm-item">touristType filterpagina's<br><span class="sd-pill rec">Recommended</span></div>
+              <div class="sd-rm-item">touristType on filter pages<br><span class="sd-pill rec">Recommended</span></div>
+              <div class="sd-rm-item">Meal plan as amenityFeature<br><span class="sd-pill rec">Recommended</span></div>
             </div>
             <div>
-              <div class="sd-col-head ph2">Fase 2</div>
-              <div class="sd-rm-item">amenityFeature op accommodaties<br><span class="sd-pill nice">Nice-to-have</span></div>
-              <div class="sd-rm-item">Wikidata item aanmaken<br><span class="sd-pill nice">Nice-to-have</span></div>
-              <div class="sd-rm-item">WebMCP Tool Contract<br><span class="sd-pill nice">Nice-to-have</span></div>
-              <div class="sd-rm-item">speakable homepage + about<br><span class="sd-pill nice">Nice-to-have</span></div>
+              <div class="sd-col-head ph2">Phase 2</div>
+              <div class="sd-rm-item">Full amenityFeature (all facilities)<br><span class="sd-pill nice">Nice-to-have</span></div>
+              <div class="sd-rm-item">Create Wikidata item for Zoover<br><span class="sd-pill nice">Nice-to-have</span></div>
+              <div class="sd-rm-item">Implement WebMCP Tool Contract<br><span class="sd-pill nice">Nice-to-have</span></div>
+              <div class="sd-rm-item">speakable on homepage + about page<br><span class="sd-pill nice">Nice-to-have</span></div>
             </div>
           </div>
         </div>
@@ -722,7 +744,7 @@ body.has-sel .card:not(.hl-src):not(.hl-fwd):not(.hl-bwd):not(.hl-bc):not(.hl-sa
     <div class="sd-nav">
       <button class="sd-arrow" id="sdPrev" onclick="sdNav(-1)" disabled>←</button>
       <div class="sd-dots" id="sdDots"></div>
-      <span class="sd-counter" id="sdCounter">1 / 10</span>
+      <span class="sd-counter" id="sdCounter">1 / 11</span>
       <button class="sd-arrow" id="sdNext" onclick="sdNav(1)">→</button>
     </div>
   </div>
@@ -1773,32 +1795,62 @@ document.querySelector('.jw').addEventListener('scroll',()=>{if(activeLinkCard) 
 window.addEventListener('resize',()=>{if(activeLinkCard) drawArrows(activeLinkCard);});
 
 // ——— Structured Data Carousel ———
-const sdTotal=10;
+const sdTotal=11;
 let sdCur=0;
 const sdCodeMap={
-s2:`{
+s3:`{
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebSite",
       "@id": "https://www.zoover.nl/#website",
+      "name": "Zoover"
+    },
+    {
+      "@type": ["TravelAgency", "Organization"],
+      "@id": "https://www.zoover.nl/#organization",
       "name": "Zoover",
-      "alternateName": "Zoover - Boek je vakantie!",
-      "url": "https://www.zoover.nl/",
-      "inLanguage": "nl-NL",
-      "description": "Zoover is the largest Dutch holiday platform with 3.9 million genuine reviews and over 150,000 bookable accommodations.",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://www.zoover.nl/zoeken?bestemming={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
+      "url": "https://www.zoover.nl/"
+    },
+    {
+      "@type": "Hotel",
+      "@id": "https://www.zoover.nl/a/[ACCOMMODATION_ID]/[ACCOMMODATION_SLUG]#hotel",
+      "name": "[ACCOMMODATION_NAME]",
+      "publisher": { "@id": "https://www.zoover.nl/#organization" }
     }
   ]
 }`,
-s3:`{
+s4:`"knowsAbout": [
+  "boekingsplatform",
+  "onafhankelijke vergelijker",
+  "makkelijk boeken",
+  "laagsteprijsgarantie",
+  "vakantie boeken",
+  "pakketreizen",
+  "all-inclusive vakanties",
+  "goedkope vakantie",
+  "echte reviews",
+  "geverifieerde reviews",
+  "reisorganisatie",
+  "online reisbureau",
+  "betrouwbaar",
+  "veilig boeken",
+  "Nederlandstalige klantenservice",
+  { "@type": "Country", "name": "Spain", "sameAs": "https://www.wikidata.org/wiki/Q29" },
+  { "@type": "Country", "name": "Greece", "sameAs": "https://www.wikidata.org/wiki/Q41" },
+  { "@type": "Country", "name": "Turkey", "sameAs": "https://www.wikidata.org/wiki/Q43" },
+  { "@type": "Country", "name": "Egypt", "sameAs": "https://www.wikidata.org/wiki/Q79" },
+  { "@type": "Country", "name": "Portugal", "sameAs": "https://www.wikidata.org/wiki/Q45" },
+  { "@type": "Country", "name": "Morocco", "sameAs": "https://www.wikidata.org/wiki/Q1028" },
+  { "@type": "Country", "name": "France", "sameAs": "https://www.wikidata.org/wiki/Q142" },
+  { "@type": "Country", "name": "Italy", "sameAs": "https://www.wikidata.org/wiki/Q38" },
+  { "@type": "Country", "name": "Malta", "sameAs": "https://www.wikidata.org/wiki/Q233" },
+  { "@type": "Country", "name": "Tunisia", "sameAs": "https://www.wikidata.org/wiki/Q948" },
+  { "@type": "Country", "name": "Curacao", "sameAs": "https://www.wikidata.org/wiki/Q25279" },
+  { "@type": "Country", "name": "Germany", "sameAs": "https://www.wikidata.org/wiki/Q183" },
+  { "@type": "Country", "name": "Netherlands", "sameAs": "https://www.wikidata.org/wiki/Q55" }
+]`,
+s5:`{
   "@type": ["TravelAgency", "Organization"],
   "@id": "https://www.zoover.nl/#organization",
   "name": "Zoover",
@@ -1807,8 +1859,13 @@ s3:`{
   "logo": "https://www.zoover.nl/logo.svg",
   "foundingDate": "2005",
   "foundingLocation": { "@type": "Place", "name": "Zeist, Netherlands" },
-  "description": "Zoover is a Dutch holiday platform, founded in 2005 as a review site and grown since 2020 into a full-service booking platform. With 3.9 million genuine Dutch reviews, over 150,000 accommodations and a lowest-price guarantee, Zoover helps holiday makers find and directly book their ideal holiday.",
+  "description": "Zoover is a Dutch holiday booking platform founded in 2005. With 3.9 million verified reviews from real Dutch holidaymakers and over 150,000 bookable accommodations, Zoover combines independent review authority with a full-service online travel agency — offering package holidays, all-inclusive resorts, campsites and city trips with a lowest-price guarantee. Zoover is certified by ANVR (05507), SGR (3732) and the Calamiteitenfonds.",
   "slogan": "De start van je vakantie",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Vakanties.nl B.V.",
+    "url": "https://www.vakanties.nl"
+  },
   "identifier": [
     { "@type": "PropertyValue", "name": "SGR", "value": "3732" },
     { "@type": "PropertyValue", "name": "ANVR", "value": "05507" },
@@ -1822,10 +1879,6 @@ s3:`{
   "publishingPrinciples": "https://www.zoover.nl/richtlijnen",
   "verificationFactCheckingPolicy": "https://www.zoover.nl/richtlijnen",
   "areaServed": { "@type": "Country", "name": "Netherlands" },
-  "knowsAbout": [
-    "holiday reviews", "accommodation booking", "travel destinations",
-    "all-inclusive holidays", "campsites", "city trips", "last-minute travel"
-  ],
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
@@ -1843,64 +1896,62 @@ s3:`{
     "https://nl.pinterest.com/zoover/"
   ]
 }`,
-s4:`{
-  "@context": "https://schema.org",
-  "@graph": [
-    { "@id": "https://www.zoover.nl/#website" },
-    { "@id": "https://www.zoover.nl/#organization" },
+s6:`{
+  "@type": "WebSite",
+  "@id": "https://www.zoover.nl/#website",
+  "name": "Zoover",
+  "alternateName": "Zoover - Boek je vakantie!",
+  "url": "https://www.zoover.nl/",
+  "inLanguage": "nl-NL",
+  "description": "Zoover is the largest Dutch holiday platform with 3.9 million genuine reviews and over 150,000 bookable accommodations.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://www.zoover.nl/zoeken?bestemming={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}`,
+s7:`{
+  "@type": "FAQPage",
+  "@id": "https://www.zoover.nl/#faq",
+  "mainEntity": [
     {
-      "@type": "WebPage",
-      "@id": "https://www.zoover.nl/#webpage",
-      "url": "https://www.zoover.nl/",
-      "name": "Zoover - Boek je vakantie!",
-      "isPartOf": { "@id": "https://www.zoover.nl/#website" },
-      "publisher": { "@id": "https://www.zoover.nl/#organization" },
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", ".intro-text"]
+      "@type": "Question",
+      "name": "Can I book a holiday through Zoover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Zoover has been a full booking platform since 2020. In addition to 3.9 million genuine reviews you will find over 150,000 bookable accommodations, from campsites to all-inclusive resorts, with a lowest-price guarantee."
       }
     },
     {
-      "@type": "FAQPage",
-      "@id": "https://www.zoover.nl/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Can I book a holiday through Zoover?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Zoover has been a full booking platform since 2020. In addition to 3.9 million genuine reviews you will find over 150,000 bookable accommodations, from campsites to all-inclusive resorts."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the Zoover lowest-price guarantee?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If you find the same holiday on the same day cheaper elsewhere, Zoover refunds the difference."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are the reviews on Zoover reliable?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. All 3.9 million reviews are written by Dutch holidaymakers who actually stayed at the accommodation. Zoover moderates every review and randomly verifies stays. The review guidelines can be found at zoover.nl/richtlijnen."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does the online travel assistant Vera work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Vera is the AI travel assistant of Zoover. You share your holiday preferences and Vera finds matching accommodations. Vera directs you to the exact booking page — payment is completed by you, keeping you in control."
-          }
-        }
-      ]
+      "@type": "Question",
+      "name": "What is the Zoover lowest-price guarantee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you find the same holiday on the same day cheaper elsewhere, Zoover refunds the difference."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the reviews on Zoover reliable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All 3.9 million reviews are written by Dutch holidaymakers who actually stayed at the accommodation. Zoover moderates every review and randomly verifies stays. Review guidelines: zoover.nl/richtlijnen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the online travel assistant Vera work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vera is the AI travel assistant of Zoover. You share your holiday preferences and Vera finds matching accommodations. Vera directs you to the exact booking page — payment is completed by you, keeping you in control."
+      }
     }
   ]
 }`,
-s5:`{
+s8:`{
   "@context": "https://schema.org",
   "@graph": [
     { "@id": "https://www.zoover.nl/#website" },
@@ -1940,11 +1991,12 @@ s5:`{
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@type": "Hotel",
+            "@type": "[HOTEL_TYPE]",
             "@id": "[ACCOMMODATION_URL]#hotel",
             "name": "[ACCOMMODATION_NAME]",
             "image": "[IMAGE_URL]",
             "starRating": { "@type": "Rating", "ratingValue": "[STARS]" },
+            "touristType": ["[TOURIST_TYPE]"],
             "url": "[ACCOMMODATION_URL]",
             "address": {
               "@type": "PostalAddress",
@@ -1962,47 +2014,18 @@ s5:`{
             }
           }
         }
-        // repeat for each accommodation in the list
       ]
     },
     {
       "@type": "FAQPage",
       "@id": "https://www.zoover.nl/[COUNTRY_SLUG]#faq",
       "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What are the top accommodations in [COUNTRY_NAME] in [CURRENT_YEAR]?",
-          "acceptedAnswer": { "@type": "Answer", "text": "..." }
-        }
-        // 6 remaining FAQ questions with [COUNTRY_NAME] placeholder
+        "// 7 FAQ questions with [COUNTRY_NAME] and [CURRENT_YEAR] as placeholders"
       ]
     }
   ]
 }`,
-s6:`// URL pattern → touristType mapping
-// /[country]/all-inclusive          → touristType: "All-inclusive"
-// /[country]/kindvriendelijk        → touristType: "Family holiday"
-// /[country]/campings               → touristType: "Camping"
-// /[country]/campings/autovakanties → touristType: ["Camping", "Road trip"]
-// /[country]/stedentrip             → touristType: "City trip"
-// /[country]/hotels                 → touristType: "Hotel"
-// /[country]/appartementen          → touristType: "Apartment"
-
-{
-  "@type": "TouristDestination",
-  "@id": "https://www.zoover.nl/[COUNTRY_SLUG]/[FILTER]#destination",
-  "name": "All-inclusive holidays [COUNTRY_NAME]",
-  "alternateName": "All inclusive vakantie boeken [COUNTRY_NAME]",
-  "description": "[DESTINATION_DESCRIPTION]",
-  "url": "https://www.zoover.nl/[COUNTRY_SLUG]/[FILTER]",
-  "isContainedInPlace": {
-    "@type": "TouristDestination",
-    "@id": "https://www.zoover.nl/[COUNTRY_SLUG]#destination",
-    "name": "[COUNTRY_NAME]"
-  },
-  "touristType": ["All-inclusive"]
-}`,
-s7:`{
+s9:`{
   "@context": "https://schema.org",
   "@graph": [
     { "@id": "https://www.zoover.nl/#website" },
@@ -2039,6 +2062,10 @@ s7:`{
       "url": "[HOTEL_WEBSITE]",
       "priceRange": "From \u20AC[PRICE_FROM] p.p. including flight",
       "starRating": { "@type": "Rating", "ratingValue": "[STARS]" },
+      "touristType": ["[TOURIST_TYPE]"],
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "[MEAL_PLAN]", "value": true }
+      ],
       "award": "[HAS_ZOOVER_AWARD]",
       "address": {
         "@type": "PostalAddress",
@@ -2084,7 +2111,6 @@ s7:`{
           "author": { "@type": "Person", "name": "[REVIEW_1_AUTHOR]" },
           "publisher": { "@id": "https://www.zoover.nl/#organization" }
         }
-        // review 2 and 3: identical pattern
       ],
       "potentialAction": {
         "@type": "ReserveAction",
@@ -2108,123 +2134,12 @@ s7:`{
       "@type": "FAQPage",
       "@id": "[ACCOMMODATION_URL]#faq",
       "mainEntity": [
-        // 12 FAQ questions with [ACCOMMODATION_NAME] as placeholder
+        "// 12 FAQ questions with [ACCOMMODATION_NAME] as placeholder"
       ]
     }
   ]
 }`,
-s8:`// ——— Listerpagina (7 vragen) ———
-{
-  "@type": "FAQPage",
-  "@id": "https://www.zoover.nl/[COUNTRY_SLUG]#faq",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What are the top accommodations in [DESTINATION_NAME] in [CURRENT_YEAR]?",
-      "acceptedAnswer": { "@type": "Answer", "text": "..." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the best time to visit [DESTINATION_NAME]?",
-      "acceptedAnswer": { "@type": "Answer", "text": "..." }
-    },
-    {
-      "@type": "Question",
-      "name": "Are there all-inclusive options in [DESTINATION_NAME]?",
-      "acceptedAnswer": { "@type": "Answer", "text": "..." }
-    },
-    {
-      "@type": "Question",
-      "name": "Which accommodations in [DESTINATION_NAME] are child-friendly?",
-      "acceptedAnswer": { "@type": "Answer", "text": "..." }
-    },
-    {
-      "@type": "Question",
-      "name": "What do Dutch travellers say about [DESTINATION_NAME]?",
-      "acceptedAnswer": { "@type": "Answer", "text": "..." }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I book a last-minute holiday to [DESTINATION_NAME] via Zoover?",
-      "acceptedAnswer": { "@type": "Answer", "text": "..." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the lowest price guarantee for [DESTINATION_NAME] holidays?",
-      "acceptedAnswer": { "@type": "Answer", "text": "..." }
-    }
-  ]
-}
-
-// ——— Accommodatiepagina (12 vragen) ———
-{
-  "@type": "FAQPage",
-  "@id": "[ACCOMMODATION_URL]#faq",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the overall rating of [ACCOMMODATION_NAME]?",
-      "acceptedAnswer": { "@type": "Answer", "text": "..." }
-    },
-    {
-      "@type": "Question",
-      "name": "Is [ACCOMMODATION_NAME] suitable for families with children?",
-      "acceptedAnswer": { "@type": "Answer", "text": "..." }
-    },
-    {
-      "@type": "Question",
-      "name": "What facilities does [ACCOMMODATION_NAME] offer?",
-      "acceptedAnswer": { "@type": "Answer", "text": "..." }
-    },
-    {
-      "@type": "Question",
-      "name": "How far is [ACCOMMODATION_NAME] from the beach?",
-      "acceptedAnswer": { "@type": "Answer", "text": "..." }
-    },
-    {
-      "@type": "Question",
-      "name": "Does [ACCOMMODATION_NAME] offer all-inclusive arrangements?",
-      "acceptedAnswer": { "@type": "Answer", "text": "..." }
-    },
-    {
-      "@type": "Question",
-      "name": "What do guests say about the service at [ACCOMMODATION_NAME]?",
-      "acceptedAnswer": { "@type": "Answer", "text": "..." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the price per person for [ACCOMMODATION_NAME]?",
-      "acceptedAnswer": { "@type": "Answer", "text": "..." }
-    },
-    {
-      "@type": "Question",
-      "name": "Is [ACCOMMODATION_NAME] a Zoover Award winner?",
-      "acceptedAnswer": { "@type": "Answer", "text": "..." }
-    },
-    {
-      "@type": "Question",
-      "name": "How is the location of [ACCOMMODATION_NAME] rated?",
-      "acceptedAnswer": { "@type": "Answer", "text": "..." }
-    },
-    {
-      "@type": "Question",
-      "name": "What are the room ratings at [ACCOMMODATION_NAME]?",
-      "acceptedAnswer": { "@type": "Answer", "text": "..." }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I book [ACCOMMODATION_NAME] directly via Zoover?",
-      "acceptedAnswer": { "@type": "Answer", "text": "..." }
-    },
-    {
-      "@type": "Question",
-      "name": "What travel party types recommend [ACCOMMODATION_NAME]?",
-      "acceptedAnswer": { "@type": "Answer", "text": "..." }
-    }
-  ]
-}`,
-s9:`// ——— ReserveAction (onderdeel van accommodatie @graph) ———
-"potentialAction": {
+s10a:`"potentialAction": {
   "@type": "ReserveAction",
   "name": "Book [ACCOMMODATION_NAME] via Zoover",
   "target": {
@@ -2240,22 +2155,19 @@ s9:`// ——— ReserveAction (onderdeel van accommodatie @graph) ———
     "name": "Holiday booking via Zoover",
     "provider": { "@id": "https://www.zoover.nl/#organization" }
   }
-}
-
-// ——— WebMCP Tool Contract (fase 2) ———
-// navigator.modelContext — Tool Contract voor Zoover
-{
+}`,
+s10b:`{
   "tools": [
     {
       "name": "searchVacations",
       "description": "Search Zoover holiday inventory by destination, date and filters.",
       "parameters": {
-        "destination": { "type": "string", "description": "Country, region or city" },
+        "destination": { "type": "string" },
         "departureDate": { "type": "string", "format": "date" },
-        "duration": { "type": "integer", "description": "Number of nights" },
-        "filters": {
-          "type": "array",
-          "items": { "enum": ["all-inclusive", "family-friendly", "small-scale", "camping"] }
+        "duration": { "type": "integer" },
+        "touristType": {
+          "type": "string",
+          "enum": ["all-inclusive", "family-friendly", "small-scale", "camping"]
         }
       }
     },
@@ -2263,7 +2175,7 @@ s9:`// ——— ReserveAction (onderdeel van accommodatie @graph) ———
       "name": "getAccommodationDetails",
       "description": "Retrieve details for an accommodation including reviews and price.",
       "parameters": {
-        "accommodationId": { "type": "string", "description": "Zoover accommodation ID" }
+        "accommodationId": { "type": "string" }
       }
     },
     {
@@ -2282,43 +2194,47 @@ s9:`// ——— ReserveAction (onderdeel van accommodatie @graph) ———
 
 // Per-slide visual data: priority, badge label, icon SVG, decorative background SVG
 const sdSlideData=[
-  // Slide 1 — Intro: connected network of nodes
+  // Slide 1 — Lost in Translation: speech bubbles
   {priority:null,label:null,
+   icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6a2 2 0 012-2h8a2 2 0 012 2v5a2 2 0 01-2 2H8l-4 4V6z"/><path d="M21 14a2 2 0 00-2-2h-2M21 10v4"/></svg>',
+   deco:'<svg width="210" height="195" viewBox="0 0 210 195" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15,22 Q15,8 28,8 L130,8 Q143,8 143,22 L143,88 Q143,102 130,102 L62,102 L28,130 L28,102 Q15,102 15,88 Z"/><line x1="45" y1="44" x2="113" y2="44"/><line x1="45" y1="64" x2="100" y2="64"/><path d="M75,128 Q75,116 86,116 L188,116 Q200,116 200,128 L200,168 Q200,180 188,180 L155,180 L170,195 L170,180 Q188,180 200,168"/><line x1="96" y1="146" x2="178" y2="146"/><line x1="96" y1="163" x2="155" y2="163"/></svg>'},
+  // Slide 2 — Strategic opportunity: trend chart
+  {priority:null,label:null,
+   icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>',
+   deco:'<svg width="220" height="190" viewBox="0 0 220 190" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><line x1="25" y1="170" x2="215" y2="170"/><line x1="25" y1="170" x2="25" y2="20"/><polyline points="45,145 82,118 118,95 155,58 195,28"/><circle cx="45" cy="145" r="5"/><circle cx="82" cy="118" r="5"/><circle cx="118" cy="95" r="5"/><circle cx="155" cy="58" r="5"/><circle cx="195" cy="28" r="5"/><polyline points="188,22 197,29 190,36"/></svg>'},
+  // Slide 3 — @graph architecture: connected network
+  {priority:'must',label:'Must-have',
    icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><circle cx="5" cy="14" r="2"/><line x1="7" y1="6" x2="17" y2="6"/><line x1="5" y1="8" x2="5" y2="12"/><line x1="6.8" y1="15" x2="10.2" y2="16.8"/><line x1="17.2" y1="7.2" x2="13.2" y2="16.2"/></svg>',
    deco:'<svg width="200" height="200" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><circle cx="145" cy="35" r="20"/><circle cx="185" cy="90" r="13"/><circle cx="115" cy="85" r="15"/><circle cx="170" cy="145" r="10"/><circle cx="100" cy="165" r="16"/><circle cx="175" cy="55" r="7"/><line x1="163" y1="49" x2="176" y2="60"/><line x1="160" y1="44" x2="130" y2="73"/><line x1="182" y1="103" x2="128" y2="88"/><line x1="130" y1="100" x2="162" y2="136"/><line x1="116" y1="157" x2="161" y2="149"/><line x1="101" y1="149" x2="112" y2="100"/><line x1="182" y1="98" x2="174" y2="135"/></svg>'},
-  // Slide 2 — WebSite: globe
+  // Slide 4 — Entity territory: tag/label
   {priority:'must',label:'Must-have',
-   icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="3.5" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="4.5" y1="8" x2="19.5" y2="8"/><line x1="4.5" y1="16" x2="19.5" y2="16"/></svg>',
-   deco:'<svg width="200" height="200" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><circle cx="130" cy="70" r="75"/><ellipse cx="130" cy="70" rx="30" ry="75"/><line x1="55" y1="70" x2="205" y2="70"/><line x1="59" y1="38" x2="201" y2="38"/><line x1="59" y1="102" x2="201" y2="102"/><line x1="66" y1="15" x2="194" y2="15"/><line x1="66" y1="125" x2="194" y2="125"/></svg>'},
-  // Slide 3 — Organization: hierarchy chart
+   icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>',
+   deco:'<svg width="210" height="200" viewBox="0 0 210 200" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M25,55 L72,15 L200,15 L200,95 L72,95 Z"/><circle cx="42" cy="40" r="6"/><path d="M50,128 L90,97 L210,97 L210,162 L90,162 Z"/><circle cx="64" cy="114" r="5"/><path d="M15,178 L50,155 L168,155 L168,200 L50,200 Z"/><circle cx="28" cy="168" r="4"/></svg>'},
+  // Slide 5 — Organization: hierarchy chart
   {priority:'must',label:'Must-have',
    icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="9" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><line x1="12" y1="7" x2="12" y2="13"/><line x1="12" y1="13" x2="5" y2="13"/><line x1="12" y1="13" x2="19" y2="13"/><line x1="5" y1="13" x2="5" y2="17"/><line x1="12" y1="13" x2="12" y2="17"/><line x1="19" y1="13" x2="19" y2="17"/></svg>',
    deco:'<svg width="200" height="200" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><rect x="110" y="15" width="70" height="38" rx="6"/><rect x="55" y="110" width="52" height="35" rx="5"/><rect x="118" y="110" width="52" height="35" rx="5"/><rect x="178" y="110" width="52" height="35" rx="5"/><line x1="145" y1="53" x2="145" y2="82"/><line x1="145" y1="82" x2="81" y2="82"/><line x1="145" y1="82" x2="204" y2="82"/><line x1="81" y1="82" x2="81" y2="110"/><line x1="144" y1="82" x2="144" y2="110"/><line x1="204" y1="82" x2="204" y2="110"/></svg>'},
-  // Slide 4 — Homepage: house
+  // Slide 6 — WebSite: globe
+  {priority:'must',label:'Must-have',
+   icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="3.5" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="4.5" y1="8" x2="19.5" y2="8"/><line x1="4.5" y1="16" x2="19.5" y2="16"/></svg>',
+   deco:'<svg width="200" height="200" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><circle cx="130" cy="70" r="75"/><ellipse cx="130" cy="70" rx="30" ry="75"/><line x1="55" y1="70" x2="205" y2="70"/><line x1="59" y1="38" x2="201" y2="38"/><line x1="59" y1="102" x2="201" y2="102"/><line x1="66" y1="15" x2="194" y2="15"/><line x1="66" y1="125" x2="194" y2="125"/></svg>'},
+  // Slide 7 — Homepage FAQ: house
   {priority:'must',label:'Must-have',
    icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12L12 3L21 12"/><path d="M5 10v9a1 1 0 001 1h4v-5h4v5h4a1 1 0 001-1v-9"/></svg>',
    deco:'<svg width="200" height="200" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 130 L100 35 L185 130"/><rect x="35" y="130" width="130" height="85" rx="4"/><rect x="72" y="158" width="56" height="57"/><rect x="42" y="136" width="34" height="30" rx="3"/><rect x="124" y="136" width="34" height="30" rx="3"/><line x1="100" y1="35" x2="100" y2="18"/><circle cx="100" cy="12" r="6"/></svg>'},
-  // Slide 5 — Listing: grid of cards
+  // Slide 8 — Listing pages: grid of cards
   {priority:'must',label:'Must-have',
    icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="3" width="9" height="8" rx="1.5"/><rect x="13" y="3" width="9" height="8" rx="1.5"/><rect x="2" y="13" width="9" height="8" rx="1.5"/><rect x="13" y="13" width="9" height="8" rx="1.5"/></svg>',
    deco:'<svg width="210" height="200" viewBox="0 0 210 200" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><rect x="15" y="15" width="80" height="70" rx="7"/><rect x="110" y="15" width="80" height="70" rx="7"/><rect x="15" y="105" width="80" height="70" rx="7"/><rect x="110" y="105" width="80" height="70" rx="7"/><line x1="25" y1="40" x2="85" y2="40"/><line x1="25" y1="56" x2="75" y2="56"/><line x1="120" y1="40" x2="180" y2="40"/><line x1="120" y1="56" x2="170" y2="56"/><line x1="25" y1="130" x2="85" y2="130"/><line x1="25" y1="146" x2="72" y2="146"/><line x1="120" y1="130" x2="180" y2="130"/><line x1="120" y1="146" x2="168" y2="146"/></svg>'},
-  // Slide 6 — Filter: funnel
-  {priority:'rec',label:'Recommended',
-   icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 6h18M7 12h10M10 18h4"/></svg>',
-   deco:'<svg width="200" height="210" viewBox="0 0 200 210" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20,30 L180,30 L118,108 L118,178 L82,162 L82,108 Z"/><line x1="35" y1="58" x2="165" y2="58"/><line x1="53" y1="83" x2="147" y2="83"/></svg>'},
-  // Slide 7 — Accommodation: hotel building
+  // Slide 9 — Accommodation: hotel building
   {priority:'must',label:'Must-have',
    icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="12.01"/></svg>',
    deco:'<svg width="210" height="200" viewBox="0 0 210 200" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><rect x="15" y="55" width="180" height="140" rx="5"/><rect x="42" y="22" width="126" height="38" rx="4"/><line x1="15" y1="100" x2="195" y2="100"/><line x1="15" y1="135" x2="195" y2="135"/><rect x="28" y="108" width="30" height="22" rx="3"/><rect x="75" y="108" width="30" height="22" rx="3"/><rect x="122" y="108" width="30" height="22" rx="3"/><rect x="169" y="108" width="22" height="22" rx="3"/><rect x="28" y="143" width="30" height="22" rx="3"/><rect x="75" y="143" width="30" height="22" rx="3"/><rect x="122" y="143" width="30" height="22" rx="3"/><rect x="169" y="143" width="22" height="22" rx="3"/><rect x="80" y="30" width="50" height="42" rx="3"/></svg>'},
-  // Slide 8 — FAQ: speech bubble with lines
-  {priority:'must',label:'Must-have',
-   icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 9a3 3 0 115.83 1c-.32.98-1.2 1.64-2.04 2.23A2 2 0 0012 14"/><circle cx="12" cy="17" r="0.5" fill="currentColor"/><circle cx="12" cy="12" r="10"/></svg>',
-   deco:'<svg width="200" height="200" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M20,18 Q20,8 30,8 L180,8 Q190,8 190,18 L190,125 Q190,135 180,135 L80,135 L42,175 L42,135 Q20,135 20,125 Z"/><line x1="50" y1="52" x2="160" y2="52"/><line x1="50" y1="72" x2="148" y2="72"/><line x1="50" y1="92" x2="155" y2="92"/><line x1="50" y1="112" x2="130" y2="112"/></svg>'},
-  // Slide 9 — Agentic: robot
+  // Slide 10 — Agentic readiness: robot
   {priority:'nice',label:'Nice-to-have',
    icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="7" y="8" width="10" height="9" rx="2"/><path d="M10 8V6a2 2 0 114 0v2"/><circle cx="9.5" cy="12" r="1"/><circle cx="14.5" cy="12" r="1"/><line x1="7" y1="13" x2="4" y2="15"/><line x1="17" y1="13" x2="20" y2="15"/><line x1="10" y1="17" x2="10" y2="20"/><line x1="14" y1="17" x2="14" y2="20"/><line x1="10" y1="20" x2="14" y2="20"/></svg>',
    deco:'<svg width="200" height="220" viewBox="0 0 200 220" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><rect x="55" y="68" width="100" height="100" rx="14"/><rect x="72" y="38" width="66" height="36" rx="7"/><line x1="105" y1="38" x2="105" y2="22"/><circle cx="105" cy="15" r="7"/><circle cx="82" cy="107" r="13"/><circle cx="128" cy="107" r="13"/><line x1="55" y1="118" x2="28" y2="140"/><line x1="145" y1="118" x2="172" y2="140"/><line x1="82" y1="168" x2="82" y2="200"/><line x1="128" y1="168" x2="128" y2="200"/><line x1="82" y1="200" x2="128" y2="200"/><line x1="90" y1="138" x2="120" y2="138"/></svg>'},
-  // Slide 10 — Roadmap: timeline with milestones
+  // Slide 11 — Roadmap: timeline with milestones
   {priority:null,label:null,
    icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><circle cx="7" cy="12" r="2.5"/><circle cx="14" cy="12" r="2.5"/><circle cx="20" cy="12" r="2.5"/><line x1="7" y1="9.5" x2="7" y2="5"/><line x1="14" y1="9.5" x2="14" y2="5"/><line x1="20" y1="9.5" x2="20" y2="5"/></svg>',
    deco:'<svg width="220" height="160" viewBox="0 0 220 160" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><line x1="10" y1="120" x2="210" y2="120"/><circle cx="55" cy="120" r="12"/><circle cx="115" cy="120" r="12"/><circle cx="175" cy="120" r="12"/><line x1="55" y1="108" x2="55" y2="60"/><line x1="115" y1="108" x2="115" y2="60"/><line x1="175" y1="108" x2="175" y2="60"/><rect x="22" y="38" width="66" height="24" rx="5"/><rect x="82" y="38" width="66" height="24" rx="5"/><rect x="142" y="38" width="66" height="24" rx="5"/><line x1="5" y1="120" x2="10" y2="120"/><polyline points="205,115 215,120 205,125"/></svg>'}
